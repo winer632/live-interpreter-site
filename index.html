@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技术支持 · 实时同声传译 / Support · Live Interpreter</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1c1e; --muted: #5c6166; --line: #e3e6e8;
+    --accent: #2563eb; --card: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1113; --fg: #e8eaed; --muted: #9aa0a6; --line: #2a2e33;
+            --accent: #7aa2ff; --card: #171a1d; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 16px 64px; background: var(--bg); color: var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  header { padding: 40px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; font-size: 15px; }
+  a { color: var(--accent); }
+  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
+  .switch { display: flex; gap: 8px; margin: 20px 0 0; }
+  .switch button {
+    font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer;
+  }
+  .switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  /* 只作用于正文里的语言块：选择器不收窄的话会连 <html lang> 一起命中，整页空白 */
+  main [lang] { display: none; }
+  body[data-lang="zh"] main [lang="zh"], body[data-lang="en"] main [lang="en"] { display: revert; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  details summary { cursor: pointer; font-weight: 600; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "＋ "; color: var(--muted); }
+  details[open] summary::before { content: "－ "; }
+  details p:last-child { margin-bottom: 0; }
+  nav { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
+</style>
+</head>
+<body data-lang="zh">
+<main>
+
+<header>
+  <h1 lang="zh">🎙 实时同声传译 · 技术支持</h1>
+  <h1 lang="en">🎙 Live Interpreter · Support</h1>
+  <p class="sub" lang="zh">面对面的双向实时口译。说话即出字幕与译音，方向自动识别。</p>
+  <p class="sub" lang="en">Two-way interpreting for talking face to face. Subtitles and speech as you go, with the direction worked out for you.</p>
+  <div class="switch">
+    <button type="button" data-set="zh" aria-pressed="true">中文</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<h2 lang="zh">先试试演示模式</h2>
+<h2 lang="en">Start with demo mode</h2>
+<div class="card">
+  <p lang="zh">不需要任何配置、也不联网：<strong>设置 → 翻译后端 → 演示模式</strong>，然后点「开始传译」。
+  你会听到一段预先录好的中英对话，字幕和译音的效果和真实使用时一样。</p>
+  <p lang="en">Nothing to configure and no network needed: <strong>Settings → Backend → Demo mode</strong>, then press
+  Start. You will hear a short recorded conversation, with subtitles and speech exactly as in real use.</p>
+</div>
+
+<h2 lang="zh">正式使用</h2>
+<h2 lang="en">Using it for real</h2>
+<p lang="zh">这个 App <strong>不含翻译额度</strong>，它用你自己的账号直连翻译服务商，费用由服务商向你收取。
+在设置里填入任一家的 API Key 即可：</p>
+<p lang="en">The app <strong>does not include translation credit</strong>. It connects with your own account and the
+provider bills you directly. Put an API key for either one into settings:</p>
+<ul>
+  <li lang="zh"><strong>火山引擎 · 同声传译</strong>——中文为轴，支持中英/中日/中德/中法/中西/中葡/中韩/中泰，以及粤语、上海话转普通话</li>
+  <li lang="en"><strong>Volcengine</strong> — built around Chinese: Chinese paired with English, Japanese, German,
+    French, Spanish, Portuguese, Korean or Thai, plus Cantonese and Shanghainese into Mandarin</li>
+  <li lang="zh"><strong>OpenAI · Realtime Translation</strong>——13 种语言任意两两组合，包括不经中文的英西、英法、英德等</li>
+  <li lang="en"><strong>OpenAI Realtime Translation</strong> — any two of thirteen languages, including pairs that
+    do not involve Chinese at all, such as English with Spanish, French or German</li>
+</ul>
+<p lang="zh"><strong>「中英」永久免费</strong>，其余每个语言对解锁一次 5 美元，<strong>双向共用</strong>——
+买下「英语 ⇄ 德语」之后，英译德和德译英都能用，一次买断、永久有效。</p>
+<p lang="en"><strong>Chinese ⇄ English is free forever.</strong> Every other pair unlocks once for US$5 and
+<strong>covers both directions</strong> — buy English ⇄ German and you have both ways, for good.</p>
+
+<h2 lang="zh">常见问题</h2>
+<h2 lang="en">Common questions</h2>
+
+<details>
+  <summary lang="zh">没有声音</summary>
+  <summary lang="en">No sound</summary>
+  <p lang="zh">先看 iPhone 左侧上方的<strong>静音拨片</strong>有没有拨到静音（露出橙色）。
+  再确认界面右上角的「译音」没有选成「译音关」。还是没有的话，把音量调大一些——
+  听筒和外放用的是两套独立的音量刻度。</p>
+  <p lang="en">Check the <strong>ring/silent switch</strong> above the volume buttons on the left edge — orange
+  means silent. Then make sure the speech selector at the top right is not set to off. If it is still quiet, turn
+  the volume up: the earpiece and the speaker have separate volume levels.</p>
+</details>
+
+<details>
+  <summary lang="zh">想贴着耳朵听，不想外放</summary>
+  <summary lang="en">Listening privately instead of out loud</summary>
+  <p lang="zh">把顶部的「译音」切到 <strong>📞 听筒</strong>，译音就从听筒出声，像打电话一样贴耳听。
+  传译进行中也可以随时切换。</p>
+  <p lang="en">Switch the speech selector at the top to <strong>📞 Earpiece</strong> and the translation comes out of
+  the receiver, held to your ear like a call. You can switch at any time, including mid-session.</p>
+</details>
+
+<details>
+  <summary lang="zh">提示「麦克风已被系统断开」</summary>
+  <summary lang="en">“The system disconnected the microphone”</summary>
+  <p lang="zh">通常是别的应用抢走了麦克风（来电、语音消息、录音类 App），或蓝牙耳机切换了模式。
+  停止后重新开始即可恢复。如果插着蓝牙耳机反复出现，换成内置麦克风或有线耳机试试。</p>
+  <p lang="en">Usually another app took the microphone — a call, a voice message, a recorder — or a Bluetooth
+  headset changed modes. Stop and start again to recover. If it keeps happening with Bluetooth, try the built-in
+  microphone or a wired headset.</p>
+</details>
+
+<details>
+  <summary lang="zh">外放时出现啸叫或回音</summary>
+  <summary lang="en">Howling or echo when using the speaker</summary>
+  <p lang="zh">同一个房间里外放，扬声器的译音会被麦克风重新拾到。
+  在<strong>设置 → 回声处理</strong>里改成「播放译音时压低麦克风」或「静音麦克风」，
+  也可以把扬声器音量调低一些。改用听筒则完全不会有这个问题。</p>
+  <p lang="en">In one room, the speaker's output gets picked up by the microphone again. Under
+  <strong>Settings → Echo handling</strong>, choose to duck or mute the microphone while the translation plays, or
+  simply lower the volume. Using the earpiece avoids this entirely.</p>
+</details>
+
+<details>
+  <summary lang="zh">字幕停住不动了</summary>
+  <summary lang="en">Subtitles stopped updating</summary>
+  <p lang="zh">界面顶部会显示健康状态。常见原因是网络中断，或麦克风被系统静音——
+  后者会有明确提示。停止再开始通常就好；如果服务商那边报额度问题，界面上会原样转述它的错误信息。</p>
+  <p lang="en">The bar at the top shows the session's health. The usual causes are a dropped network or the system
+  muting the microphone, which is reported explicitly. Stopping and starting again normally clears it; if the
+  provider reports a quota problem, its message is passed through as-is.</p>
+</details>
+
+<details>
+  <summary lang="zh">换了手机，之前买的语言对怎么办</summary>
+  <summary lang="en">Moving to a new phone</summary>
+  <p lang="zh">用同一个 Apple ID 登录，打开<strong>设置 → 语言对解锁 → 恢复购买</strong>即可全部取回。
+  买断是永久的，不会二次收费。</p>
+  <p lang="en">Sign in with the same Apple ID and use <strong>Settings → Language pairs → Restore purchases</strong>.
+  Purchases are permanent; you are never charged twice.</p>
+</details>
+
+<details>
+  <summary lang="zh">某些语言对为什么标着「仅字幕」</summary>
+  <summary lang="en">Why some pairs say “subtitles only”</summary>
+  <p lang="zh">火山引擎在中韩、中泰和两种方言上没有语音合成模型，只能出字幕。
+  同样是中韩，切到 OpenAI 后端就有译音——所以这个标记是跟着后端变的。</p>
+  <p lang="en">Volcengine has no speech model for Chinese with Korean or Thai, nor for the two dialects, so those
+  produce subtitles only. The same Chinese ⇄ Korean pair does have speech on the OpenAI backend, which is why the
+  label changes with the backend.</p>
+</details>
+
+<details>
+  <summary lang="zh">英语和西班牙语之间，方向判断偶尔会反</summary>
+  <summary lang="en">Direction occasionally flips between English and Spanish</summary>
+  <p lang="zh">两种语言用同一套字母，判别只能靠用词，短句或专有名词上可能拿不准。
+  这类语言对的顶部会多出一个方向开关，把它从「自动」改成固定方向即可按住。</p>
+  <p lang="en">Those two share an alphabet, so detection goes by word choice and can waver on short phrases or
+  names. Pairs like this get an extra direction control at the top — switch it from automatic to a fixed direction
+  to pin it.</p>
+</details>
+
+<h2 lang="zh">联系我们</h2>
+<h2 lang="en">Getting in touch</h2>
+<p lang="zh">问题、建议、退款咨询都可以写信到
+<a href="mailto:winer632@qq.com">winer632@qq.com</a>，一般一到两个工作日内回复。
+描述问题时如果能附上机型、iOS 版本和所用的翻译后端，排查会快很多。</p>
+<p lang="en">Questions, suggestions and refund enquiries all go to
+<a href="mailto:winer632@qq.com">winer632@qq.com</a>, usually answered within a business day or two.
+Telling us the device, the iOS version and which backend you were using makes it much quicker.</p>
+
+<nav>
+  <a href="./privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy policy</span> →</a>
+</nav>
+
+</main>
+<script>
+  for (const button of document.querySelectorAll('.switch button')) {
+    button.onclick = () => {
+      document.body.dataset.lang = button.dataset.set;
+      for (const other of document.querySelectorAll('.switch button')) {
+        other.setAttribute('aria-pressed', String(other === button));
+      }
+    };
+  }
+  // 浏览器不是中文环境就默认英文，省得海外用户一进来看到中文
+  if (!navigator.language?.toLowerCase().startsWith('zh')) {
+    document.querySelector('.switch button[data-set="en"]').click();
+  }
+</script>
+</body>
+</html>
