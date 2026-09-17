@@ -30,19 +30,20 @@
   a { color: var(--accent); }
   code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
-  .switch { display: flex; gap: 8px; margin: 20px 0 0; }
-  .switch button {
-    font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px;
-    border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer;
-  }
-  .switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
-  /* 只作用于正文里的语言块：选择器不收窄的话会连 <html lang> 一起命中，整页空白 */
-  main [lang] { display: none; }
-  body[data-lang="zh"] main [lang="zh"], body[data-lang="en"] main [lang="en"] { display: revert; }
+  /* 中英并置：英文跟在中文后面，压低一档以便一眼分辨哪句是哪句 */
+  main [lang="en"] { color: var(--muted); }
+  main h1[lang="en"] { font-size: 19px; font-weight: 600; margin: 2px 0 0; letter-spacing: 0; }
+  main h2[lang="en"] { font-size: 15px; font-weight: 600; margin: 2px 0 12px; }
+  main h3[lang="en"] { font-size: 14px; font-weight: 600; margin: 2px 0 8px; }
+  main h2[lang="zh"] { margin-bottom: 2px; }
+  main h3[lang="zh"] { margin-bottom: 2px; }
+  main p[lang="zh"], main li[lang="zh"] { margin-bottom: 4px; }
+  main p[lang="en"], main li[lang="en"] { margin-top: 0; font-size: 15px; }
+  .en-note { display: block; color: var(--muted); font-weight: 400; font-size: 14px; margin-top: 2px; }
   nav { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
 </style>
 </head>
-<body data-lang="zh">
+<body>
 <main>
 
 <header>
@@ -50,10 +51,6 @@
   <h1 lang="en">Privacy Policy</h1>
   <p class="sub" lang="zh">实时同声传译 · 最后更新 2026 年 9 月 17 日</p>
   <p class="sub" lang="en">Duo Interpreter · Last updated 17 September 2026</p>
-  <div class="switch">
-    <button type="button" data-set="zh" aria-pressed="true">中文</button>
-    <button type="button" data-set="en" aria-pressed="false">English</button>
-  </div>
 </header>
 
 <div class="card">
@@ -151,19 +148,5 @@ and has no accounts, we have no way to notify you directly — this page is the 
 </nav>
 
 </main>
-<script>
-  for (const button of document.querySelectorAll('.switch button')) {
-    button.onclick = () => {
-      document.body.dataset.lang = button.dataset.set;
-      for (const other of document.querySelectorAll('.switch button')) {
-        other.setAttribute('aria-pressed', String(other === button));
-      }
-    };
-  }
-  // 浏览器不是中文环境就默认英文，省得海外用户一进来看到中文
-  if (!navigator.language?.toLowerCase().startsWith('zh')) {
-    document.querySelector('.switch button[data-set="en"]').click();
-  }
-</script>
 </body>
 </html>
