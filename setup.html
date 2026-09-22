@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>申请通义千问 API Key / Getting a Qwen API key · Duo Interpreter</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1a1c1e; --muted: #5c6166; --line: #e3e6e8;
+    --accent: #2563eb; --card: #f7f8fa; --warn: #b45309; --warnbg: #fef6e7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1113; --fg: #e8eaed; --muted: #9aa0a6; --line: #2a2e33;
+            --accent: #7aa2ff; --card: #171a1d; --warn: #f0b95c; --warnbg: #251d0e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 16px 64px; background: var(--bg); color: var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  header { padding: 40px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 44px 0 12px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0; font-size: 15px; }
+  a { color: var(--accent); }
+  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px;
+         word-break: break-all; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
+  main [lang="en"] { color: var(--muted); }
+  main h1[lang="en"] { font-size: 19px; font-weight: 600; margin: 2px 0 0; letter-spacing: 0; }
+  main h2[lang="en"] { font-size: 15px; font-weight: 600; margin: 2px 0 12px; }
+  main h2[lang="zh"] { margin-bottom: 2px; }
+  main p[lang="zh"], main li[lang="zh"] { margin-bottom: 4px; }
+  main p[lang="en"], main li[lang="en"] { margin-top: 0; font-size: 15px; }
+  nav { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
+
+  /* 步骤：序号靠左，内容靠右，图占满内容宽度 */
+  ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; }
+  ol.steps > li { counter-increment: step; position: relative; padding: 0 0 8px 44px; margin: 32px 0 0; }
+  ol.steps > li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 15px; font-weight: 600; display: grid; place-items: center;
+  }
+  ol.steps h2 { margin-top: 0; }
+  /* 截图占位：图还没拍好时页面照样立得住，拍好了把 img 换进来即可 */
+  figure { margin: 14px 0 0; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 10px; }
+  .shot-todo {
+    border: 1px dashed var(--line); border-radius: 10px; background: var(--card);
+    color: var(--muted); font-size: 14px; padding: 28px 20px; text-align: center;
+  }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+  .note {
+    border-left: 3px solid var(--warn); background: var(--warnbg); border-radius: 0 8px 8px 0;
+    padding: 12px 16px; margin: 14px 0 0;
+  }
+  .note p { margin: 0; }
+  .note p[lang="en"] { margin-top: 2px; }
+  .note strong { color: var(--warn); }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1 lang="zh">申请通义千问 API Key</h1>
+  <h1 lang="en">Getting a Qwen API key</h1>
+  <p class="sub" lang="zh">大约十分钟。全程在电脑浏览器里完成，最后一步回到手机。</p>
+  <p class="sub" lang="en">About ten minutes. Do it in a desktop browser; only the last step is on the phone.</p>
+</header>
+
+<div class="card">
+  <p lang="zh">这个 App <strong>不含翻译额度</strong>，它用你自己的账号直连阿里云百炼，费用由阿里云按用量向你收取。
+  语音不经过我们的服务器。</p>
+  <p lang="en">The app <strong>includes no translation credit</strong>. It talks to Alibaba Cloud Model Studio with
+  your own account, and Alibaba Cloud bills you for what you use. Your speech never passes through our servers.</p>
+</div>
+
+<div class="note">
+  <p lang="zh"><strong>两件事先记住</strong>，出错基本都出在这两处：Key 必须建在
+  <strong>新加坡（Singapore）</strong>区，别的区建的 Key 这个 App 用不了；
+  Key 创建后<strong>只完整显示一次</strong>，弹窗关掉就再也看不到。</p>
+  <p lang="en"><strong>Two things to keep in mind</strong> — nearly every failure comes from one of them. The key
+  must be created in the <strong>Singapore</strong> region; keys from other regions will not work here. And the key
+  is <strong>shown in full only once</strong> — once you close that dialog it cannot be read again.</p>
+</div>
+
+<ol class="steps">
+
+<li>
+  <h2 lang="zh">注册阿里云国际站账号</h2>
+  <h2 lang="en">Create an Alibaba Cloud account</h2>
+  <p lang="zh">打开 <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">alibabacloud.com</a>
+  注册。用邮箱即可，<strong>不需要中国大陆手机号</strong>。</p>
+  <p lang="en">Sign up at <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">alibabacloud.com</a>.
+  An email address is enough — <strong>no mainland-China phone number is required</strong>.</p>
+  <p lang="zh">注册后需要绑定一张信用卡或 PayPal 才能开通服务。绑卡本身不扣费，按实际用量计费。</p>
+  <p lang="en">You will need to add a credit card or PayPal before services can be activated. Adding it does not
+  charge you anything; you are billed for actual usage.</p>
+</li>
+
+<li>
+  <h2 lang="zh">把区域切到新加坡</h2>
+  <h2 lang="en">Switch the region to Singapore</h2>
+  <p lang="zh">打开百炼控制台：
+  <a href="https://modelstudio.console.alibabacloud.com/ap-southeast-1" target="_blank" rel="noreferrer">modelstudio.console.alibabacloud.com/ap-southeast-1</a>，
+  确认<strong>右上角的区域是 Singapore</strong>。这个链接已经指向新加坡，但登录过程有时会把你带回默认区域，所以要看一眼。</p>
+  <p lang="en">Open the Model Studio console at
+  <a href="https://modelstudio.console.alibabacloud.com/ap-southeast-1" target="_blank" rel="noreferrer">modelstudio.console.alibabacloud.com/ap-southeast-1</a>
+  and check that the region at the <strong>top right reads Singapore</strong>. The link points there already, but
+  signing in sometimes returns you to a default region, so it is worth a look.</p>
+  <figure>
+    <div class="shot-todo" data-shot="1">截图 1 · 区域下拉展开，Singapore 选中<br>Screenshot 1 — the region menu, with Singapore selected</div>
+    <figcaption lang="zh">区域选错是连接失败最常见的原因。</figcaption>
+    <figcaption lang="en">Picking the wrong region is the most common cause of a failed connection.</figcaption>
+  </figure>
+</li>
+
+<li>
+  <h2 lang="zh">开通百炼服务</h2>
+  <h2 lang="en">Activate Model Studio</h2>
+  <p lang="zh">第一次进入会提示开通，同意条款后点开通即可。已经开通过的账号看不到这一步，直接跳到下一步。</p>
+  <p lang="en">The first visit asks you to activate the service: accept the terms and confirm. If your account is
+  already activated you will not see this screen — go straight to the next step.</p>
+  <figure>
+    <div class="shot-todo" data-shot="2">截图 2 · 开通页面<br>Screenshot 2 — the activation screen</div>
+  </figure>
+</li>
+
+<li>
+  <h2 lang="zh">找到 API Key 页面</h2>
+  <h2 lang="en">Open the API Key page</h2>
+  <p lang="zh">在控制台左侧导航里点 <strong>API Key</strong>。</p>
+  <p lang="en">In the left-hand navigation of the console, click <strong>API Key</strong>.</p>
+  <figure>
+    <div class="shot-todo" data-shot="3">截图 3 · 左侧导航，API Key 入口<br>Screenshot 3 — the left navigation, with API Key highlighted</div>
+  </figure>
+</li>
+
+<li>
+  <h2 lang="zh">创建 API Key</h2>
+  <h2 lang="en">Create the key</h2>
+  <p lang="zh">点 <strong>Create API Key</strong>。工作区选默认的那个，权限选 <strong>All</strong>，
+  描述可以留空，然后确定。</p>
+  <p lang="en">Click <strong>Create API Key</strong>. Pick the default workspace, set permissions to
+  <strong>All</strong>, leave the description empty if you like, and confirm.</p>
+  <figure>
+    <div class="shot-todo" data-shot="4">截图 4 · Create API Key 对话框<br>Screenshot 4 — the Create API Key dialog</div>
+  </figure>
+</li>
+
+<li>
+  <h2 lang="zh">立刻复制整串 Key</h2>
+  <h2 lang="en">Copy the whole key, right away</h2>
+  <p lang="zh">Key 会以 <code>sk-</code> 开头，很长——<strong>一定要复制完整的一整串</strong>，
+  漏掉尾巴几个字符的表现和填错一样，都是连不上。用弹窗里的复制按钮最稳。</p>
+  <p lang="en">The key starts with <code>sk-</code> and is long — <strong>copy all of it</strong>. A key missing
+  its last few characters fails exactly like a wrong one. Use the copy button in the dialog.</p>
+  <div class="note">
+    <p lang="zh"><strong>关掉这个弹窗就再也看不到完整 Key 了。</strong>万一没存下来，删掉重建一把即可，不影响账号。</p>
+    <p lang="en"><strong>Once this dialog closes the full key is gone.</strong> If you lose it, just delete that key
+    and create another — nothing else is affected.</p>
+  </div>
+  <figure>
+    <div class="shot-todo" data-shot="5">截图 5 · 只显示一次的 Key 弹窗（Key 本身需打码）<br>Screenshot 5 — the one-time key dialog (redact the key itself)</div>
+  </figure>
+</li>
+
+<li>
+  <h2 lang="zh">填进 App，点「测试」</h2>
+  <h2 lang="en">Paste it into the app and press Test</h2>
+  <p lang="zh">回到手机：<strong>设置 → 通义千问 API Key</strong>。站点保持
+  <strong>国际站 · 新加坡</strong>，把 Key 粘进输入框，点<strong>保存</strong>，再点<strong>测试</strong>。
+  看到绿色的「连接成功」就完成了。</p>
+  <p lang="en">Back on the phone: <strong>Settings → Qwen API key</strong>. Leave the site on
+  <strong>International · Singapore</strong>, paste the key, press <strong>Save</strong>, then
+  <strong>Test</strong>. A green “connected” message means you are done.</p>
+  <p lang="zh">最后到<strong>翻译后端</strong>里选中「通义千问」，关掉设置，选好语言对就可以开始了。</p>
+  <p lang="en">Finally pick <strong>Qwen</strong> under Backend, close settings, choose a language pair and start.</p>
+  <figure>
+    <div class="shot-todo" data-shot="6">截图 6 · App 设置页：站点、已保存的 Key、测试成功<br>Screenshot 6 — the app’s settings: site, saved key, successful test</div>
+  </figure>
+</li>
+
+</ol>
+
+<h2 lang="zh">连不上怎么办</h2>
+<h2 lang="en">If it will not connect</h2>
+
+<div class="card">
+  <p lang="zh"><strong>提示 Key 无效</strong>——九成是区域不对。回控制台看右上角是不是 Singapore；
+  不是的话切过去<strong>重新建一把</strong>，别的区的 Key 换不过来。也顺便确认粘贴时没漏掉结尾。</p>
+  <p lang="en"><strong>“Invalid key”</strong> — nine times out of ten the region is wrong. Check that the console
+  says Singapore at the top right; if not, switch and <strong>create a new key</strong>, because a key cannot be
+  moved between regions. Also make sure nothing was cut off the end when pasting.</p>
+</div>
+<div class="card">
+  <p lang="zh"><strong>提示无权调用该模型</strong>——账号还没开通百炼，或者没有可用余额。回控制台看一眼。</p>
+  <p lang="en"><strong>“Not allowed to call the model”</strong> — the account has not activated Model Studio yet, or
+  has no usable balance. Check in the console.</p>
+</div>
+<div class="card">
+  <p lang="zh"><strong>提示连接超时</strong>——手机网络到
+  <code>dashscope-intl.aliyuncs.com</code> 不通。换个网络（比如从公司 Wi-Fi 切到蜂窝数据）再试。</p>
+  <p lang="en"><strong>“Connection timed out”</strong> — the phone cannot reach
+  <code>dashscope-intl.aliyuncs.com</code>. Try a different network, for example cellular instead of office Wi-Fi.</p>
+</div>
+<div class="card">
+  <p lang="zh"><strong>想先看看效果？</strong>不用 Key：<strong>设置 → 翻译后端 → 演示模式</strong>，
+  语言对选「中英」，点「开始传译」。不联网、不采集麦克风。</p>
+  <p lang="en"><strong>Want to see it first?</strong> No key needed: <strong>Settings → Backend → Demo mode</strong>,
+  pick the Chinese ⇄ English pair and press Start. It uses no network and no microphone.</p>
+</div>
+
+<div class="card">
+  <p lang="zh">还是不行的话写信到 <a href="mailto:winer632@qq.com">winer632@qq.com</a>，
+  附上机型、iOS 版本和「测试」按钮给出的那句提示，排查会快很多。<strong>不要把 Key 发给我们。</strong></p>
+  <p lang="en">Still stuck? Write to <a href="mailto:winer632@qq.com">winer632@qq.com</a> with your device, iOS
+  version and the exact message the Test button gave — that makes it much quicker. <strong>Please do not send us
+  your key.</strong></p>
+</div>
+
+<nav>
+  <a href="./"><span lang="zh">← 技术支持</span><span lang="en">← Support</span></a>
+  &nbsp;·&nbsp;
+  <a href="./privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy policy</span></a>
+</nav>
+
+</main>
+</body>
+</html>
