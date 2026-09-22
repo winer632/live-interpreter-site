@@ -80,8 +80,8 @@ provider bills you directly. Put a Qwen API key into settings; the pairs on offe
   <li lang="en"><strong>Around English</strong> — no Chinese involved: English with Spanish, French, German,
     Italian, Portuguese, Russian, Japanese, Korean, Hindi, Indonesian, Vietnamese, Arabic, Turkish, Thai,
     Filipino, Polish, Urdu, Hebrew, Persian, Malay or Dutch</li>
-  <li lang="zh"><strong>粤语 → 普通话</strong>——单向</li>
-  <li lang="en"><strong>Cantonese → Mandarin</strong> — one way</li>
+  <li lang="zh"><strong>粤语 ⇄ 普通话</strong>——说粤语有译音，反过来只有字幕</li>
+  <li lang="en"><strong>Cantonese ⇄ Mandarin</strong> — spoken one way, subtitles the other</li>
 </ul>
 <div class="card">
   <p lang="zh"><strong>没有中国大陆手机号也能用</strong>：通义千问的国际站用邮箱就能注册。
@@ -153,12 +153,14 @@ provider bills you directly. Put a Qwen API key into settings; the pairs on offe
 </details>
 
 <details>
-  <summary>「粤语 → 普通话」为什么只有一个方向<span class="en-note">Why Cantonese → Mandarin only goes one way</span></summary>
-  <p lang="zh">模型能<strong>听懂</strong>粤语，但没法<strong>说</strong>粤语——它在官方语言表里属于
-  「只有字幕」那一档，做不了目标语言。所以粤语可以作为输入译成普通话，反过来不行。</p>
-  <p lang="en">The model can <strong>understand</strong> Cantonese but cannot <strong>speak</strong> it: in the
-  provider's language table it is subtitles-only and cannot be a target language. So Cantonese works as input into
-  Mandarin, but not the other way round.</p>
+  <summary>「粤 ⇄ 普」为什么反过来没有声音<span class="en-note">Why Cantonese ⇄ Mandarin only speaks one way</span></summary>
+  <p lang="zh">模型能<strong>听懂</strong>粤语，也能<strong>写</strong>粤语，但没法<strong>说</strong>粤语——
+  它在官方语言表里属于「只有字幕」那一档。所以说粤语时会听到普通话译音；说普通话时，
+  粤语译文只会以字幕出现。这一对两边都是汉字，方向自动判不出来，请用方向开关手动指定。</p>
+  <p lang="en">The model can <strong>understand</strong> and <strong>write</strong> Cantonese, but not
+  <strong>speak</strong> it — in the provider's language table it is subtitles-only. So speaking Cantonese gives you
+  spoken Mandarin; speaking Mandarin gives you Cantonese subtitles only. Both sides use Chinese characters, so the
+  direction cannot be detected automatically — set it with the direction selector.</p>
 </details>
 
 <details>
