@@ -69,16 +69,19 @@
 <h2 lang="zh">正式使用</h2>
 <h2 lang="en">Using it for real</h2>
 <p lang="zh">这个 App <strong>不含翻译额度</strong>，它用你自己的账号直连翻译服务商，费用由服务商向你收取。
-在设置里填入任一家的 API Key 即可：</p>
+在设置里填入通义千问的 API Key 即可，支持的语言对：</p>
 <p lang="en">The app <strong>does not include translation credit</strong>. It connects with your own account and the
-provider bills you directly. Put an API key for either one into settings:</p>
+provider bills you directly. Put a Qwen API key into settings; the pairs on offer:</p>
 <ul>
-  <li lang="zh"><strong>火山引擎 · 同声传译</strong>——中文为轴，支持中英/中日/中德/中法/中西/中葡/中韩/中泰，以及粤语、上海话转普通话</li>
-  <li lang="en"><strong>Volcengine</strong> — built around Chinese: Chinese paired with English, Japanese, German,
-    French, Spanish, Portuguese, Korean or Thai, plus Cantonese and Shanghainese into Mandarin</li>
-  <li lang="zh"><strong>通义千问 · LiveTranslate</strong>——13 种语言任意两两组合，包括不经中文的英西、英法、英德等</li>
-  <li lang="en"><strong>Qwen LiveTranslate</strong> — any two of thirteen languages, including pairs that
-    do not involve Chinese at all, such as English with Spanish, French or German</li>
+  <li lang="zh"><strong>中文为轴</strong>——中文与英、日、德、法、西、葡、韩、泰、阿拉伯、土耳其、菲律宾、波兰、乌尔都、希伯来、波斯、马来、荷兰语互译</li>
+  <li lang="en"><strong>Around Chinese</strong> — Chinese with English, Japanese, German, French, Spanish,
+    Portuguese, Korean, Thai, Arabic, Turkish, Filipino, Polish, Urdu, Hebrew, Persian, Malay or Dutch</li>
+  <li lang="zh"><strong>英文为轴</strong>——不经中文：英语与西、法、德、意、葡、俄、日、韩、印地、印尼、越南、阿拉伯、土耳其、泰、菲律宾、波兰、乌尔都、希伯来、波斯、马来、荷兰语互译</li>
+  <li lang="en"><strong>Around English</strong> — no Chinese involved: English with Spanish, French, German,
+    Italian, Portuguese, Russian, Japanese, Korean, Hindi, Indonesian, Vietnamese, Arabic, Turkish, Thai,
+    Filipino, Polish, Urdu, Hebrew, Persian, Malay or Dutch</li>
+  <li lang="zh"><strong>粤语 → 普通话</strong>——单向</li>
+  <li lang="en"><strong>Cantonese → Mandarin</strong> — one way</li>
 </ul>
 <div class="card">
   <p lang="zh"><strong>没有中国大陆手机号也能用</strong>：通义千问的国际站用邮箱就能注册。
@@ -150,12 +153,12 @@ provider bills you directly. Put an API key for either one into settings:</p>
 </details>
 
 <details>
-  <summary>某些语言对为什么标着「仅字幕」<span class="en-note">Why some pairs say “subtitles only”</span></summary>
-  <p lang="zh">火山引擎在中韩、中泰和两种方言上没有语音合成模型，只能出字幕。
-  同样是中韩，切到通义千问后端就有译音——所以这个标记是跟着后端变的。</p>
-  <p lang="en">Volcengine has no speech model for Chinese with Korean or Thai, nor for the two dialects, so those
-  produce subtitles only. The same Chinese ⇄ Korean pair does have speech on the Qwen backend, which is why the
-  label changes with the backend.</p>
+  <summary>「粤语 → 普通话」为什么只有一个方向<span class="en-note">Why Cantonese → Mandarin only goes one way</span></summary>
+  <p lang="zh">模型能<strong>听懂</strong>粤语，但没法<strong>说</strong>粤语——它在官方语言表里属于
+  「只有字幕」那一档，做不了目标语言。所以粤语可以作为输入译成普通话，反过来不行。</p>
+  <p lang="en">The model can <strong>understand</strong> Cantonese but cannot <strong>speak</strong> it: in the
+  provider's language table it is subtitles-only and cannot be a target language. So Cantonese works as input into
+  Mandarin, but not the other way round.</p>
 </details>
 
 <details>
