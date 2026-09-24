@@ -49,45 +49,115 @@
 <header>
   <h1 lang="zh">隐私政策</h1>
   <h1 lang="en">Privacy Policy</h1>
-  <p class="sub" lang="zh">实时同声传译 · 最后更新 2026 年 9 月 22 日</p>
-  <p class="sub" lang="en">Duo Interpreter · Last updated 22 September 2026</p>
+  <p class="sub" lang="zh">实时同声传译 · 最后更新 2026 年 9 月 24 日</p>
+  <p class="sub" lang="en">Duo Interpreter · Last updated 24 September 2026</p>
 </header>
 
 <div class="card">
-  <p lang="zh"><strong>一句话版本：</strong>这个 App 没有服务器、不需要注册、不做任何统计。
-  你的语音直接从手机发往<strong>你自己配置的</strong>翻译服务商，我们全程不经手、也无从留存。
-  字幕记录只存在你的手机里。</p>
-  <p lang="en"><strong>In short:</strong> this app has no servers, no accounts and no analytics.
-  Your speech goes straight from your phone to the translation provider
-  <strong>you configured yourself</strong>; it never passes through us and we have nothing to keep.
-  Transcripts stay on your phone.</p>
+  <p lang="zh"><strong>一句话版本：</strong>App 有两种用法。默认的「购买时长」不用注册：你的语音从手机直接发往阿里云百炼翻译，
+  <strong>不经过我们的服务器</strong>；我们的服务器只记一个随机生成的账号号码、你买了多少时长、用了多少时长。
+  选「用自己的阿里云 Key」时，我们什么都不收集。App 里没有统计、广告和追踪，字幕记录只存在你的手机里。</p>
+  <p lang="en"><strong>In short:</strong> the app works in two ways. By default you buy interpreting time, with no sign-up:
+  your speech goes straight from your phone to Alibaba Cloud Model Studio for translation and <strong>never passes through
+  our server</strong>; our server only keeps a randomly generated account number, how much time you bought and how much you used.
+  If you use your own Alibaba Cloud key instead, we collect nothing. There is no analytics, advertising or tracking,
+  and transcripts stay on your phone.</p>
 </div>
 
 <h2 lang="zh">我们收集什么</h2>
 <h2 lang="en">What we collect</h2>
-<p lang="zh"><strong>什么都不收集。</strong>我们不运营任何服务器，没有账号体系，App 里也没有第三方分析、
-广告或跟踪组件。我们无法知道有谁在用、用了多久、翻译了什么。</p>
-<p lang="en"><strong>Nothing.</strong> We run no servers, there are no accounts, and the app contains no
-third-party analytics, advertising or tracking. We cannot tell who uses it, for how long, or what was said.</p>
+<p lang="zh">取决于你在「设置 → 计费方式」里选的是哪一种。</p>
+<p lang="en">It depends on what you chose under Settings → Billing.</p>
+
+<h3 lang="zh">购买时长（默认，免注册）</h3>
+<h3 lang="en">Buying time (the default, no sign-up)</h3>
+<p lang="zh">为了记住你买了多少时长、防止被盗刷，App 会连接我们的服务器 <code>api.duo-interpreter.com</code>
+（部署在 Microsoft Azure 新加坡区域）。服务器保存这些：</p>
+<p lang="en">To remember how much time you bought and to stop abuse, the app talks to our server
+<code>api.duo-interpreter.com</code> (hosted on Microsoft Azure in Singapore). The server keeps:</p>
+<ul>
+  <li lang="zh"><strong>随机账号 ID</strong>：App 第一次用时随机生成的一串号码（UUID），和你的姓名、邮箱、电话、Apple 账户都没有关系。
+    它存在你的 iCloud 钥匙串里，所以重装 App、换同一 Apple 账户的新手机，余额都还在。</li>
+  <li lang="en"><strong>A random account ID</strong>: a number (a UUID) the app generates the first time you use it. It has nothing to do
+    with your name, email, phone number or Apple Account. It is kept in your iCloud Keychain, so your balance survives reinstalls and
+    follows you to new phones on the same Apple Account.</li>
+  <li lang="zh"><strong>设备凭证</strong>：每台设备一把 Apple App Attest 密钥的编号和公钥，以及登记时间、最后一次使用时间。
+    用来确认请求来自这个 App 的正版安装，而不是被篡改的程序。</li>
+  <li lang="en"><strong>Device credentials</strong>: for each device, the identifier and public key of an Apple App Attest key, with when it was
+    registered and last used. They prove that requests come from a genuine copy of this app, not a modified one.</li>
+  <li lang="zh"><strong>购买记录</strong>：Apple 的交易号、商品（1、5 或 10 小时）、购买时间、是否是测试（沙盒）购买、是否已退款。</li>
+  <li lang="en"><strong>Purchases</strong>: Apple's transaction ID, the product (1, 5 or 10 hours), when it was bought, whether it was a test
+    (sandbox) purchase, and whether it was refunded.</li>
+  <li lang="zh"><strong>使用记录</strong>：每次传译的开始和结束时间、模式（念出译文或只出字幕）、扣了多少时长、这次传译向服务器要了几次临时密钥，
+    以及余额的每一笔增减。</li>
+  <li lang="en"><strong>Usage</strong>: when each interpreting session started and ended, its mode (spoken translation or subtitles only),
+    how much time it used, how many temporary keys it asked for, and every change to your balance.</li>
+</ul>
+<p lang="zh"><strong>新设备送的 5 分钟试用</strong>每台设备只送一次。为了防止重复领，App 会把 Apple DeviceCheck 生成的一次性令牌交给服务器，
+服务器拿它请 Apple 查一下、再标记 Apple 替我们给这台设备保存的 1 个比特（「领过试用」）。令牌用完即弃，服务器不保存；
+Apple 只替我们记这 1 个比特，不会告诉我们这是哪台设备。</p>
+<p lang="en"><strong>The 5-minute trial</strong> is given once per device. To prevent repeat claims the app hands the server a one-time
+Apple DeviceCheck token; the server uses it to ask Apple to check, then set, a single bit Apple keeps for this device on our behalf
+(“trial used”). The token is used once and not stored, and Apple keeps only that bit for us, without telling us which device it is.</p>
+<p lang="zh">服务器<strong>收不到</strong>：你的语音、字幕和翻译内容，你的姓名、邮箱、电话、位置、通讯录，以及你的付款方式。</p>
+<p lang="en">The server <strong>never receives</strong> your speech, subtitles or translations, your name, email, phone number,
+location or contacts, or your payment details.</p>
+
+<h3 lang="zh">用自己的阿里云 Key</h3>
+<h3 lang="en">Using your own Alibaba Cloud key</h3>
+<p lang="zh">这种用法下 App 不连接我们的服务器，<strong>我们什么都不收集</strong>。</p>
+<p lang="en">In this mode the app does not contact our server, and <strong>we collect nothing</strong>.</p>
+
+<h3 lang="zh">两种用法都一样</h3>
+<h3 lang="en">Either way</h3>
+<p lang="zh">App 里没有第三方分析、广告或跟踪组件。我们不做统计、不投广告、不跨 App 或网站追踪你，也不出售或分享任何数据。</p>
+<p lang="en">The app contains no third-party analytics, advertising or tracking. We run no analytics or ads, do not track you
+across apps or websites, and do not sell or share any data.</p>
+
+<h2 lang="zh">服务器日志与保存期限</h2>
+<h2 lang="en">Server logs and retention</h2>
+<p lang="zh">连接服务器时，你的 IP 地址只在内存里用来限制请求频率（防刷），最后一次请求一小时后清掉，不写日志、不进数据库。
+服务器日志只记事件，比如「有一台设备登记」（只记账号 ID 的前 8 位）、「一笔购买入账」（商品和是否是测试购买）、
+「一笔退款」（交易号），以及出错信息。服务器日志保留 30 天后自动删除。</p>
+<p lang="en">Your IP address is used only in memory to limit request rates (to stop abuse) and is dropped an hour after your last request; it is
+not logged or stored. Server logs record events only, such as “a device registered” (with just the first 8 characters of the account ID),
+“a purchase was credited” (the product and whether it was a test purchase), “a refund was applied” (the transaction ID), and errors.
+Server logs are deleted automatically after 30 days.</p>
+<p lang="zh">账本每小时在服务器上做一份快照，保留最近 48 份；另外加密后传到异地备份，保留 30 天。账号、购买和使用记录在账号存续期间一直保留，
+对账和处理 Apple 的退款都要用到。</p>
+<p lang="en">The ledger is snapshotted on the server every hour, keeping the latest 48, and an encrypted copy is kept off-site for
+30 days. Account, purchase and usage records are kept for as long as the account exists, because they are needed to reconcile
+the books and to handle Apple refunds.</p>
 
 <h2 lang="zh">你的语音去了哪里</h2>
 <h2 lang="en">Where your speech goes</h2>
-<p lang="zh">传译进行时，麦克风采集的音频会<strong>实时发送给你在设置里选定的翻译服务商</strong>，
-用的是<strong>你自己的 API Key</strong>，连接由手机直连，不经过我们：</p>
-<p lang="en">While interpreting, the audio from your microphone is sent <strong>live to whichever translation
-provider you picked in settings</strong>, using <strong>your own API key</strong>, directly from your phone:</p>
+<p lang="zh">两种用法下，传译时麦克风采集的音频都<strong>从手机直接实时发往阿里云百炼</strong>（通义千问 LiveTranslate），
+不经过我们的服务器，我们听不到，也存不下：</p>
+<p lang="en">In both modes, the audio from your microphone goes <strong>live and directly from your phone to Alibaba Cloud Model
+Studio</strong> (Qwen LiveTranslate). It never passes through our server; we cannot hear it and have nothing to keep:</p>
 <ul>
-  <li lang="zh">通义千问 · LiveTranslate（<code>dashscope-intl.aliyuncs.com</code> 或 <code>dashscope.aliyuncs.com</code>）——
-    <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">其隐私政策</a></li>
-  <li lang="en">Qwen LiveTranslate (<code>dashscope-intl.aliyuncs.com</code> or <code>dashscope.aliyuncs.com</code>) —
-    <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">their privacy policy</a></li>
+  <li lang="zh">购买时长时，连接的是 <code>dashscope-intl.aliyuncs.com</code>（新加坡），用的是我们的阿里云账户：
+    服务器只给 App 签发一把 60 秒内有效的临时密钥去连接，音频按我们和阿里云之间的协议处理。</li>
+  <li lang="en">When you buy time, the app connects to <code>dashscope-intl.aliyuncs.com</code> (Singapore) on our Alibaba Cloud account:
+    our server only issues the app a temporary key that expires after 60 seconds, and the audio is handled under our agreement
+    with Alibaba Cloud.</li>
+  <li lang="zh">用自己的 Key 时，连接你在设置里选的站点（<code>dashscope-intl.aliyuncs.com</code> 或 <code>dashscope.aliyuncs.com</code>），
+    用的是你自己的 Key，音频按<strong>你和阿里云之间</strong>的协议处理。</li>
+  <li lang="en">With your own key, the app connects to the site you picked in settings (<code>dashscope-intl.aliyuncs.com</code> or
+    <code>dashscope.aliyuncs.com</code>) with your key, and the audio is handled under <strong>your</strong> agreement with Alibaba Cloud.</li>
+  <li lang="zh">阿里云如何处理音频，见
+    <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">其隐私政策</a>。</li>
+  <li lang="en">For what Alibaba Cloud does with the audio, see
+    <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">their privacy policy</a>.</li>
 </ul>
-<p lang="zh">这些服务商如何处理这段音频，取决于<strong>你和他们之间</strong>的协议，请以他们的隐私政策为准。
-App 里除这两个之外不向任何其他地址发送数据。</p>
-<p lang="en">What those providers do with the audio is governed by <strong>your</strong> agreement with them, so read
-their policies. The app sends data to no other address.</p>
-<p lang="zh"><strong>演示模式完全离线</strong>：它播放的是随 App 打包的预录音频，不联网、不用麦克风。</p>
-<p lang="en"><strong>Demo mode is fully offline</strong>: it plays audio bundled with the app, with no network and no microphone.</p>
+<p lang="zh">App 只连接这几处：阿里云百炼、我们的服务器（仅购买时长时），以及 Apple 的服务（App 内购买、App Attest、DeviceCheck）。</p>
+<p lang="en">The app connects only to Alibaba Cloud Model Studio, our server (only when buying time), and Apple's services
+(in-app purchase, App Attest, DeviceCheck).</p>
+<p lang="zh"><strong>译音用说话人的声音</strong>（默认开启，可在设置里关闭）：阿里云用同一段语音实时模仿说话人的音色来念译文，
+每句跟着当时说话的人走，双方说话时都是如此。App 和我们都不另外采集、保存或上传声纹，用的就是本来发去翻译的那段音频。</p>
+<p lang="en"><strong>Translations in the speaker's voice</strong> (on by default, can be turned off in settings): Alibaba Cloud imitates
+the speaker's voice live from the same audio it translates, following whoever is speaking — both people in a conversation.
+Neither the app nor we separately collect, store or upload any voiceprint; it is the same audio already sent for translation.</p>
 
 <h2 lang="zh">留在你手机上的东西</h2>
 <h2 lang="en">What stays on your phone</h2>
@@ -99,11 +169,19 @@ their policies. The app sends data to no other address.</p>
 <strong>never uploaded</strong> and are excluded from iCloud backup. You can read, export or delete them under
 “Transcripts” in the app; deleting the app removes them.</p>
 
+<h3 lang="zh">账号 ID</h3>
+<h3 lang="en">Account ID</h3>
+<p lang="zh">上面说的随机账号 ID 存在 iOS 钥匙串里，打开了 iCloud 钥匙串时会在你同一 Apple 账户的设备间同步（由 Apple 端到端加密）。
+卸载 App 不会删掉它，重装后余额还在。</p>
+<p lang="en">The random account ID described above is kept in the iOS Keychain and, if iCloud Keychain is on, syncs between
+your devices on the same Apple Account (end-to-end encrypted by Apple). Deleting the app does not remove it, so your balance is
+still there after a reinstall.</p>
+
 <h3 lang="zh">API Key</h3>
 <h3 lang="en">API keys</h3>
-<p lang="zh">你填写的 API Key 保存在 iOS <strong>钥匙串</strong>中，标记为「仅本机、解锁后可读」，
+<p lang="zh">你自己填写的 API Key 保存在 iOS <strong>钥匙串</strong>中，标记为「仅本机、解锁后可读」，
 既不上传也不随备份迁移到其他设备。</p>
-<p lang="en">The API keys you enter are kept in the iOS <strong>Keychain</strong>, marked as readable only on this
+<p lang="en">The API keys you enter yourself are kept in the iOS <strong>Keychain</strong>, marked as readable only on this
 device and only while it is unlocked. They are never uploaded and do not migrate to another device via backup.</p>
 
 <h2 lang="zh">麦克风</h2>
@@ -116,11 +194,29 @@ it resumes when the system permits. The system's orange microphone indicator sho
 
 <h2 lang="zh">购买</h2>
 <h2 lang="en">Purchases</h2>
-<p lang="zh">语言对的解锁通过 <strong>Apple 的 App 内购买</strong>完成。支付全过程由 Apple 处理，
-我们<strong>收不到也看不到</strong>你的支付方式、姓名或账单信息；App 只向系统询问「这个语言对是否已购买」。</p>
-<p lang="en">Language pairs are unlocked through <strong>Apple's in-app purchase</strong>. Apple handles payment
-end to end; we <strong>never receive or see</strong> your payment method, name or billing details. The app only
-asks the system whether a given pair has been bought.</p>
+<p lang="zh">购买时长和「全部语言」（用自己的 Key 时）都通过 <strong>Apple 的 App 内购买</strong>完成。支付全过程由 Apple 处理，
+我们<strong>收不到也看不到</strong>你的支付方式、姓名或账单信息。</p>
+<p lang="en">Buying time and “All languages” (when using your own key) both go through <strong>Apple's in-app
+purchase</strong>. Apple handles payment end to end; we <strong>never receive or see</strong> your payment method, name or billing details.</p>
+<ul>
+  <li lang="zh">购买时长：App 把账号 ID 交给 Apple 写进这笔交易，再把 Apple 签名的交易凭证交给我们的服务器核验、入账；
+    服务器只给交易里写明的那个账号加时长。退款由 Apple 处理，Apple 会通知服务器扣回相应时长。</li>
+  <li lang="en">Buying time: the app asks Apple to record your account ID in the transaction, then sends the transaction, signed by
+    Apple, to our server to verify and credit; the server credits only the account named in the transaction. Refunds are handled
+    by Apple, which notifies our server to take the time back.</li>
+  <li lang="zh">「全部语言」：App 只向系统询问「是否已购买」，不经过我们的服务器。</li>
+  <li lang="en">“All languages”: the app only asks the system whether it has been bought; our server is not involved.</li>
+</ul>
+
+<h2 lang="zh">查询与删除</h2>
+<h2 lang="en">Access and deletion</h2>
+<p lang="zh">你的账号 ID 在 App 的「设置 → 剩余时长」里，可以复制。想查询或删除服务器上关于你的记录，把它写信发到
+<a href="mailto:winer632@qq.com">winer632@qq.com</a>，我们会删除这个账号在服务器上的全部记录
+（快照和异地备份在各自的保留期后过期）。删除后剩余时长无法恢复。购买的退款请向 Apple 申请。</p>
+<p lang="en">Your account ID is under Settings → Time left in the app, with a Copy button. To see or delete what our server
+holds about you, send it to <a href="mailto:winer632@qq.com">winer632@qq.com</a> and we will delete all of that account’s records on
+the server (snapshots and the off-site copy expire after their retention periods). Remaining time cannot be restored after
+deletion. Refunds for purchases are requested from Apple.</p>
 
 <h2 lang="zh">儿童</h2>
 <h2 lang="en">Children</h2>
@@ -130,10 +226,10 @@ knowingly collect anything from them.</p>
 
 <h2 lang="zh">政策变更</h2>
 <h2 lang="en">Changes</h2>
-<p lang="zh">如果这份政策有实质性变化，我们会更新页面顶部的日期。由于 App 不收集数据、也没有账号，
-我们无法主动通知你，请以本页为准。</p>
-<p lang="en">If this policy changes materially we will update the date at the top. Since the app collects nothing
-and has no accounts, we have no way to notify you directly — this page is the record.</p>
+<p lang="zh">如果这份政策有实质性变化，我们会更新页面顶部的日期。App 不需要注册，我们没有你的联系方式，
+无法主动通知你，请以本页为准。</p>
+<p lang="en">If this policy changes materially we will update the date at the top. The app has no sign-up and we have no way
+to contact you, so this page is the record.</p>
 
 <h2 lang="zh">联系</h2>
 <h2 lang="en">Contact</h2>
