@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>技术支持 · 实时同声传译 / Support · Duo Interpreter</title>
+<title data-i18n="index.doc.title">Support · Duo Interpreter</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+<script src="i18n.js"></script>
 <style>
   :root {
+    color-scheme: light dark;
     --bg: #ffffff; --fg: #1a1c1e; --muted: #5c6166; --line: #e3e6e8;
     --accent: #2563eb; --card: #f7f8fa;
   }
@@ -17,27 +19,28 @@
   * { box-sizing: border-box; }
   body {
     margin: 0; padding: 0 16px 64px; background: var(--bg); color: var(--fg);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+  /* 中日韩共用汉字，字形要按语言挑字体；系统字体在 Apple 设备上会自己挑，这里照顾 Windows */
+  body:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  body:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; }
+  body:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  body:lang(ur) { line-height: 2.1; }
   main { max-width: 760px; margin: 0 auto; }
-  header { padding: 40px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  /* i18n.js 还在取文案时先不画正文，免得闪一下英文 */
+  html.i18n-wait main { visibility: hidden; }
+  header { padding: 16px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  .langbar { display: flex; justify-content: flex-end; min-height: 30px; margin-bottom: 10px; }
+  .langbar select { font: inherit; font-size: 14px; color: var(--fg); background: var(--card);
+                    border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; }
   h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
   h2 { font-size: 20px; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  [dir="rtl"] h1, [dir="rtl"] h2 { letter-spacing: 0; }
   .sub { color: var(--muted); margin: 0; font-size: 15px; }
   a { color: var(--accent); }
-  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; direction: ltr; unicode-bidi: isolate; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
-  /* 中英并置：英文跟在中文后面，压低一档以便一眼分辨哪句是哪句 */
-  main [lang="en"] { color: var(--muted); }
-  main h1[lang="en"] { font-size: 19px; font-weight: 600; margin: 2px 0 0; letter-spacing: 0; }
-  main h2[lang="en"] { font-size: 15px; font-weight: 600; margin: 2px 0 12px; }
-  main h3[lang="en"] { font-size: 14px; font-weight: 600; margin: 2px 0 8px; }
-  main h2[lang="zh"] { margin-bottom: 2px; }
-  main h3[lang="zh"] { margin-bottom: 2px; }
-  main p[lang="zh"], main li[lang="zh"] { margin-bottom: 4px; }
-  main p[lang="en"], main li[lang="en"] { margin-top: 0; font-size: 15px; }
-  .en-note { display: block; color: var(--muted); font-weight: 400; font-size: 14px; margin-top: 2px; }
   details { border-bottom: 1px solid var(--line); padding: 14px 0; }
   details summary { cursor: pointer; font-weight: 600; list-style: none; }
   details summary::-webkit-details-marker { display: none; }
@@ -51,162 +54,121 @@
 <main>
 
 <header>
-  <h1 lang="zh">🎙 实时同声传译 · 技术支持</h1>
-  <h1 lang="en">🎙 Duo Interpreter · Support</h1>
-  <p class="sub" lang="zh">面对面的双向实时口译。说话即出字幕与译音，方向自动识别。</p>
-  <p class="sub" lang="en">Two-way interpreting for talking face to face. Subtitles and speech as you go, with the direction worked out for you.</p>
+  <div class="langbar" data-lang-picker></div>
+  <h1 data-i18n="index.title">🎙 Duo Interpreter · Support</h1>
+  <p class="sub" data-i18n="index.sub">Two-way interpreting for talking face to face. Subtitles and speech as you go,
+  with the direction worked out for you.</p>
 </header>
 
-<h2 lang="zh">先用送的 5 分钟试试</h2>
-<h2 lang="en">Try it with five free minutes</h2>
+<h2 data-i18n="index.trial.title">Try it with five free minutes</h2>
 <div class="card">
-  <p lang="zh">不用注册，也不用填 Key：在一台新设备上第一次打开，App 会送 <strong>5 分钟试用</strong>，顶部显示剩余时长。
-  在字幕上方选好「我说」和「对方说」，点「开始传译」，直接说话——这就是真实的传译，字幕和译音都是现场出来的。
-  每台设备只送一次；用完了可以在 App 里买时长，或者改用自己的阿里云 Key。</p>
-  <p lang="en">No sign-up and no key: the first time you open the app on a new device it gives you <strong>five free
-  minutes</strong>, shown at the top. Pick “I speak” and “They speak” above the subtitles, press Start and just talk —
-  this is real interpreting, with subtitles and speech as you go. Each device gets the trial once; after that, buy time
-  in the app or use your own Alibaba Cloud key.</p>
+  <p data-i18n="index.trial.p">No sign-up and no key: the first time you open the app on a new device it gives you
+  <strong>five free minutes</strong>, shown at the top. Pick “I speak” and “They speak” above the subtitles, press Start
+  and just talk — this is real interpreting, with subtitles and speech as you go. Each device gets the trial once;
+  after that, buy time in the app or use your own Alibaba Cloud key.</p>
 </div>
 
-<h2 lang="zh">正式使用</h2>
-<h2 lang="en">Using it for real</h2>
-<p lang="zh">两种付费方式，在<strong>设置 → 计费方式</strong>里选：</p>
-<p lang="en">Two ways to pay, chosen under <strong>Settings → How to pay</strong>:</p>
+<h2 data-i18n="index.pay.title">Using it for real</h2>
+<p data-i18n="index.pay.intro">Two ways to pay, chosen under <strong>Settings → How to pay</strong>:</p>
 <ul>
-  <li lang="zh"><strong>在 App 里买传译时长</strong>（默认）——不用注册任何账号，打开就能用，新设备送 5 分钟试用。
-    有 1 / 5 / 10 小时三档，所有语言都能用。开着译音 1 分钟扣 1 分钟，只看字幕扣三分之一。</li>
-  <li lang="en"><strong>Buy interpreting time in the app</strong> (the default) — no account of any kind; open it and go,
-    with five free minutes on a new device. Comes in 1, 5 and 10 hours and covers every language. With spoken
-    translation a minute costs a minute; subtitles only cost a third.</li>
-  <li lang="zh"><strong>用自己的阿里云 Key</strong>——由阿里云直接按用量向你收费。这时「中文 ⇄ 英语」免费，
-    其余语言一次买断「全部语言」，永久有效，以后新增的语言也包含在内。
-    <a href="./setup.html">申请 API Key 的图文教程 →</a></li>
-  <li lang="en"><strong>Use your own Alibaba Cloud key</strong> — Alibaba Cloud bills you directly for what you use.
-    Chinese ⇄ English is then free; everything else unlocks with a single “All languages” purchase, for good,
-    including languages added later. <a href="./setup.html">Step-by-step guide to getting an API key →</a></li>
+  <li data-i18n="index.pay.credit"><strong>Buy interpreting time in the app</strong> (the default) — no account of any
+    kind; open it and go, with five free minutes on a new device. Comes in 1, 5 and 10 hours and covers every language.
+    With spoken translation a minute costs a minute; subtitles only cost a third.</li>
+  <li data-i18n="index.pay.key"><strong>Use your own Alibaba Cloud key</strong> — Alibaba Cloud bills you directly for
+    what you use. Chinese ⇄ English is then free; everything else unlocks with a single “All languages” purchase, for
+    good, including languages added later. <a href="./setup.html">Step-by-step guide to getting an API key →</a></li>
 </ul>
 
-<h2 lang="zh">支持的语言</h2>
-<h2 lang="en">Languages</h2>
-<p lang="zh">在字幕上方的两栏里选：左边「我说」，右边「对方说」。下面 24 种语言之间都能互译（只有下面列出的几组除外），
-方向自动识别：</p>
-<p lang="en">Pick them in the two columns above the subtitles: “I speak” on the left, “They speak” on the right.
-These 24 languages interpret with each other — all but the few combinations listed below — with the direction
-worked out for you:</p>
-<p lang="zh">中文、英语、日语、韩语、德语、法语、西班牙语、葡萄牙语、意大利语、俄语、印地语、印尼语、越南语、
-阿拉伯语、泰语、土耳其语、菲律宾语、波兰语、乌尔都语、希伯来语、波斯语、马来语、荷兰语、孟加拉语</p>
-<p lang="en">Chinese, English, Japanese, Korean, German, French, Spanish, Portuguese, Italian, Russian, Hindi,
-Indonesian, Vietnamese, Arabic, Thai, Turkish, Filipino, Polish, Urdu, Hebrew, Persian, Malay, Dutch, Bangla</p>
+<h2 data-i18n="index.langs.title">Languages</h2>
+<p data-i18n="index.langs.intro">Pick them in the two columns above the subtitles: “I speak” on the left, “They speak”
+on the right. These 24 languages interpret with each other — all but the few combinations listed below — with the
+direction worked out for you:</p>
+<p data-i18n="index.langs.list">Chinese, English, Japanese, Korean, German, French, Spanish, Portuguese, Italian,
+Russian, Hindi, Indonesian, Vietnamese, Arabic, Thai, Turkish, Filipino, Polish, Urdu, Hebrew, Persian, Malay, Dutch,
+Bangla</p>
 <ul>
-  <li lang="zh"><strong>孟加拉语只有字幕</strong>：别人的话译成孟加拉语时只出字幕、没有译音；说孟加拉语照样有译音。</li>
-  <li lang="en"><strong>Bangla is subtitles only</strong>: what others say is shown in Bangla as text, not spoken;
-    speaking Bangla still gets a spoken translation.</li>
-  <li lang="zh">不配对的几组：印尼语与马来语、印地语与乌尔都语（口语基本相通），以及阿拉伯语、乌尔都语、波斯语彼此之间
-    （同用阿拉伯字母，暂时分不出是谁在说）。</li>
-  <li lang="en">A few combinations are left out: Indonesian with Malay and Hindi with Urdu (people already understand
-    each other), and Arabic, Urdu and Persian with each other (same alphabet; the app cannot yet tell who is
-    speaking).</li>
-  <li lang="zh"><strong>粤语 ⇄ 普通话</strong>——说粤语有译音，反过来只有字幕。</li>
-  <li lang="en"><strong>Cantonese ⇄ Mandarin</strong> — spoken one way, subtitles the other.</li>
+  <li data-i18n="index.langs.bangla"><strong>Bangla is subtitles only</strong>: what others say is shown in Bangla as
+    text, not spoken; speaking Bangla still gets a spoken translation.</li>
+  <li data-i18n="index.langs.unpaired">A few combinations are left out: Indonesian with Malay and Hindi with Urdu
+    (people already understand each other), and Arabic, Urdu and Persian with each other (same alphabet; the app cannot
+    yet tell who is speaking).</li>
+  <li data-i18n="index.langs.cantonese"><strong>Cantonese ⇄ Mandarin</strong> — spoken one way, subtitles the
+    other.</li>
 </ul>
 
-<h2 lang="zh">常见问题</h2>
-<h2 lang="en">Common questions</h2>
+<h2 data-i18n="index.faq.title">Common questions</h2>
 
 <details>
-  <summary>没有声音<span class="en-note">No sound</span></summary>
-  <p lang="zh">先看 iPhone 左侧上方的<strong>静音拨片</strong>有没有拨到静音（露出橙色）。
-  再确认界面顶部的「译音」没有选成「译音关」，以及译成的那种语言不是只有字幕的孟加拉语或粤语。还是没有的话，把音量调大一些——
-  听筒和外放用的是两套独立的音量刻度。</p>
-  <p lang="en">Check the <strong>ring/silent switch</strong> above the volume buttons on the left edge — orange
-  means silent. Then make sure the speech selector at the top is not set to off, and that you are not translating into Bangla or
-  Cantonese, which are subtitles only. If it is still quiet, turn
-  the volume up: the earpiece and the speaker have separate volume levels.</p>
+  <summary data-i18n="index.faq.sound.q">No sound</summary>
+  <p data-i18n="index.faq.sound.a">Check the <strong>ring/silent switch</strong> above the volume buttons on the left
+  edge — orange means silent. Then make sure the speech selector at the top is not set to “🔇 Voice off”, and that you
+  are not translating into Bangla or Cantonese, which are subtitles only. If it is still quiet, turn the volume up: the
+  earpiece and the speaker have separate volume levels.</p>
 </details>
 
 <details>
-  <summary>想贴着耳朵听，不想外放<span class="en-note">Listening privately instead of out loud</span></summary>
-  <p lang="zh">把顶部的「译音」切到 <strong>📞 听筒</strong>，译音就从听筒出声，像打电话一样贴耳听。
-  传译进行中也可以随时切换。</p>
-  <p lang="en">Switch the speech selector at the top to <strong>📞 Earpiece</strong> and the translation comes out of
-  the receiver, held to your ear like a call. You can switch at any time, including mid-session.</p>
+  <summary data-i18n="index.faq.earpiece.q">Listening privately instead of out loud</summary>
+  <p data-i18n="index.faq.earpiece.a">Switch the speech selector at the top to <strong>📞 Earpiece</strong> and the
+  translation comes out of the receiver, held to your ear like a call. You can switch at any time, including
+  mid-session.</p>
 </details>
 
 <details>
-  <summary>提示「麦克风已被系统断开」<span class="en-note">“The system disconnected the microphone”</span></summary>
-  <p lang="zh">通常是别的应用抢走了麦克风（来电、语音消息、录音类 App），或蓝牙耳机切换了模式。
-  停止后重新开始即可恢复。如果插着蓝牙耳机反复出现，换成内置麦克风或有线耳机试试。</p>
-  <p lang="en">Usually another app took the microphone — a call, a voice message, a recorder — or a Bluetooth
-  headset changed modes. Stop and start again to recover. If it keeps happening with Bluetooth, try the built-in
-  microphone or a wired headset.</p>
+  <summary data-i18n="index.faq.mic.q">“The system disconnected the microphone”</summary>
+  <p data-i18n="index.faq.mic.a">Usually another app took the microphone — a call, a voice message, a recorder — or a
+  Bluetooth headset changed modes. Stop and start again to recover. If it keeps happening with Bluetooth, try the
+  built-in microphone or a wired headset.</p>
 </details>
 
 <details>
-  <summary>外放时出现啸叫或回音<span class="en-note">Howling or echo when using the speaker</span></summary>
-  <p lang="zh">同一个房间里外放，扬声器的译音会被麦克风重新拾到。
-  在<strong>设置 → 回声处理</strong>里改成「播放译音时压低麦克风」或「静音麦克风」，
-  也可以把扬声器音量调低一些。改用听筒则完全不会有这个问题。</p>
-  <p lang="en">In one room, the speaker's output gets picked up by the microphone again. Under
-  <strong>Settings → Echo handling</strong>, choose to duck or mute the microphone while the translation plays, or
+  <summary data-i18n="index.faq.echo.q">Howling or echo when using the speaker</summary>
+  <p data-i18n="index.faq.echo.a">In one room, the speaker's output gets picked up by the microphone again. Under
+  <strong>Settings → Echo handling</strong>, choose “Lower mic during playback” or “Mute mic during playback”, or
   simply lower the volume. Using the earpiece avoids this entirely.</p>
 </details>
 
 <details>
-  <summary>字幕停住不动了<span class="en-note">Subtitles stopped updating</span></summary>
-  <p lang="zh">界面顶部会显示健康状态。常见原因是网络中断，或麦克风被系统静音——
-  后者会有明确提示。停止再开始通常就好；买时长的话看看顶部的剩余时长；自带 Key 时如果阿里云报额度问题，界面上会原样转述它的错误信息。</p>
-  <p lang="en">The bar at the top shows the session's health. The usual causes are a dropped network or the system
-  muting the microphone, which is reported explicitly. Stopping and starting again normally clears it. With bought
-  time, check the time left at the top; with your own key, a quota problem from Alibaba Cloud is passed through as-is.</p>
+  <summary data-i18n="index.faq.stuck.q">Subtitles stopped updating</summary>
+  <p data-i18n="index.faq.stuck.a">The bar at the top shows the session's health. The usual causes are a dropped
+  network or the system muting the microphone, which is reported explicitly. Stopping and starting again normally
+  clears it. With bought time, check the time left at the top; with your own key, a quota problem from Alibaba Cloud is
+  passed through as-is.</p>
 </details>
 
 <details>
-  <summary>换了手机，买过的时长和语言怎么办<span class="en-note">Moving to a new phone</span></summary>
-  <p lang="zh">买的时长记在你的账号上。账号是 App 自动生成的随机 ID，存在 iCloud 钥匙串里：
-  新手机登录同一个 Apple 账户、打开 iCloud 钥匙串，余额就在。
-  自带 Key 时买的「全部语言」，在<strong>设置 → 全部语言 → 恢复购买</strong>里取回，不会二次收费。</p>
-  <p lang="en">Bought time belongs to your account, a random ID the app creates and keeps in iCloud Keychain: sign in
-  to the same Apple Account on the new phone with iCloud Keychain on, and the balance is there. “All languages”, bought
-  when using your own key, comes back under <strong>Settings → All languages → Restore purchases</strong> at no
-  charge.</p>
+  <summary data-i18n="index.faq.phone.q">Moving to a new phone</summary>
+  <p data-i18n="index.faq.phone.a">Bought time belongs to your account, a random ID the app creates and keeps in iCloud
+  Keychain: sign in to the same Apple Account on the new phone with iCloud Keychain on, and the balance is there. “All
+  languages”, bought when using your own key, comes back under <strong>Settings → All languages → Restore
+  purchases</strong> at no charge.</p>
 </details>
 
 <details>
-  <summary>「粤 ⇄ 普」为什么反过来没有声音<span class="en-note">Why Cantonese ⇄ Mandarin only speaks one way</span></summary>
-  <p lang="zh">模型能<strong>听懂</strong>粤语，也能<strong>写</strong>粤语，但没法<strong>说</strong>粤语——
-  它在官方语言表里属于「只有字幕」那一档。所以说粤语时会听到普通话译音；说普通话时，
-  粤语译文只会以字幕出现。这一对两边都是汉字，方向自动判不出来，请用方向开关手动指定。</p>
-  <p lang="en">The model can <strong>understand</strong> and <strong>write</strong> Cantonese, but not
-  <strong>speak</strong> it — in the provider's language table it is subtitles-only. So speaking Cantonese gives you
-  spoken Mandarin; speaking Mandarin gives you Cantonese subtitles only. Both sides use Chinese characters, so the
-  direction cannot be detected automatically — set it with the direction selector.</p>
+  <summary data-i18n="index.faq.cantonese.q">Why Cantonese ⇄ Mandarin only speaks one way</summary>
+  <p data-i18n="index.faq.cantonese.a">The model can <strong>understand</strong> and <strong>write</strong> Cantonese,
+  but not <strong>speak</strong> it — in the provider's language table it is subtitles-only. So speaking Cantonese
+  gives you spoken Mandarin; speaking Mandarin gives you Cantonese subtitles only. Both sides use Chinese characters, so
+  the direction cannot be detected automatically — set it with the direction selector.</p>
 </details>
 
 <details>
-  <summary>西班牙语和葡萄牙语这类组合，方向偶尔会判反<span class="en-note">Direction occasionally flips, e.g. between Spanish and Portuguese</span></summary>
-  <p lang="zh">两种语言用同一套字母时（英、西、葡、意、法、德、印尼、越南语等之间），判别只能靠用词，
-  短句或专有名词上可能拿不准。这类组合的顶部会多出一个方向开关，把它从「自动」改成固定方向即可按住。</p>
-  <p lang="en">When both languages share an alphabet (English, Spanish, Portuguese, Italian, French, German,
-  Indonesian, Vietnamese and so on), detection goes by word choice and can waver on short phrases or names. These
-  combinations get an extra direction control at the top — switch it from automatic to a fixed direction to pin it.</p>
+  <summary data-i18n="index.faq.direction.q">Direction occasionally flips, e.g. between Spanish and Portuguese</summary>
+  <p data-i18n="index.faq.direction.a">When both languages share an alphabet (English, Spanish, Portuguese, Italian,
+  French, German, Indonesian, Vietnamese and so on), detection goes by word choice and can waver on short phrases or
+  names. These combinations get an extra direction control at the top — switch it from “Direction · automatic” to a
+  fixed direction to pin it.</p>
 </details>
 
-<h2 lang="zh">联系我们</h2>
-<h2 lang="en">Getting in touch</h2>
-<p lang="zh">问题、建议、退款咨询都可以写信到
-<a href="mailto:winer632@qq.com">winer632@qq.com</a>，一般一到两个工作日内回复。
-描述问题时如果能附上机型、iOS 版本、用的是哪两种语言、买时长还是自带 Key，排查会快很多。
-买时长的问题请附上<strong>设置里的账号 ID</strong>。</p>
-<p lang="en">Questions, suggestions and refund enquiries all go to
-<a href="mailto:winer632@qq.com">winer632@qq.com</a>, usually answered within a business day or two.
-Telling us the device, the iOS version, the two languages, and whether you bought time or use your own key makes
-it much quicker. For bought time, include the <strong>account ID</strong> shown in Settings.</p>
+<h2 data-i18n="index.contact.title">Getting in touch</h2>
+<p data-i18n="index.contact.p">Questions, suggestions and refund enquiries all go to
+<a href="mailto:winer632@qq.com">winer632@qq.com</a>, usually answered within a business day or two. Telling us the
+device, the iOS version, the two languages, and whether you bought time or use your own key makes it much quicker. For
+bought time, include the <strong>account ID</strong> shown in Settings.</p>
 
 <nav>
-  <a href="./setup.html"><span lang="zh">申请 API Key</span><span lang="en">Getting an API key</span></a>
+  <a href="./setup.html" data-i18n="nav.setup">Getting an API key</a>
   &nbsp;·&nbsp;
-  <a href="./privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy policy</span> →</a>
+  <a href="./privacy.html" data-i18n="nav.privacy">Privacy policy</a>
 </nav>
 
 </main>

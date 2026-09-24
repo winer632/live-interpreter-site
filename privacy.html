@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>隐私政策 · 实时同声传译 / Privacy Policy · Duo Interpreter</title>
+<title data-i18n="privacy.doc.title">Privacy Policy · Duo Interpreter</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+<script src="i18n.js"></script>
 <style>
   :root {
+    color-scheme: light dark;
     --bg: #ffffff; --fg: #1a1c1e; --muted: #5c6166; --line: #e3e6e8;
     --accent: #2563eb; --card: #f7f8fa;
   }
@@ -17,29 +19,31 @@
   * { box-sizing: border-box; }
   body {
     margin: 0; padding: 0 16px 64px; background: var(--bg); color: var(--fg);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+  /* 中日韩共用汉字，字形要按语言挑字体；系统字体在 Apple 设备上会自己挑，这里照顾 Windows */
+  body:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  body:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; }
+  body:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  body:lang(ur) { line-height: 2.1; }
   main { max-width: 760px; margin: 0 auto; }
-  header { padding: 40px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+  /* i18n.js 还在取文案时先不画正文，免得闪一下英文 */
+  html.i18n-wait main { visibility: hidden; }
+  header { padding: 16px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+  .langbar { display: flex; justify-content: flex-end; min-height: 30px; margin-bottom: 10px; }
+  .langbar select { font: inherit; font-size: 14px; color: var(--fg); background: var(--card);
+                    border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; }
   h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
   h2 { font-size: 20px; margin: 40px 0 12px; letter-spacing: -0.01em; }
   h3 { font-size: 16px; margin: 24px 0 8px; }
+  [dir="rtl"] h1, [dir="rtl"] h2 { letter-spacing: 0; }
   p, li { color: var(--fg); }
   .sub { color: var(--muted); margin: 0; font-size: 15px; }
+  .translated { color: var(--muted); font-size: 14px; margin: 10px 0 0; }
   a { color: var(--accent); }
-  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; direction: ltr; unicode-bidi: isolate; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
-  /* 中英并置：英文跟在中文后面，压低一档以便一眼分辨哪句是哪句 */
-  main [lang="en"] { color: var(--muted); }
-  main h1[lang="en"] { font-size: 19px; font-weight: 600; margin: 2px 0 0; letter-spacing: 0; }
-  main h2[lang="en"] { font-size: 15px; font-weight: 600; margin: 2px 0 12px; }
-  main h3[lang="en"] { font-size: 14px; font-weight: 600; margin: 2px 0 8px; }
-  main h2[lang="zh"] { margin-bottom: 2px; }
-  main h3[lang="zh"] { margin-bottom: 2px; }
-  main p[lang="zh"], main li[lang="zh"] { margin-bottom: 4px; }
-  main p[lang="en"], main li[lang="en"] { margin-top: 0; font-size: 15px; }
-  .en-note { display: block; color: var(--muted); font-weight: 400; font-size: 14px; margin-top: 2px; }
   nav { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
 </style>
 </head>
@@ -47,197 +51,140 @@
 <main>
 
 <header>
-  <h1 lang="zh">隐私政策</h1>
-  <h1 lang="en">Privacy Policy</h1>
-  <p class="sub" lang="zh">实时同声传译 · 最后更新 2026 年 9 月 24 日</p>
-  <p class="sub" lang="en">Duo Interpreter · Last updated 24 September 2026</p>
+  <div class="langbar" data-lang-picker></div>
+  <h1 data-i18n="privacy.title">Privacy Policy</h1>
+  <p class="sub" data-i18n="privacy.sub">Duo Interpreter · Last updated 24 September 2026</p>
+  <!-- 只有译文里有这句（中文和英文是原文，没有）：法律文本以原文为准 -->
+  <p class="translated" data-i18n="privacy.translated" hidden></p>
 </header>
 
 <div class="card">
-  <p lang="zh"><strong>一句话版本：</strong>App 有两种用法。默认的「购买时长」不用注册：你的语音从手机直接发往阿里云百炼翻译，
-  <strong>不经过我们的服务器</strong>；我们的服务器只记一个随机生成的账号号码、你买了多少时长、用了多少时长。
-  选「用自己的阿里云 Key」时，我们什么都不收集。App 里没有统计、广告和追踪，字幕记录只存在你的手机里。</p>
-  <p lang="en"><strong>In short:</strong> the app works in two ways. By default you buy interpreting time, with no sign-up:
-  your speech goes straight from your phone to Alibaba Cloud Model Studio for translation and <strong>never passes through
-  our server</strong>; our server only keeps a randomly generated account number, how much time you bought and how much you used.
-  If you use your own Alibaba Cloud key instead, we collect nothing. There is no analytics, advertising or tracking,
-  and transcripts stay on your phone.</p>
+  <p data-i18n="privacy.short"><strong>In short:</strong> the app works in two ways. By default you buy interpreting
+  time, with no sign-up: your speech goes straight from your phone to Alibaba Cloud Model Studio for translation and
+  <strong>never passes through our server</strong>; our server only keeps a randomly generated account number, how much
+  time you bought and how much you used. If you use your own Alibaba Cloud key instead, we collect nothing. There is no
+  analytics, advertising or tracking, and transcripts stay on your phone.</p>
 </div>
 
-<h2 lang="zh">我们收集什么</h2>
-<h2 lang="en">What we collect</h2>
-<p lang="zh">取决于你在「设置 → 计费方式」里选的是哪一种。</p>
-<p lang="en">It depends on what you chose under Settings → Billing.</p>
+<h2 data-i18n="privacy.collect.title">What we collect</h2>
+<p data-i18n="privacy.collect.intro">It depends on what you chose under Settings → How to pay.</p>
 
-<h3 lang="zh">购买时长（默认，免注册）</h3>
-<h3 lang="en">Buying time (the default, no sign-up)</h3>
-<p lang="zh">为了记住你买了多少时长、防止被盗刷，App 会连接我们的服务器 <code>api.duo-interpreter.com</code>
-（部署在 Microsoft Azure 新加坡区域）。服务器保存这些：</p>
-<p lang="en">To remember how much time you bought and to stop abuse, the app talks to our server
+<h3 data-i18n="privacy.credit.title">Buying time (the default, no sign-up)</h3>
+<p data-i18n="privacy.credit.intro">To remember how much time you bought and to stop abuse, the app talks to our server
 <code>api.duo-interpreter.com</code> (hosted on Microsoft Azure in Singapore). The server keeps:</p>
 <ul>
-  <li lang="zh"><strong>随机账号 ID</strong>：App 第一次用时随机生成的一串号码（UUID），和你的姓名、邮箱、电话、Apple 账户都没有关系。
-    它存在你的 iCloud 钥匙串里，所以重装 App、换同一 Apple 账户的新手机，余额都还在。</li>
-  <li lang="en"><strong>A random account ID</strong>: a number (a UUID) the app generates the first time you use it. It has nothing to do
-    with your name, email, phone number or Apple Account. It is kept in your iCloud Keychain, so your balance survives reinstalls and
-    follows you to new phones on the same Apple Account.</li>
-  <li lang="zh"><strong>设备凭证</strong>：每台设备一把 Apple App Attest 密钥的编号和公钥，以及登记时间、最后一次使用时间。
-    用来确认请求来自这个 App 的正版安装，而不是被篡改的程序。</li>
-  <li lang="en"><strong>Device credentials</strong>: for each device, the identifier and public key of an Apple App Attest key, with when it was
-    registered and last used. They prove that requests come from a genuine copy of this app, not a modified one.</li>
-  <li lang="zh"><strong>购买记录</strong>：Apple 的交易号、商品（1、5 或 10 小时）、购买时间、是否是测试（沙盒）购买、是否已退款。</li>
-  <li lang="en"><strong>Purchases</strong>: Apple's transaction ID, the product (1, 5 or 10 hours), when it was bought, whether it was a test
-    (sandbox) purchase, and whether it was refunded.</li>
-  <li lang="zh"><strong>使用记录</strong>：每次传译的开始和结束时间、模式（念出译文或只出字幕）、扣了多少时长、这次传译向服务器要了几次临时密钥，
-    以及余额的每一笔增减。</li>
-  <li lang="en"><strong>Usage</strong>: when each interpreting session started and ended, its mode (spoken translation or subtitles only),
-    how much time it used, how many temporary keys it asked for, and every change to your balance.</li>
+  <li data-i18n="privacy.credit.id"><strong>A random account ID</strong>: a number (a UUID) the app generates the first
+    time you use it. It has nothing to do with your name, email, phone number or Apple Account. It is kept in your
+    iCloud Keychain, so your balance survives reinstalls and follows you to new phones on the same Apple Account.</li>
+  <li data-i18n="privacy.credit.device"><strong>Device credentials</strong>: for each device, the identifier and public
+    key of an Apple App Attest key, with when it was registered and last used. They prove that requests come from a
+    genuine copy of this app, not a modified one.</li>
+  <li data-i18n="privacy.credit.purchases"><strong>Purchases</strong>: Apple's transaction ID, the product (1, 5 or 10
+    hours), when it was bought, whether it was a test (sandbox) purchase, and whether it was refunded.</li>
+  <li data-i18n="privacy.credit.usage"><strong>Usage</strong>: when each interpreting session started and ended, its
+    mode (spoken translation or subtitles only), how much time it used, how many temporary keys it asked for, and every
+    change to your balance.</li>
 </ul>
-<p lang="zh"><strong>新设备送的 5 分钟试用</strong>每台设备只送一次。为了防止重复领，App 会把 Apple DeviceCheck 生成的一次性令牌交给服务器，
-服务器拿它请 Apple 查一下、再标记 Apple 替我们给这台设备保存的 1 个比特（「领过试用」）。令牌用完即弃，服务器不保存；
-Apple 只替我们记这 1 个比特，不会告诉我们这是哪台设备。</p>
-<p lang="en"><strong>The 5-minute trial</strong> is given once per device. To prevent repeat claims the app hands the server a one-time
-Apple DeviceCheck token; the server uses it to ask Apple to check, then set, a single bit Apple keeps for this device on our behalf
-(“trial used”). The token is used once and not stored, and Apple keeps only that bit for us, without telling us which device it is.</p>
-<p lang="zh">服务器<strong>收不到</strong>：你的语音、字幕和翻译内容，你的姓名、邮箱、电话、位置、通讯录，以及你的付款方式。</p>
-<p lang="en">The server <strong>never receives</strong> your speech, subtitles or translations, your name, email, phone number,
-location or contacts, or your payment details.</p>
+<p data-i18n="privacy.credit.trial"><strong>The 5-minute trial</strong> is given once per device. To prevent repeat
+claims the app hands the server a one-time Apple DeviceCheck token; the server uses it to ask Apple to check, then set,
+a single bit Apple keeps for this device on our behalf (“trial used”). The token is used once and not stored, and Apple
+keeps only that bit for us, without telling us which device it is.</p>
+<p data-i18n="privacy.credit.never">The server <strong>never receives</strong> your speech, subtitles or translations,
+your name, email, phone number, location or contacts, or your payment details.</p>
 
-<h3 lang="zh">用自己的阿里云 Key</h3>
-<h3 lang="en">Using your own Alibaba Cloud key</h3>
-<p lang="zh">这种用法下 App 不连接我们的服务器，<strong>我们什么都不收集</strong>。</p>
-<p lang="en">In this mode the app does not contact our server, and <strong>we collect nothing</strong>.</p>
+<h3 data-i18n="privacy.key.title">Using your own Alibaba Cloud key</h3>
+<p data-i18n="privacy.key.p">In this mode the app does not contact our server, and <strong>we collect
+nothing</strong>.</p>
 
-<h3 lang="zh">两种用法都一样</h3>
-<h3 lang="en">Either way</h3>
-<p lang="zh">App 里没有第三方分析、广告或跟踪组件。我们不做统计、不投广告、不跨 App 或网站追踪你，也不出售或分享任何数据。</p>
-<p lang="en">The app contains no third-party analytics, advertising or tracking. We run no analytics or ads, do not track you
-across apps or websites, and do not sell or share any data.</p>
+<h3 data-i18n="privacy.both.title">Either way</h3>
+<p data-i18n="privacy.both.p">The app contains no third-party analytics, advertising or tracking. We run no analytics
+or ads, do not track you across apps or websites, and do not sell or share any data.</p>
 
-<h2 lang="zh">服务器日志与保存期限</h2>
-<h2 lang="en">Server logs and retention</h2>
-<p lang="zh">连接服务器时，你的 IP 地址只在内存里用来限制请求频率（防刷），最后一次请求一小时后清掉，不写日志、不进数据库。
-服务器日志只记事件，比如「有一台设备登记」（只记账号 ID 的前 8 位）、「一笔购买入账」（商品和是否是测试购买）、
-「一笔退款」（交易号），以及出错信息。服务器日志保留 30 天后自动删除。</p>
-<p lang="en">Your IP address is used only in memory to limit request rates (to stop abuse) and is dropped an hour after your last request; it is
-not logged or stored. Server logs record events only, such as “a device registered” (with just the first 8 characters of the account ID),
-“a purchase was credited” (the product and whether it was a test purchase), “a refund was applied” (the transaction ID), and errors.
-Server logs are deleted automatically after 30 days.</p>
-<p lang="zh">账本每小时在服务器上做一份快照，保留最近 48 份；另外加密后传到异地备份，保留 30 天。账号、购买和使用记录在账号存续期间一直保留，
-对账和处理 Apple 的退款都要用到。</p>
-<p lang="en">The ledger is snapshotted on the server every hour, keeping the latest 48, and an encrypted copy is kept off-site for
-30 days. Account, purchase and usage records are kept for as long as the account exists, because they are needed to reconcile
-the books and to handle Apple refunds.</p>
+<h2 data-i18n="privacy.logs.title">Server logs and retention</h2>
+<p data-i18n="privacy.logs.ip">Your IP address is used only in memory to limit request rates (to stop abuse) and is
+dropped an hour after your last request; it is not logged or stored. Server logs record events only, such as “a device
+registered” (with just the first 8 characters of the account ID), “a purchase was credited” (the product and whether it
+was a test purchase), “a refund was applied” (the transaction ID), and errors. Server logs are deleted automatically
+after 30 days.</p>
+<p data-i18n="privacy.logs.ledger">The ledger is snapshotted on the server every hour, keeping the latest 48, and an
+encrypted copy is kept off-site for 30 days. Account, purchase and usage records are kept for as long as the account
+exists, because they are needed to reconcile the books and to handle Apple refunds.</p>
 
-<h2 lang="zh">你的语音去了哪里</h2>
-<h2 lang="en">Where your speech goes</h2>
-<p lang="zh">两种用法下，传译时麦克风采集的音频都<strong>从手机直接实时发往阿里云百炼</strong>（通义千问 LiveTranslate），
-不经过我们的服务器，我们听不到，也存不下：</p>
-<p lang="en">In both modes, the audio from your microphone goes <strong>live and directly from your phone to Alibaba Cloud Model
-Studio</strong> (Qwen LiveTranslate). It never passes through our server; we cannot hear it and have nothing to keep:</p>
+<h2 data-i18n="privacy.speech.title">Where your speech goes</h2>
+<p data-i18n="privacy.speech.intro">In both modes, the audio from your microphone goes <strong>live and directly from
+your phone to Alibaba Cloud Model Studio</strong> (Qwen LiveTranslate). It never passes through our server; we cannot
+hear it and have nothing to keep:</p>
 <ul>
-  <li lang="zh">购买时长时，连接的是 <code>dashscope-intl.aliyuncs.com</code>（新加坡），用的是我们的阿里云账户：
-    服务器只给 App 签发一把 60 秒内有效的临时密钥去连接，音频按我们和阿里云之间的协议处理。</li>
-  <li lang="en">When you buy time, the app connects to <code>dashscope-intl.aliyuncs.com</code> (Singapore) on our Alibaba Cloud account:
-    our server only issues the app a temporary key that expires after 60 seconds, and the audio is handled under our agreement
-    with Alibaba Cloud.</li>
-  <li lang="zh">用自己的 Key 时，连接你在设置里选的站点（<code>dashscope-intl.aliyuncs.com</code> 或 <code>dashscope.aliyuncs.com</code>），
-    用的是你自己的 Key，音频按<strong>你和阿里云之间</strong>的协议处理。</li>
-  <li lang="en">With your own key, the app connects to the site you picked in settings (<code>dashscope-intl.aliyuncs.com</code> or
-    <code>dashscope.aliyuncs.com</code>) with your key, and the audio is handled under <strong>your</strong> agreement with Alibaba Cloud.</li>
-  <li lang="zh">阿里云如何处理音频，见
-    <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">其隐私政策</a>。</li>
-  <li lang="en">For what Alibaba Cloud does with the audio, see
+  <li data-i18n="privacy.speech.credit">When you buy time, the app connects to <code>dashscope-intl.aliyuncs.com</code>
+    (Singapore) on our Alibaba Cloud account: our server only issues the app a temporary key that expires after 60
+    seconds, and the audio is handled under our agreement with Alibaba Cloud.</li>
+  <li data-i18n="privacy.speech.key">With your own key, the app connects to the site you picked in settings
+    (<code>dashscope-intl.aliyuncs.com</code> or <code>dashscope.aliyuncs.com</code>) with your key, and the audio is
+    handled under <strong>your</strong> agreement with Alibaba Cloud.</li>
+  <li data-i18n="privacy.speech.alibaba">For what Alibaba Cloud does with the audio, see
     <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noreferrer">their privacy policy</a>.</li>
 </ul>
-<p lang="zh">App 只连接这几处：阿里云百炼、我们的服务器（仅购买时长时），以及 Apple 的服务（App 内购买、App Attest、DeviceCheck）。</p>
-<p lang="en">The app connects only to Alibaba Cloud Model Studio, our server (only when buying time), and Apple's services
-(in-app purchase, App Attest, DeviceCheck).</p>
-<p lang="zh"><strong>译音用说话人的声音</strong>（默认开启，可在设置里关闭）：阿里云用同一段语音实时模仿说话人的音色来念译文，
-每句跟着当时说话的人走，双方说话时都是如此。App 和我们都不另外采集、保存或上传声纹，用的就是本来发去翻译的那段音频。</p>
-<p lang="en"><strong>Translations in the speaker's voice</strong> (on by default, can be turned off in settings): Alibaba Cloud imitates
-the speaker's voice live from the same audio it translates, following whoever is speaking — both people in a conversation.
-Neither the app nor we separately collect, store or upload any voiceprint; it is the same audio already sent for translation.</p>
+<p data-i18n="privacy.speech.hosts">The app connects only to Alibaba Cloud Model Studio, our server (only when buying
+time), and Apple's services (in-app purchase, App Attest, DeviceCheck).</p>
+<p data-i18n="privacy.speech.voice"><strong>Translations in the speaker's voice</strong> (on by default, can be turned
+off in settings): Alibaba Cloud imitates the speaker's voice live from the same audio it translates, following whoever
+is speaking — both people in a conversation. Neither the app nor we separately collect, store or upload any voiceprint;
+it is the same audio already sent for translation.</p>
 
-<h2 lang="zh">留在你手机上的东西</h2>
-<h2 lang="en">What stays on your phone</h2>
-<h3 lang="zh">字幕记录</h3>
-<h3 lang="en">Transcripts</h3>
-<p lang="zh">每句定稿的字幕会按天存成文件，放在 App 自己的沙盒目录里，<strong>不会上传</strong>，
-也不参与 iCloud 备份。可以在 App 的「记录」里查看、导出或删除；卸载 App 即随之清除。</p>
-<p lang="en">Finished lines are written to one file per day inside the app's own container. They are
-<strong>never uploaded</strong> and are excluded from iCloud backup. You can read, export or delete them under
-“Transcripts” in the app; deleting the app removes them.</p>
+<h2 data-i18n="privacy.device.title">What stays on your phone</h2>
+<h3 data-i18n="privacy.transcripts.title">Transcripts</h3>
+<p data-i18n="privacy.transcripts.p">Finished lines are written to one file per day inside the app's own container.
+They are <strong>never uploaded</strong> and are excluded from iCloud backup. You can read, export or delete them under
+“History” in the app; deleting the app removes them.</p>
 
-<h3 lang="zh">账号 ID</h3>
-<h3 lang="en">Account ID</h3>
-<p lang="zh">上面说的随机账号 ID 存在 iOS 钥匙串里，打开了 iCloud 钥匙串时会在你同一 Apple 账户的设备间同步（由 Apple 端到端加密）。
-卸载 App 不会删掉它，重装后余额还在。</p>
-<p lang="en">The random account ID described above is kept in the iOS Keychain and, if iCloud Keychain is on, syncs between
-your devices on the same Apple Account (end-to-end encrypted by Apple). Deleting the app does not remove it, so your balance is
-still there after a reinstall.</p>
+<h3 data-i18n="privacy.account.title">Account ID</h3>
+<p data-i18n="privacy.account.p">The random account ID described above is kept in the iOS Keychain and, if iCloud
+Keychain is on, syncs between your devices on the same Apple Account (end-to-end encrypted by Apple). Deleting the app
+does not remove it, so your balance is still there after a reinstall.</p>
 
-<h3 lang="zh">API Key</h3>
-<h3 lang="en">API keys</h3>
-<p lang="zh">你自己填写的 API Key 保存在 iOS <strong>钥匙串</strong>中，标记为「仅本机、解锁后可读」，
-既不上传也不随备份迁移到其他设备。</p>
-<p lang="en">The API keys you enter yourself are kept in the iOS <strong>Keychain</strong>, marked as readable only on this
-device and only while it is unlocked. They are never uploaded and do not migrate to another device via backup.</p>
+<h3 data-i18n="privacy.apikey.title">API keys</h3>
+<p data-i18n="privacy.apikey.p">The API keys you enter yourself are kept in the iOS <strong>Keychain</strong>, marked
+as readable only on this device and only while it is unlocked. They are never uploaded and do not migrate to another
+device via backup.</p>
 
-<h2 lang="zh">麦克风</h2>
-<h2 lang="en">Microphone</h2>
-<p lang="zh">只有在你点击「开始传译」之后才会使用麦克风。切换到其他 App 或锁屏后，正在进行的传译会继续采集、翻译并保存字幕；
-点击「停止」结束采集。来电等系统音频中断会暂停会话，系统允许恢复时继续。系统的橙色麦克风指示点会显示采集状态。</p>
-<p lang="en">The microphone is used only after you press Start. An active session continues recording, translating and saving transcripts
-when you switch apps or lock the screen. Press Stop to end capture. System audio interruptions, such as calls, pause the session;
-it resumes when the system permits. The system's orange microphone indicator shows when capture is active.</p>
+<h2 data-i18n="privacy.mic.title">Microphone</h2>
+<p data-i18n="privacy.mic.p">The microphone is used only after you press Start. An active session continues recording,
+translating and saving transcripts when you switch apps or lock the screen. Press Stop to end capture. System audio
+interruptions, such as calls, pause the session; it resumes when the system permits. The system's orange microphone
+indicator shows when capture is active.</p>
 
-<h2 lang="zh">购买</h2>
-<h2 lang="en">Purchases</h2>
-<p lang="zh">购买时长和「全部语言」（用自己的 Key 时）都通过 <strong>Apple 的 App 内购买</strong>完成。支付全过程由 Apple 处理，
-我们<strong>收不到也看不到</strong>你的支付方式、姓名或账单信息。</p>
-<p lang="en">Buying time and “All languages” (when using your own key) both go through <strong>Apple's in-app
-purchase</strong>. Apple handles payment end to end; we <strong>never receive or see</strong> your payment method, name or billing details.</p>
+<h2 data-i18n="privacy.purchase.title">Purchases</h2>
+<p data-i18n="privacy.purchase.p">Buying time and “All languages” (when using your own key) both go through
+<strong>Apple's in-app purchase</strong>. Apple handles payment end to end; we <strong>never receive or see</strong>
+your payment method, name or billing details.</p>
 <ul>
-  <li lang="zh">购买时长：App 把账号 ID 交给 Apple 写进这笔交易，再把 Apple 签名的交易凭证交给我们的服务器核验、入账；
-    服务器只给交易里写明的那个账号加时长。退款由 Apple 处理，Apple 会通知服务器扣回相应时长。</li>
-  <li lang="en">Buying time: the app asks Apple to record your account ID in the transaction, then sends the transaction, signed by
-    Apple, to our server to verify and credit; the server credits only the account named in the transaction. Refunds are handled
-    by Apple, which notifies our server to take the time back.</li>
-  <li lang="zh">「全部语言」：App 只向系统询问「是否已购买」，不经过我们的服务器。</li>
-  <li lang="en">“All languages”: the app only asks the system whether it has been bought; our server is not involved.</li>
+  <li data-i18n="privacy.purchase.credit">Buying time: the app asks Apple to record your account ID in the transaction,
+    then sends the transaction, signed by Apple, to our server to verify and credit; the server credits only the
+    account named in the transaction. Refunds are handled by Apple, which notifies our server to take the time
+    back.</li>
+  <li data-i18n="privacy.purchase.all">“All languages”: the app only asks the system whether it has been bought; our
+    server is not involved.</li>
 </ul>
 
-<h2 lang="zh">查询与删除</h2>
-<h2 lang="en">Access and deletion</h2>
-<p lang="zh">你的账号 ID 在 App 的「设置 → 剩余时长」里，可以复制。想查询或删除服务器上关于你的记录，把它写信发到
-<a href="mailto:winer632@qq.com">winer632@qq.com</a>，我们会删除这个账号在服务器上的全部记录
-（快照和异地备份在各自的保留期后过期）。删除后剩余时长无法恢复。购买的退款请向 Apple 申请。</p>
-<p lang="en">Your account ID is under Settings → Time left in the app, with a Copy button. To see or delete what our server
-holds about you, send it to <a href="mailto:winer632@qq.com">winer632@qq.com</a> and we will delete all of that account’s records on
-the server (snapshots and the off-site copy expire after their retention periods). Remaining time cannot be restored after
-deletion. Refunds for purchases are requested from Apple.</p>
+<h2 data-i18n="privacy.delete.title">Access and deletion</h2>
+<p data-i18n="privacy.delete.p">Your account ID is under Settings → Time left in the app, with a Copy button. To see or
+delete what our server holds about you, send it to <a href="mailto:winer632@qq.com">winer632@qq.com</a> and we will
+delete all of that account’s records on the server (snapshots and the off-site copy expire after their retention
+periods). Remaining time cannot be restored after deletion. Refunds for purchases are requested from Apple.</p>
 
-<h2 lang="zh">儿童</h2>
-<h2 lang="en">Children</h2>
-<p lang="zh">本 App 面向商务与日常口译场景，不面向儿童，也不会有意收集儿童的任何信息。</p>
-<p lang="en">This app is aimed at business and everyday interpreting. It is not directed at children and does not
-knowingly collect anything from them.</p>
+<h2 data-i18n="privacy.children.title">Children</h2>
+<p data-i18n="privacy.children.p">This app is aimed at business and everyday interpreting. It is not directed at
+children and does not knowingly collect anything from them.</p>
 
-<h2 lang="zh">政策变更</h2>
-<h2 lang="en">Changes</h2>
-<p lang="zh">如果这份政策有实质性变化，我们会更新页面顶部的日期。App 不需要注册，我们没有你的联系方式，
-无法主动通知你，请以本页为准。</p>
-<p lang="en">If this policy changes materially we will update the date at the top. The app has no sign-up and we have no way
-to contact you, so this page is the record.</p>
+<h2 data-i18n="privacy.changes.title">Changes</h2>
+<p data-i18n="privacy.changes.p">If this policy changes materially we will update the date at the top. The app has no
+sign-up and we have no way to contact you, so this page is the record.</p>
 
-<h2 lang="zh">联系</h2>
-<h2 lang="en">Contact</h2>
-<p lang="zh">有任何隐私相关的问题，写信到 <a href="mailto:winer632@qq.com">winer632@qq.com</a>。</p>
-<p lang="en">Any privacy question: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.</p>
+<h2 data-i18n="privacy.contact.title">Contact</h2>
+<p data-i18n="privacy.contact.p">Any privacy question: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.</p>
 
 <nav>
-  <a href="./">← <span lang="zh">技术支持</span><span lang="en">Support</span></a>
+  <a href="./" data-i18n="nav.support">← Support</a>
 </nav>
 
 </main>

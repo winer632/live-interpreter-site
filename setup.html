@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>申请通义千问 API Key / Getting a Qwen API key · Duo Interpreter</title>
+<title data-i18n="setup.doc.title">Getting a Qwen API key · Duo Interpreter</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+<script src="i18n.js"></script>
 <style>
   :root {
+    color-scheme: light dark;
     --bg: #ffffff; --fg: #1a1c1e; --muted: #5c6166; --line: #e3e6e8;
     --accent: #2563eb; --card: #f7f8fa; --warn: #b45309; --warnbg: #fef6e7;
   }
@@ -17,49 +19,49 @@
   * { box-sizing: border-box; }
   body {
     margin: 0; padding: 0 16px 64px; background: var(--bg); color: var(--fg);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+  /* 中日韩共用汉字，字形要按语言挑字体；系统字体在 Apple 设备上会自己挑，这里照顾 Windows */
+  body:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  body:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  body:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; }
+  body:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  body:lang(ur) { line-height: 2.1; }
   main { max-width: 760px; margin: 0 auto; }
-  header { padding: 40px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  /* i18n.js 还在取文案时先不画正文，免得闪一下英文 */
+  html.i18n-wait main { visibility: hidden; }
+  header { padding: 16px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  .langbar { display: flex; justify-content: flex-end; min-height: 30px; margin-bottom: 10px; }
+  .langbar select { font: inherit; font-size: 14px; color: var(--fg); background: var(--card);
+                    border: 1px solid var(--line); border-radius: 8px; padding: 3px 8px; }
   h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.02em; }
   h2 { font-size: 20px; margin: 44px 0 12px; letter-spacing: -0.01em; }
+  [dir="rtl"] h1, [dir="rtl"] h2 { letter-spacing: 0; }
   .sub { color: var(--muted); margin: 0; font-size: 15px; }
   a { color: var(--accent); }
-  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px;
+  code { background: var(--card); padding: 2px 6px; border-radius: 4px; font-size: 14px; direction: ltr; unicode-bidi: isolate;
          word-break: break-all; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
-  main [lang="en"] { color: var(--muted); }
-  main h1[lang="en"] { font-size: 19px; font-weight: 600; margin: 2px 0 0; letter-spacing: 0; }
-  main h2[lang="en"] { font-size: 15px; font-weight: 600; margin: 2px 0 12px; }
-  main h2[lang="zh"] { margin-bottom: 2px; }
-  main p[lang="zh"], main li[lang="zh"] { margin-bottom: 4px; }
-  main p[lang="en"], main li[lang="en"] { margin-top: 0; font-size: 15px; }
   nav { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; }
 
-  /* 步骤：序号靠左，内容靠右，图占满内容宽度 */
+  /* 步骤：序号靠左（从右往左的语言靠右），内容在另一侧，图占满内容宽度 */
   ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; }
-  ol.steps > li { counter-increment: step; position: relative; padding: 0 0 8px 44px; margin: 32px 0 0; }
+  ol.steps > li { counter-increment: step; position: relative; padding: 0 0 8px; padding-inline-start: 44px; margin: 32px 0 0; }
   ol.steps > li::before {
-    content: counter(step); position: absolute; left: 0; top: 1px;
+    content: counter(step); position: absolute; inset-inline-start: 0; top: 1px;
     width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff;
     font-size: 15px; font-weight: 600; display: grid; place-items: center;
   }
   ol.steps h2 { margin-top: 0; }
-  /* 截图占位：图还没拍好时页面照样立得住，拍好了把 img 换进来即可 */
   figure { margin: 14px 0 0; }
   figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 10px; }
-  .shot-todo {
-    border: 1px dashed var(--line); border-radius: 10px; background: var(--card);
-    color: var(--muted); font-size: 14px; padding: 28px 20px; text-align: center;
-  }
   figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
   .note {
-    border-left: 3px solid var(--warn); background: var(--warnbg); border-radius: 0 8px 8px 0;
+    border-inline-start: 3px solid var(--warn); background: var(--warnbg); border-radius: 0 8px 8px 0;
     padding: 12px 16px; margin: 14px 0 0;
   }
+  [dir="rtl"] .note { border-radius: 8px 0 0 8px; }
   .note p { margin: 0; }
-  .note p[lang="en"] { margin-top: 2px; }
   .note strong { color: var(--warn); }
 </style>
 </head>
@@ -67,189 +69,147 @@
 <main>
 
 <header>
-  <h1 lang="zh">申请通义千问 API Key</h1>
-  <h1 lang="en">Getting a Qwen API key</h1>
-  <p class="sub" lang="zh">大约十分钟。全程在电脑浏览器里完成，最后一步回到手机。</p>
-  <p class="sub" lang="en">About ten minutes. Do it in a desktop browser; only the last step is on the phone.</p>
+  <div class="langbar" data-lang-picker></div>
+  <h1 data-i18n="setup.title">Getting a Qwen API key</h1>
+  <p class="sub" data-i18n="setup.sub">About ten minutes. Do it in a desktop browser; only the last step is on the phone.</p>
 </header>
 
 <div class="card">
-  <p lang="zh">这个 App <strong>不含翻译额度</strong>，它用你自己的账号直连阿里云百炼，费用由阿里云按用量向你收取。
-  语音不经过我们的服务器。</p>
-  <p lang="en">The app <strong>includes no translation credit</strong>. It talks to Alibaba Cloud Model Studio with
-  your own account, and Alibaba Cloud bills you for what you use. Your speech never passes through our servers.</p>
+  <p data-i18n="setup.intro">The app <strong>includes no translation credit</strong>. It talks to Alibaba Cloud Model
+  Studio with your own account, and Alibaba Cloud bills you for what you use. Your speech never passes through our
+  servers.</p>
 </div>
 
 <div class="note">
-  <p lang="zh"><strong>两件事先记住</strong>，出错基本都出在这两处：Key 必须建在
-  <strong>新加坡（Singapore）</strong>区，别的区建的 Key 这个 App 用不了；
-  Key 创建后<strong>只完整显示一次</strong>，弹窗关掉就再也看不到。</p>
-  <p lang="en"><strong>Two things to keep in mind</strong> — nearly every failure comes from one of them. The key
-  must be created in the <strong>Singapore</strong> region; keys from other regions will not work here. And the key
-  is <strong>shown in full only once</strong> — once you close that dialog it cannot be read again.</p>
+  <p data-i18n="setup.remember"><strong>Two things to keep in mind</strong> — nearly every failure comes from one of
+  them. The key must be created in the <strong>Singapore</strong> region; keys from other regions will not work here.
+  And the key is <strong>shown in full only once</strong> — once you close that dialog it cannot be read again.</p>
 </div>
 
 <ol class="steps">
 
 <li>
-  <h2 lang="zh">注册阿里云国际站账号</h2>
-  <h2 lang="en">Create an Alibaba Cloud account</h2>
-  <p lang="zh">打开 <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">alibabacloud.com</a>
-  注册。用邮箱即可，<strong>不需要中国大陆手机号</strong>。</p>
-  <p lang="en">Sign up at <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">alibabacloud.com</a>.
+  <h2 data-i18n="setup.s1.title">Create an Alibaba Cloud account</h2>
+  <p data-i18n="setup.s1.signup">Sign up at <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">alibabacloud.com</a>.
   An email address is enough — <strong>no mainland-China phone number is required</strong>.</p>
-  <p lang="zh">也可以直接用 Google 或 GitHub 账号登录，省掉填表。</p>
-  <p lang="en">You can also sign in with a Google or GitHub account and skip the form.</p>
-  <p lang="zh">注册后需要绑定一张信用卡或 PayPal 才能开通服务。绑卡本身不扣费，按实际用量计费。</p>
-  <p lang="en">You will need to add a credit card or PayPal before services can be activated. Adding it does not
-  charge you anything; you are billed for actual usage.</p>
+  <p data-i18n="setup.s1.sso">You can also sign in with a Google or GitHub account and skip the form.</p>
+  <p data-i18n="setup.s1.card">You will need to add a credit card or PayPal before services can be activated. Adding it
+  does not charge you anything; you are billed for actual usage.</p>
   <figure>
-    <img src="./setup/1-signup.png" alt="Alibaba Cloud sign-in page" width="1200" height="704" loading="lazy">
+    <img src="./setup/1-signup.png" data-i18n-alt="setup.s1.alt" alt="Alibaba Cloud sign-in page"
+         width="1200" height="704" loading="lazy">
   </figure>
 </li>
 
 <li>
-  <h2 lang="zh">把区域切到新加坡</h2>
-  <h2 lang="en">Switch the region to Singapore</h2>
-  <p lang="zh">打开百炼控制台：
-  <a href="https://modelstudio.console.alibabacloud.com/ap-southeast-1" target="_blank" rel="noreferrer">modelstudio.console.alibabacloud.com/ap-southeast-1</a>，
-  确认<strong>右上角的区域是 Singapore</strong>。这个链接已经指向新加坡，但登录过程有时会把你带回默认区域，所以要看一眼。</p>
-  <p lang="en">Open the Model Studio console at
+  <h2 data-i18n="setup.s2.title">Switch the region to Singapore</h2>
+  <p data-i18n="setup.s2.p">Open the Model Studio console at
   <a href="https://modelstudio.console.alibabacloud.com/ap-southeast-1" target="_blank" rel="noreferrer">modelstudio.console.alibabacloud.com/ap-southeast-1</a>
   and check that the region at the <strong>top right reads Singapore</strong>. The link points there already, but
   signing in sometimes returns you to a default region, so it is worth a look.</p>
   <figure>
-    <img src="./setup/2-region.png" alt="Model Studio console with the region set to Singapore"
+    <img src="./setup/2-region.png" data-i18n-alt="setup.s2.alt" alt="Model Studio console with the region set to Singapore"
          width="1200" height="832" loading="lazy">
-    <figcaption lang="zh">右上角是区域，左下角那个 <strong>API-KEY</strong> 就是下一步要点的入口——它不在左侧主导航里。</figcaption>
-    <figcaption lang="en">The region sits at the top right. The <strong>API-KEY</strong> button at the bottom left is
-    where you go next — it is not in the main navigation.</figcaption>
+    <figcaption data-i18n="setup.s2.caption">The region sits at the top right. The <strong>API-KEY</strong> button at
+    the bottom left is where you go next — it is not in the main navigation.</figcaption>
   </figure>
 </li>
 
 <li>
-  <h2 lang="zh">开通百炼服务</h2>
-  <h2 lang="en">Activate Model Studio</h2>
-  <p lang="zh">第一次进入会提示开通，同意条款后点开通即可。已经开通过的账号看不到这一步，直接跳到下一步。</p>
-  <p lang="en">The first visit asks you to activate the service: accept the terms and confirm. If your account is
-  already activated you will not see this screen — go straight to the next step.</p>
+  <h2 data-i18n="setup.s3.title">Activate Model Studio</h2>
+  <p data-i18n="setup.s3.p">The first visit asks you to activate the service: accept the terms and confirm. If your
+  account is already activated you will not see this screen — go straight to the next step.</p>
 </li>
 
 <li>
-  <h2 lang="zh">找到 API Key 页面</h2>
-  <h2 lang="en">Open the API Key page</h2>
-  <p lang="zh">点控制台<strong>左下角</strong>的 <strong>API-KEY</strong> 按钮。它是个单独的胶囊按钮，
-  不在上面那排主导航里，第一次找容易找不到。</p>
-  <p lang="en">Click the <strong>API-KEY</strong> button at the <strong>bottom left</strong> of the console. It is a
-  separate pill-shaped button rather than an item in the main navigation, which makes it easy to miss the first time.</p>
+  <h2 data-i18n="setup.s4.title">Open the API Key page</h2>
+  <p data-i18n="setup.s4.p">Click the <strong>API-KEY</strong> button at the <strong>bottom left</strong> of the
+  console. It is a separate pill-shaped button rather than an item in the main navigation, which makes it easy to miss
+  the first time.</p>
   <figure>
-    <img src="./setup/3-api-key-page.png" alt="The API Key page with the Create API Key button"
+    <img src="./setup/3-api-key-page.png" data-i18n-alt="setup.s4.alt" alt="The API Key page with the Create API Key button"
          width="1200" height="832" loading="lazy">
-    <figcaption lang="zh">到了这一页，点右边的 <strong>Create API Key</strong>。</figcaption>
-    <figcaption lang="en">Once you are on this page, click <strong>Create API Key</strong> on the right.</figcaption>
+    <figcaption data-i18n="setup.s4.caption">Once you are on this page, click <strong>Create API Key</strong> on the
+    right.</figcaption>
   </figure>
 </li>
 
 <li>
-  <h2 lang="zh">创建 API Key</h2>
-  <h2 lang="en">Create the key</h2>
-  <p lang="zh">点 <strong>Create API Key</strong>。工作区选默认的那个，权限选 <strong>All</strong>，
-  描述可以留空，然后确定。</p>
-  <p lang="en">Click <strong>Create API Key</strong>. Pick the default workspace, set permissions to
+  <h2 data-i18n="setup.s5.title">Create the key</h2>
+  <p data-i18n="setup.s5.p">Click <strong>Create API Key</strong>. Pick the default workspace, set permissions to
   <strong>All</strong>, leave the description empty if you like, and confirm.</p>
   <figure>
-    <img src="./setup/4-create-dialog.png" alt="The Create API Key dialog"
+    <img src="./setup/4-create-dialog.png" data-i18n-alt="setup.s5.alt" alt="The Create API Key dialog"
          width="1200" height="832" loading="lazy">
   </figure>
 </li>
 
 <li>
-  <h2 lang="zh">立刻复制整串 Key</h2>
-  <h2 lang="en">Copy the whole key, right away</h2>
-  <p lang="zh">Key 会以 <code>sk-</code> 开头，很长——<strong>一定要复制完整的一整串</strong>，
-  漏掉尾巴几个字符的表现和填错一样，都是连不上。用弹窗里的复制按钮最稳。</p>
-  <p lang="en">The key starts with <code>sk-</code> and is long — <strong>copy all of it</strong>. A key missing
-  its last few characters fails exactly like a wrong one. Use the copy button in the dialog.</p>
-  <p lang="zh">弹窗里还有个 <strong>Download</strong>，会把 Key 存成文件，比只放在剪贴板保险。</p>
-  <p lang="en">The dialog also offers <strong>Download</strong>, which saves the key to a file — safer than relying
-  on the clipboard alone.</p>
+  <h2 data-i18n="setup.s6.title">Copy the whole key, right away</h2>
+  <p data-i18n="setup.s6.copy">The key starts with <code>sk-</code> and is long — <strong>copy all of it</strong>. A
+  key missing its last few characters fails exactly like a wrong one. Use the copy button in the dialog.</p>
+  <p data-i18n="setup.s6.download">The dialog also offers <strong>Download</strong>, which saves the key to a file —
+  safer than relying on the clipboard alone.</p>
   <div class="note">
-    <p lang="zh"><strong>关掉这个弹窗就再也看不到完整 Key 了。</strong>万一没存下来，删掉重建一把即可，不影响账号。</p>
-    <p lang="en"><strong>Once this dialog closes the full key is gone.</strong> If you lose it, just delete that key
-    and create another — nothing else is affected.</p>
+    <p data-i18n="setup.s6.note"><strong>Once this dialog closes the full key is gone.</strong> If you lose it, just
+    delete that key and create another — nothing else is affected.</p>
   </div>
   <figure>
-    <img src="./setup/5-copy-key.png" alt="The dialog that shows the key once, with Copy and Download"
+    <img src="./setup/5-copy-key.png" data-i18n-alt="setup.s6.alt" alt="The dialog that shows the key once, with Copy and Download"
          width="1200" height="832" loading="lazy">
-    <figcaption lang="zh">图中的 Key 和专属域名已打码。</figcaption>
-    <figcaption lang="en">The key and the dedicated domains are blacked out in this screenshot.</figcaption>
+    <figcaption data-i18n="setup.s6.caption">The key and the dedicated domains are blacked out in this
+    screenshot.</figcaption>
   </figure>
 </li>
 
 <li>
-  <h2 lang="zh">填进 App，点「测试」</h2>
-  <h2 lang="en">Paste it into the app and press Test</h2>
-  <p lang="zh">回到手机：<strong>设置 → 计费方式</strong>选「用自己的阿里云 Key」，下面会出现<strong>通义千问 API Key</strong>。站点保持
-  <strong>国际站 · 新加坡</strong>，把 Key 粘进输入框，点<strong>保存</strong>，再点<strong>测试</strong>。
-  看到绿色的「连接成功」就完成了。</p>
-  <p lang="en">Back on the phone: <strong>Settings → How to pay</strong>, choose “Use my own Alibaba Cloud key”, and
-  the <strong>Qwen API key</strong> section appears. Leave the site on
+  <h2 data-i18n="setup.s7.title">Paste it into the app and press Test</h2>
+  <p data-i18n="setup.s7.p">Back on the phone: <strong>Settings → How to pay</strong>, choose “Use my own Alibaba Cloud
+  key”, and the <strong>Qwen API key</strong> section appears. Leave the site on
   <strong>International · Singapore</strong>, paste the key, press <strong>Save</strong>, then
-  <strong>Test</strong>. A green “connected” message means you are done.</p>
-  <p lang="zh">最后关掉设置，在「我说」「对方说」里选好语言就可以开始了。中文 ⇄ 英语免费；其他语言在设置里买一次「全部语言」，全部解锁。</p>
-  <p lang="en">Finally close settings, choose languages under “I speak” and “They speak”, and start. Chinese ⇄ English is
-  free; one “All languages” purchase in settings unlocks the rest.</p>
+  <strong>Test</strong>. A green “Connected — the key works” means you are done.</p>
+  <p data-i18n="setup.s7.start">Finally close settings, choose languages under “I speak” and “They speak”, and start.
+  Chinese ⇄ English is free; one “All languages” purchase in settings unlocks the rest.</p>
   <figure>
-    <img src="./setup/6-app-settings.png" alt="The app settings with the key saved and the test passing"
+    <img src="./setup/6-app-settings.png" data-i18n-alt="setup.s7.alt" alt="The app settings with the key saved and the test passing"
          width="900" height="1588" loading="lazy">
-    <figcaption lang="zh">绿色那行就是成功的样子。</figcaption>
-    <figcaption lang="en">The green line is what success looks like.</figcaption>
+    <figcaption data-i18n="setup.s7.caption">The green line is what success looks like.</figcaption>
   </figure>
 </li>
 
 </ol>
 
-<h2 lang="zh">连不上怎么办</h2>
-<h2 lang="en">If it will not connect</h2>
+<h2 data-i18n="setup.help.title">If it will not connect</h2>
 
 <div class="card">
-  <p lang="zh"><strong>提示 Key 无效</strong>——九成是区域不对。回控制台看右上角是不是 Singapore；
-  不是的话切过去<strong>重新建一把</strong>，别的区的 Key 换不过来。也顺便确认粘贴时没漏掉结尾。</p>
-  <p lang="en"><strong>“Invalid key”</strong> — nine times out of ten the region is wrong. Check that the console
-  says Singapore at the top right; if not, switch and <strong>create a new key</strong>, because a key cannot be
-  moved between regions. Also make sure nothing was cut off the end when pasting.</p>
+  <p data-i18n="setup.help.badKey"><strong>“Invalid API key”</strong> — nine times out of ten the region is wrong.
+  Check that the console says Singapore at the top right; if not, switch and <strong>create a new key</strong>, because
+  a key cannot be moved between regions. Also make sure nothing was cut off the end when pasting.</p>
 </div>
 <div class="card">
-  <p lang="zh"><strong>提示无权调用该模型</strong>——账号还没开通百炼，或者没有可用余额。回控制台看一眼。</p>
-  <p lang="en"><strong>“Not allowed to call the model”</strong> — the account has not activated Model Studio yet, or
-  has no usable balance. Check in the console.</p>
+  <p data-i18n="setup.help.forbidden"><strong>“This key cannot call the model”</strong> — the account has not
+  activated Model Studio yet, or has no usable balance. Check in the console.</p>
 </div>
 <div class="card">
-  <p lang="zh"><strong>提示连接超时</strong>——手机网络到
-  <code>dashscope-intl.aliyuncs.com</code> 不通。换个网络（比如从公司 Wi-Fi 切到蜂窝数据）再试。</p>
-  <p lang="en"><strong>“Connection timed out”</strong> — the phone cannot reach
+  <p data-i18n="setup.help.timeout"><strong>“Connection timed out”</strong> — the phone cannot reach
   <code>dashscope-intl.aliyuncs.com</code>. Try a different network, for example cellular instead of office Wi-Fi.</p>
 </div>
 <div class="card">
-  <p lang="zh"><strong>想先试试，或者拿不到 Key？</strong>不用 Key：<strong>设置 → 计费方式 → 购买时长（免注册）</strong>。
-  新设备送 5 分钟，点「开始传译」就能试；之后在 App 里直接买时长，所有语言都能用。</p>
-  <p lang="en"><strong>Want to try it first, or can’t get a key?</strong> No key needed: <strong>Settings → How to pay →
-  Buy time (no sign-up)</strong>. A new device gets 5 free minutes — press Start to try it; after that, buy time in the
-  app and every language works.</p>
+  <p data-i18n="setup.help.noKey"><strong>Want to try it first, or can’t get a key?</strong> No key needed:
+  <strong>Settings → How to pay → Buy time (no sign-up)</strong>. A new device gets 5 free minutes — press Start to try
+  it; after that, buy time in the app and every language works.</p>
 </div>
 
 <div class="card">
-  <p lang="zh">还是不行的话写信到 <a href="mailto:winer632@qq.com">winer632@qq.com</a>，
-  附上机型、iOS 版本和「测试」按钮给出的那句提示，排查会快很多。<strong>不要把 Key 发给我们。</strong></p>
-  <p lang="en">Still stuck? Write to <a href="mailto:winer632@qq.com">winer632@qq.com</a> with your device, iOS
-  version and the exact message the Test button gave — that makes it much quicker. <strong>Please do not send us
-  your key.</strong></p>
+  <p data-i18n="setup.help.contact">Still stuck? Write to <a href="mailto:winer632@qq.com">winer632@qq.com</a> with
+  your device, iOS version and the exact message the Test button gave — that makes it much quicker.
+  <strong>Please do not send us your key.</strong></p>
 </div>
 
 <nav>
-  <a href="./"><span lang="zh">← 技术支持</span><span lang="en">← Support</span></a>
+  <a href="./" data-i18n="nav.support">← Support</a>
   &nbsp;·&nbsp;
-  <a href="./privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy policy</span></a>
+  <a href="./privacy.html" data-i18n="nav.privacy">Privacy policy</a>
 </nav>
 
 </main>
