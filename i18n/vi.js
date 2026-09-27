@@ -181,7 +181,7 @@ siteI18n('vi', {
   // privacy.html
   'privacy.doc.title': 'Chính sách quyền riêng tư · Duo Interpreter',
   'privacy.title': 'Chính sách quyền riêng tư',
-  'privacy.sub': 'Duo Interpreter · Cập nhật lần cuối ngày 24 tháng 9 năm 2026',
+  'privacy.sub': "Duo Interpreter · Cập nhật lần cuối ngày 26 tháng 9 năm 2026",
   'privacy.translated':
     'Chính sách này là bản dịch. Nếu có khác biệt so với <a href="?lang=en">bản tiếng Anh</a>, bản tiếng Anh sẽ được áp dụng.',
   'privacy.short':
@@ -196,10 +196,7 @@ siteI18n('vi', {
   'privacy.credit.intro':
     'Để ghi nhớ lượng thời gian bạn đã mua và ngăn chặn lạm dụng, ứng dụng liên lạc với máy chủ <code>api.duo-interpreter.com</code> ' +
     'của chúng tôi (đặt trên Microsoft Azure tại Singapore). Máy chủ lưu:',
-  'privacy.credit.id':
-    '<strong>Một ID tài khoản ngẫu nhiên</strong>: một mã số (UUID) do ứng dụng tạo ra trong lần đầu bạn sử dụng. ' +
-    'ID này không liên quan gì đến tên, email, số điện thoại hay Tài khoản Apple của bạn. ID được lưu trong Chuỗi khóa iCloud của bạn, ' +
-    'nên số dư vẫn còn sau khi cài lại ứng dụng và theo bạn sang điện thoại mới dùng cùng Tài khoản Apple.',
+  'privacy.credit.id': "<strong>ID tài khoản ngẫu nhiên và thông tin xác minh khôi phục</strong>: ứng dụng tạo một ID (UUID) và một mã bí mật khôi phục ngẫu nhiên riêng biệt. Chúng không liên quan đến tên, email, số điện thoại hay Tài khoản Apple của bạn. ID và mã bí mật được giữ trong Chuỗi khóa iCloud; máy chủ chỉ lưu giá trị băm xác minh của mã bí mật để cho phép thiết bị khác dùng chung số dư.",
   'privacy.credit.device':
     '<strong>Thông tin xác thực thiết bị</strong>: với mỗi thiết bị, mã định danh và khóa công khai của một khóa Apple App Attest, ' +
     'cùng thời điểm đăng ký và thời điểm sử dụng gần nhất. Chúng chứng minh rằng các yêu cầu đến từ một bản chính hãng của ứng dụng này, ' +
@@ -210,16 +207,12 @@ siteI18n('vi', {
   'privacy.credit.usage':
     '<strong>Mức sử dụng</strong>: thời điểm bắt đầu và kết thúc của mỗi lần phiên dịch, chế độ (có giọng đọc bản dịch hoặc chỉ phụ đề), ' +
     'lượng thời gian đã dùng, số khóa tạm thời đã yêu cầu, và mọi thay đổi trong số dư của bạn.',
-  'privacy.credit.trial':
-    '<strong>5 phút dùng thử</strong> chỉ được tặng một lần cho mỗi thiết bị. Để ngăn việc nhận lại nhiều lần, ứng dụng gửi cho máy chủ ' +
-    'một mã thông báo Apple DeviceCheck dùng một lần; máy chủ dùng mã này để nhờ Apple kiểm tra, rồi đặt, một bit duy nhất ' +
-    'mà Apple thay mặt chúng tôi lưu cho thiết bị này (“đã dùng thử”). Mã thông báo chỉ được dùng một lần và không được lưu lại, ' +
-    'còn Apple chỉ lưu bit đó cho chúng tôi mà không cho chúng tôi biết đó là thiết bị nào.',
+  'privacy.credit.trial': "<strong>5 phút dùng thử</strong> được cấp một lần cho mỗi thiết bị. Ứng dụng gửi mã thông báo Apple DeviceCheck để máy chủ có thể kiểm tra và đặt cờ ‘đã dùng thử’ của thiết bị với Apple. Nếu việc kiểm tra tạm thời không khả dụng, ứng dụng có thể thử lại mà không cấp dùng thử hai lần. Mã thông báo DeviceCheck không được lưu. Apple không cho chúng tôi biết danh tính thiết bị.",
   'privacy.credit.never':
     'Máy chủ <strong>không bao giờ nhận</strong> giọng nói, phụ đề hay bản dịch của bạn; tên, email, số điện thoại, vị trí hay danh bạ của bạn; ' +
     'hay thông tin thanh toán của bạn.',
   'privacy.key.title': 'Dùng khóa Alibaba Cloud của riêng bạn',
-  'privacy.key.p': 'Ở chế độ này, ứng dụng không liên lạc với máy chủ của chúng tôi, và <strong>chúng tôi không thu thập gì cả</strong>.',
+  'privacy.key.p': "Phiên dịch bằng khóa Alibaba Cloud của riêng bạn không gửi dữ liệu giọng nói hay bản dịch đến máy chủ của chúng tôi. Nếu bạn quản lý hoặc xóa tài khoản thời gian hiện có, ứng dụng sẽ liên hệ máy chủ của chúng tôi để xử lý yêu cầu đó.",
   'privacy.both.title': 'Ở cả hai chế độ',
   'privacy.both.p':
     'Ứng dụng không chứa công cụ phân tích, quảng cáo hay theo dõi của bên thứ ba. Chúng tôi không chạy phân tích hay quảng cáo, ' +
@@ -264,10 +257,7 @@ siteI18n('vi', {
     '<strong>không bao giờ được tải lên</strong> và không nằm trong bản sao lưu iCloud. Bạn có thể xem, xuất hoặc xóa chúng ' +
     'trong mục “Lịch sử” của ứng dụng; xóa ứng dụng cũng sẽ xóa chúng.',
   'privacy.account.title': 'ID tài khoản',
-  'privacy.account.p':
-    'ID tài khoản ngẫu nhiên nêu ở trên được lưu trong Chuỗi khóa của iOS và, nếu Chuỗi khóa iCloud được bật, được đồng bộ giữa ' +
-    'các thiết bị dùng cùng Tài khoản Apple của bạn (được Apple mã hóa đầu cuối). Xóa ứng dụng không xóa ID này, ' +
-    'nên số dư vẫn còn sau khi cài lại.',
+  'privacy.account.p': "ID tài khoản thời gian ngẫu nhiên và mã bí mật khôi phục riêng biệt được giữ trong Chuỗi khóa iOS. Khi Chuỗi khóa iCloud được bật, Apple có thể đồng bộ chúng giữa các thiết bị dùng cùng Tài khoản Apple bằng mã hóa đầu cuối. Thông tin xác thực đã đồng bộ cho phép khôi phục số dư sau khi cài đặt lại hoặc đổi thiết bị. Bản cài đặt cũ có thể cần được cập nhật trên thiết bị ban đầu trước khi thiết lập khôi phục an toàn.",
   'privacy.apikey.title': 'API Key',
   'privacy.apikey.p':
     'Các API Key do bạn tự nhập được lưu trong <strong>Chuỗi khóa</strong> của iOS, được đánh dấu là chỉ đọc được trên thiết bị này ' +
@@ -290,11 +280,7 @@ siteI18n('vi', {
   'privacy.purchase.all':
     '“Tất cả ngôn ngữ”: ứng dụng chỉ hỏi hệ thống xem sản phẩm này đã được mua hay chưa; máy chủ của chúng tôi không tham gia.',
   'privacy.delete.title': 'Truy cập và xóa dữ liệu',
-  'privacy.delete.p':
-    'ID tài khoản của bạn nằm trong mục Cài đặt → Thời gian còn lại của ứng dụng, kèm nút “Sao chép”. Để xem hoặc xóa những gì ' +
-    'máy chủ của chúng tôi lưu về bạn, hãy gửi ID đó tới <a href="mailto:winer632@qq.com">winer632@qq.com</a> và chúng tôi sẽ xóa ' +
-    'toàn bộ hồ sơ của tài khoản đó trên máy chủ (các bản chụp nhanh và bản sao ở địa điểm khác sẽ hết hạn sau thời gian lưu giữ tương ứng). ' +
-    'Thời gian còn lại không thể khôi phục sau khi xóa. Để được hoàn tiền cho giao dịch mua, hãy gửi yêu cầu tới Apple.',
+  'privacy.delete.p': "Trong ứng dụng, mở Cài đặt → Giới thiệu → Xóa tài khoản thời gian rồi xác nhận. Phiên dịch dừng và tài khoản đang hoạt động, đăng ký thiết bị, số dư còn lại cùng bản ghi sử dụng sẽ bị xóa. Không thể hoàn tác thao tác này; thao tác này không hoàn tiền các giao dịch mua qua Apple và không xóa bản ghi đã lưu trên thiết bị. Bạn có thể xóa các bản ghi đó trong Lịch sử. Bản sao lưu hết hạn sau các khoảng thời gian lưu giữ nêu trên. Chúng tôi chỉ giữ một số bản ghi xóa và hoàn tiền nhằm ngăn ID tài khoản cũ hoặc biên nhận đã hoàn tiền khôi phục thời gian; các bản ghi này không kích hoạt lại tài khoản đã xóa. Để truy cập dữ liệu của bạn hoặc được hỗ trợ, hãy gửi email đến <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> kèm ID tài khoản hiển thị trong Cài đặt → Thời gian còn lại.",
   'privacy.children.title': 'Trẻ em',
   'privacy.children.p':
     'Ứng dụng này hướng đến việc phiên dịch trong công việc và đời sống hằng ngày. Ứng dụng không nhắm đến trẻ em ' +

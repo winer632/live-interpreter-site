@@ -186,7 +186,7 @@ siteI18n('es', {
   // privacy.html
   'privacy.doc.title': 'Política de privacidad · Duo Interpreter',
   'privacy.title': 'Política de privacidad',
-  'privacy.sub': 'Duo Interpreter · Última actualización: 24 de septiembre de 2026',
+  'privacy.sub': "Duo Interpreter · Última actualización: 26 de septiembre de 2026",
   'privacy.translated':
     'Esta política es una traducción. Si difiere de la <a href="?lang=en">versión en inglés</a>, prevalece la versión en inglés.',
   'privacy.short':
@@ -201,11 +201,7 @@ siteI18n('es', {
   'privacy.credit.intro':
     'Para recordar cuánto tiempo compraste y evitar abusos, la app se comunica con nuestro servidor <code>api.duo-interpreter.com</code> ' +
     '(alojado en Microsoft Azure, en Singapur). El servidor guarda:',
-  'privacy.credit.id':
-    '<strong>Un ID de cuenta aleatorio</strong>: un número (un UUID) que la app genera la primera vez que la usas. ' +
-    'No tiene nada que ver con tu nombre, correo electrónico, número de teléfono ni Cuenta de Apple. ' +
-    'Se guarda en tu Llavero de iCloud, así que tu saldo se conserva aunque reinstales la app y te acompaña a teléfonos nuevos ' +
-    'con la misma Cuenta de Apple.',
+  'privacy.credit.id': "<strong>Un ID de cuenta aleatorio y un verificador de recuperación</strong>: la app genera un ID (UUID) y un secreto de recuperación aleatorio independiente. No están relacionados con tu nombre, correo electrónico, número de teléfono ni Cuenta de Apple. El ID y el secreto se conservan en el llavero de iCloud; el servidor solo almacena un resumen de verificación del secreto para autorizar a otro dispositivo a usar el mismo saldo.",
   'privacy.credit.device':
     '<strong>Credenciales del dispositivo</strong>: para cada dispositivo, el identificador y la clave pública de una clave de Apple App Attest, ' +
     'junto con cuándo se registró y cuándo se usó por última vez. Sirven para demostrar que las solicitudes vienen de una copia ' +
@@ -216,16 +212,12 @@ siteI18n('es', {
   'privacy.credit.usage':
     '<strong>Uso</strong>: cuándo empezó y terminó cada sesión de interpretación, su modo (traducción hablada o solo subtítulos), ' +
     'cuánto tiempo consumió, cuántas claves temporales pidió y cada cambio en tu saldo.',
-  'privacy.credit.trial':
-    '<strong>La prueba de 5 minutos</strong> se da una sola vez por dispositivo. Para evitar que se reclame más de una vez, ' +
-    'la app entrega al servidor un token de un solo uso de Apple DeviceCheck; el servidor lo usa para pedirle a Apple que consulte ' +
-    'y luego active un único bit que Apple guarda para este dispositivo en nuestro nombre (“prueba usada”). ' +
-    'El token se usa una vez y no se almacena, y Apple solo guarda ese bit para nosotros, sin decirnos de qué dispositivo se trata.',
+  'privacy.credit.trial': "<strong>La prueba de 5 minutos</strong> se concede una vez por dispositivo. La app envía un token de Apple DeviceCheck para que el servidor pueda consultar y establecer con Apple el indicador de «prueba utilizada» del dispositivo. Si esta comprobación no está disponible temporalmente, la app puede reintentarlo sin conceder la prueba dos veces. No se almacenan los tokens de DeviceCheck. Apple no nos comunica la identidad del dispositivo.",
   'privacy.credit.never':
     'El servidor <strong>nunca recibe</strong> tu voz, tus subtítulos ni tus traducciones; tu nombre, correo electrónico, ' +
     'número de teléfono, ubicación ni contactos; ni tus datos de pago.',
   'privacy.key.title': 'Usar tu propia clave de Alibaba Cloud',
-  'privacy.key.p': 'En este modo, la app no se comunica con nuestro servidor y <strong>no recopilamos nada</strong>.',
+  'privacy.key.p': "La interpretación con tu propia clave de Alibaba Cloud no envía datos de voz ni de traducción a nuestro servidor. Si gestionas o eliminas una cuenta de tiempo existente, la app contacta con nuestro servidor para atender esa solicitud.",
   'privacy.both.title': 'En ambos casos',
   'privacy.both.p':
     'La app no contiene analíticas, publicidad ni seguimiento de terceros. No usamos analíticas ni anuncios, ' +
@@ -271,10 +263,7 @@ siteI18n('es', {
     '<strong>Nunca se suben</strong> y están excluidas de la copia de seguridad de iCloud. ' +
     'Puedes leerlas, exportarlas o eliminarlas en “Historial”, dentro de la app; si eliminas la app, se eliminan con ella.',
   'privacy.account.title': 'ID de cuenta',
-  'privacy.account.p':
-    'El ID de cuenta aleatorio descrito arriba se guarda en el llavero de iOS y, si el Llavero de iCloud está activado, ' +
-    'se sincroniza entre tus dispositivos con la misma Cuenta de Apple (con cifrado de extremo a extremo de Apple). ' +
-    'Eliminar la app no lo borra, así que tu saldo sigue ahí después de reinstalarla.',
+  'privacy.account.p': "Tu ID aleatorio de la cuenta de tiempo y un secreto de recuperación independiente se guardan en el llavero de iOS. Si el llavero de iCloud está activado, Apple puede sincronizarlos entre dispositivos con la misma Cuenta de Apple mediante cifrado de extremo a extremo. Las credenciales sincronizadas permiten restaurar el saldo tras reinstalar la app o cambiar de dispositivo. Una instalación antigua puede necesitar actualizarse en el dispositivo original antes de poder configurar la recuperación segura.",
   'privacy.apikey.title': 'API Keys',
   'privacy.apikey.p':
     'Las API Keys que escribes tú mismo se guardan en el <strong>llavero</strong> de iOS, marcadas como legibles solo en este dispositivo ' +
@@ -296,12 +285,7 @@ siteI18n('es', {
     'Los reembolsos los gestiona Apple, que avisa a nuestro servidor para que retire el tiempo correspondiente.',
   'privacy.purchase.all': '“Todos los idiomas”: la app solo le pregunta al sistema si se ha comprado; nuestro servidor no interviene.',
   'privacy.delete.title': 'Acceso y eliminación',
-  'privacy.delete.p':
-    'Tu ID de cuenta está en la app, en Ajustes → Tiempo restante, con un botón “Copiar”. ' +
-    'Para ver o eliminar lo que nuestro servidor guarda sobre ti, envíalo a <a href="mailto:winer632@qq.com">winer632@qq.com</a> ' +
-    'y eliminaremos todos los registros de esa cuenta en el servidor (las instantáneas y la copia externa caducan al terminar ' +
-    'sus periodos de conservación). El tiempo restante no se puede recuperar después de la eliminación. ' +
-    'Los reembolsos de compras se solicitan a Apple.',
+  'privacy.delete.p': "En la app, abre Ajustes → Acerca de → Eliminar cuenta de tiempo y confirma. La interpretación se detiene y se eliminan la cuenta activa, los registros de dispositivos, el saldo restante y los registros de uso. Esta acción no se puede deshacer y no reembolsa las compras de Apple ni elimina las transcripciones guardadas en tu dispositivo; puedes borrar esas transcripciones en Historial. Las copias de seguridad caducan tras los plazos de conservación indicados arriba. Conservamos registros limitados de eliminación y reembolso únicamente para impedir que los ID de cuentas antiguas o los recibos reembolsados restauren tiempo; esos registros no reactivan una cuenta eliminada. Para acceder a tus datos o solicitar ayuda, escribe a <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> e incluye el ID de cuenta que aparece en Ajustes → Tiempo restante.",
   'privacy.children.title': 'Menores',
   'privacy.children.p':
     'Esta app está pensada para la interpretación profesional y cotidiana. No está dirigida a menores ' +

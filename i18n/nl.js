@@ -181,7 +181,7 @@ siteI18n('nl', {
   // privacy.html
   'privacy.doc.title': 'Privacybeleid · Duo Interpreter',
   'privacy.title': 'Privacybeleid',
-  'privacy.sub': 'Duo Interpreter · Laatst bijgewerkt op 24 september 2026',
+  'privacy.sub': "Duo Interpreter · Laatst bijgewerkt op 26 september 2026",
   'privacy.translated':
     'Dit beleid is een vertaling. Als het afwijkt van de <a href="?lang=en">Engelse versie</a>, geldt de Engelse versie.',
   'privacy.short':
@@ -196,10 +196,7 @@ siteI18n('nl', {
   'privacy.credit.intro':
     'Om bij te houden hoeveel tijd je hebt gekocht en om misbruik te voorkomen, communiceert de app met onze server ' +
     '<code>api.duo-interpreter.com</code> (gehost op Microsoft Azure in Singapore). De server bewaart:',
-  'privacy.credit.id':
-    '<strong>Een willekeurige account-ID</strong>: een nummer (een UUID) dat de app aanmaakt de eerste keer dat je hem gebruikt. ' +
-    'Dit nummer heeft niets te maken met je naam, e-mailadres, telefoonnummer of Apple Account. ' +
-    'Het wordt bewaard in je iCloud-sleutelhanger, zodat je saldo een herinstallatie overleeft en met je meegaat naar een nieuwe telefoon met hetzelfde Apple Account.',
+  'privacy.credit.id': "<strong>Een willekeurige account-ID en een herstelverificatie</strong>: de app genereert een ID (UUID) en een afzonderlijke willekeurige geheime herstelsleutel. Deze staan los van je naam, e-mailadres, telefoonnummer of Apple Account. De ID en sleutel blijven in iCloud-sleutelhanger; de server slaat alleen een verificatiehash van de sleutel op om een ander apparaat toegang tot hetzelfde saldo te geven.",
   'privacy.credit.device':
     '<strong>Apparaatreferenties</strong>: per apparaat de ID en de openbare sleutel van een Apple App Attest-sleutel, ' +
     'met wanneer die is geregistreerd en voor het laatst is gebruikt. ' +
@@ -210,16 +207,12 @@ siteI18n('nl', {
   'privacy.credit.usage':
     '<strong>Gebruik</strong>: wanneer elke tolksessie begon en eindigde, de modus (gesproken vertaling of alleen ondertitels), ' +
     'hoeveel tijd die heeft gebruikt, hoeveel tijdelijke sleutels die heeft opgevraagd, en elke wijziging in je saldo.',
-  'privacy.credit.trial':
-    '<strong>De proefperiode van 5 minuten</strong> wordt één keer per apparaat gegeven. Om herhaald claimen te voorkomen, ' +
-    'geeft de app de server een eenmalig Apple DeviceCheck-token; daarmee vraagt de server Apple om één bit te controleren en daarna in te stellen, ' +
-    'die Apple namens ons voor dit apparaat bewaart (‘proefperiode gebruikt’). ' +
-    'Het token wordt één keer gebruikt en niet opgeslagen, en Apple bewaart voor ons alleen die ene bit, zonder ons te vertellen om welk apparaat het gaat.',
+  'privacy.credit.trial': "<strong>De proefperiode van 5 minuten</strong> wordt één keer per apparaat toegekend. De app verstuurt een Apple DeviceCheck-token, zodat de server bij Apple de markering ‘proefperiode gebruikt’ van het apparaat kan controleren en instellen. Als die controle tijdelijk niet beschikbaar is, kan de app het opnieuw proberen zonder de proefperiode dubbel toe te kennen. DeviceCheck-tokens worden niet opgeslagen. Apple vertelt ons niet welk apparaat het is.",
   'privacy.credit.never':
     'De server <strong>ontvangt nooit</strong> je spraak, ondertitels of vertalingen, je naam, e-mailadres, telefoonnummer, ' +
     'locatie of contacten, of je betaalgegevens.',
   'privacy.key.title': 'Je eigen Alibaba Cloud-key gebruiken',
-  'privacy.key.p': 'In deze modus maakt de app geen contact met onze server en <strong>verzamelen we niets</strong>.',
+  'privacy.key.p': "Tolken met je eigen Alibaba Cloud-sleutel verstuurt geen spraak- of vertaalgegevens naar onze server. Als je een bestaand tijdaccount beheert of verwijdert, neemt de app voor dat verzoek contact op met onze server.",
   'privacy.both.title': 'In beide gevallen',
   'privacy.both.p':
     'De app bevat geen analyse-, advertentie- of trackingsoftware van derden. Wij doen niet aan analyse of advertenties, ' +
@@ -266,10 +259,7 @@ siteI18n('nl', {
     'Ze worden <strong>nooit geüpload</strong> en worden uitgesloten van de iCloud-reservekopie. ' +
     'Je kunt ze lezen, exporteren of verwijderen via ‘Geschiedenis’ in de app; als je de app verwijdert, worden ze ook verwijderd.',
   'privacy.account.title': 'Account-ID',
-  'privacy.account.p':
-    'De hierboven beschreven willekeurige account-ID wordt bewaard in de iOS-sleutelhanger en wordt, als de iCloud-sleutelhanger aanstaat, ' +
-    'gesynchroniseerd tussen je apparaten met hetzelfde Apple Account (end-to-end versleuteld door Apple). ' +
-    'Als je de app verwijdert, blijft de ID bestaan, zodat je saldo er na een herinstallatie nog is.',
+  'privacy.account.p': "Je willekeurige tijdaccount-ID en een afzonderlijke geheime herstelsleutel worden bewaard in de iOS-sleutelhanger. Als iCloud-sleutelhanger is ingeschakeld, kan Apple ze met end-to-endversleuteling synchroniseren tussen apparaten met hetzelfde Apple Account. Met gesynchroniseerde inloggegevens kun je het saldo herstellen na een herinstallatie of overstap naar een ander apparaat. Een oudere installatie moet mogelijk eerst op het oorspronkelijke apparaat worden bijgewerkt voordat veilig herstel kan worden ingesteld.",
   'privacy.apikey.title': 'API Keys',
   'privacy.apikey.p':
     'De API Keys die je zelf invoert, worden bewaard in de iOS-<strong>sleutelhanger</strong>, ' +
@@ -291,12 +281,7 @@ siteI18n('nl', {
     'Terugbetalingen worden door Apple afgehandeld; Apple laat het onze server weten, zodat die de tijd terugneemt.',
   'privacy.purchase.all': '‘Alle talen’: de app vraagt alleen aan het systeem of dit is gekocht; onze server komt er niet aan te pas.',
   'privacy.delete.title': 'Inzage en verwijdering',
-  'privacy.delete.p':
-    'Je account-ID staat in de app onder Instellingen → Resterende tijd, met een knop Kopieer. ' +
-    'Wil je zien of verwijderen wat onze server over je bewaart, stuur die ID dan naar ' +
-    '<a href="mailto:winer632@qq.com">winer632@qq.com</a>; we verwijderen dan alle gegevens van dat account op de server ' +
-    '(snapshots en de externe kopie verlopen na hun bewaartermijn). ' +
-    'Resterende tijd kan na verwijdering niet worden hersteld. Terugbetalingen voor aankopen vraag je aan bij Apple.',
+  'privacy.delete.p': "Open in de app Instellingen → Over → Tijdaccount verwijderen en bevestig. Het tolken stopt en het actieve account, apparaatregistraties, resterend saldo en gebruiksgegevens worden verwijderd. Dit kan niet ongedaan worden gemaakt en zorgt niet voor terugbetaling van Apple-aankopen of verwijdering van transcripties op je apparaat; die transcripties kun je verwijderen in Geschiedenis. Back-ups vervallen na de hierboven genoemde bewaartermijnen. We bewaren beperkte verwijderings- en terugbetalingsgegevens uitsluitend om te voorkomen dat oude account-ID’s of terugbetaalde aankoopbewijzen tijd herstellen; deze gegevens activeren een verwijderd account niet opnieuw. Wil je toegang tot je gegevens of hulp, mail dan naar <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> met de account-ID die onder Instellingen → Resterende tijd staat.",
   'privacy.children.title': 'Kinderen',
   'privacy.children.p':
     'Deze app is bedoeld voor tolken in zakelijke en alledaagse situaties. Hij is niet op kinderen gericht en verzamelt niet bewust iets van hen.',

@@ -152,7 +152,7 @@ siteI18n('zh', {
   // privacy.html
   'privacy.doc.title': '隐私政策 · 实时同声传译',
   'privacy.title': '隐私政策',
-  'privacy.sub': '实时同声传译 · 最后更新 2026 年 9 月 24 日',
+  'privacy.sub': "实时同声传译 · 最后更新 2026 年 9 月 26 日",
   'privacy.short':
     '<strong>一句话版本：</strong>App 有两种用法。默认的「购买时长」不用注册：你的语音从手机直接发往阿里云百炼翻译，' +
     '<strong>不经过我们的服务器</strong>；我们的服务器只记一个随机生成的账号号码、你买了多少时长、用了多少时长。' +
@@ -163,9 +163,7 @@ siteI18n('zh', {
   'privacy.credit.intro':
     '为了记住你买了多少时长、防止被盗刷，App 会连接我们的服务器 <code>api.duo-interpreter.com</code>' +
     '（部署在 Microsoft Azure 新加坡区域）。服务器保存这些：',
-  'privacy.credit.id':
-    '<strong>随机账号 ID</strong>：App 第一次用时随机生成的一串号码（UUID），和你的姓名、邮箱、电话、Apple 账户都没有关系。' +
-    '它存在你的 iCloud 钥匙串里，所以重装 App、换同一 Apple 账户的新手机，余额都还在。',
+  'privacy.credit.id': "<strong>随机账号 ID 和恢复校验信息</strong>：App 会生成一个 ID（UUID）和一份独立的随机恢复密钥。它们与你的姓名、邮箱、手机号或 Apple 账户无关。ID 和密钥保存在 iCloud 钥匙串中；服务器只保存密钥的校验摘要，用来授权另一台设备共享同一份余额。",
   'privacy.credit.device':
     '<strong>设备凭证</strong>：每台设备一把 Apple App Attest 密钥的编号和公钥，以及登记时间、最后一次使用时间。' +
     '用来确认请求来自这个 App 的正版安装，而不是被篡改的程序。',
@@ -174,14 +172,11 @@ siteI18n('zh', {
   'privacy.credit.usage':
     '<strong>使用记录</strong>：每次传译的开始和结束时间、模式（念出译文或只出字幕）、扣了多少时长、' +
     '这次传译向服务器要了几次临时密钥，以及余额的每一笔增减。',
-  'privacy.credit.trial':
-    '<strong>新设备送的 5 分钟试用</strong>每台设备只送一次。为了防止重复领，App 会把 Apple DeviceCheck 生成的一次性令牌交给服务器，' +
-    '服务器拿它请 Apple 查一下、再标记 Apple 替我们给这台设备保存的 1 个比特（「领过试用」）。令牌用完即弃，服务器不保存；' +
-    'Apple 只替我们记这 1 个比特，不会告诉我们这是哪台设备。',
+  'privacy.credit.trial': "<strong>5 分钟试用</strong>每台设备只赠送一次。App 发送 Apple DeviceCheck 令牌，让服务器向 Apple 查询并设置这台设备的“已用过试用”标记。如果暂时无法完成检查，App 可以重试，且不会重复赠送试用。我们不保存 DeviceCheck 令牌，Apple 也不会向我们透露设备身份。",
   'privacy.credit.never':
     '服务器<strong>收不到</strong>：你的语音、字幕和翻译内容，你的姓名、邮箱、电话、位置、通讯录，以及你的付款方式。',
   'privacy.key.title': '用自己的阿里云 Key',
-  'privacy.key.p': '这种用法下 App 不连接我们的服务器，<strong>我们什么都不收集</strong>。',
+  'privacy.key.p': "使用自己的阿里云 Key 传译时，不会向我们的服务器发送语音或翻译数据。如果你管理或删除已有的时长账号，App 会为处理该请求连接我们的服务器。",
   'privacy.both.title': '两种用法都一样',
   'privacy.both.p': 'App 里没有第三方分析、广告或跟踪组件。我们不做统计、不投广告、不跨 App 或网站追踪你，也不出售或分享任何数据。',
   'privacy.logs.title': '服务器日志与保存期限',
@@ -215,9 +210,7 @@ siteI18n('zh', {
     '每句定稿的字幕会按天存成文件，放在 App 自己的沙盒目录里，<strong>不会上传</strong>，也不参与 iCloud 备份。' +
     '可以在 App 的「记录」里查看、导出或删除；卸载 App 即随之清除。',
   'privacy.account.title': '账号 ID',
-  'privacy.account.p':
-    '上面说的随机账号 ID 存在 iOS 钥匙串里，打开了 iCloud 钥匙串时会在你同一 Apple 账户的设备间同步（由 Apple 端到端加密）。' +
-    '卸载 App 不会删掉它，重装后余额还在。',
+  'privacy.account.p': "随机时长账号 ID 和一份独立的恢复密钥保存在 iOS 钥匙串中。启用 iCloud 钥匙串后，Apple 可通过端到端加密，在同一 Apple 账户的设备之间同步它们。同步后的凭据可用于在重装 App 或更换设备后恢复余额。旧版本可能需要先在原设备上更新，才能建立安全恢复所需的信息。",
   'privacy.apikey.title': 'API Key',
   'privacy.apikey.p':
     '你自己填写的 API Key 保存在 iOS <strong>钥匙串</strong>中，标记为「仅本机、解锁后可读」，既不上传也不随备份迁移到其他设备。',
@@ -234,10 +227,7 @@ siteI18n('zh', {
     '服务器只给交易里写明的那个账号加时长。退款由 Apple 处理，Apple 会通知服务器扣回相应时长。',
   'privacy.purchase.all': '「全部语言」：App 只向系统询问「是否已购买」，不经过我们的服务器。',
   'privacy.delete.title': '查询与删除',
-  'privacy.delete.p':
-    '你的账号 ID 在 App 的「设置 → 剩余时长」里，可以复制。想查询或删除服务器上关于你的记录，把它写信发到 ' +
-    '<a href="mailto:winer632@qq.com">winer632@qq.com</a>，我们会删除这个账号在服务器上的全部记录' +
-    '（快照和异地备份在各自的保留期后过期）。删除后剩余时长无法恢复。购买的退款请向 Apple 申请。',
+  'privacy.delete.p': "在 App 中打开 设置 → 关于 → 删除时长账号 并确认。传译会停止，当前账号、设备注册信息、剩余余额和使用记录会被删除。此操作无法撤销，不会退还 Apple 购买款项，也不会删除设备上保存的对话记录；这些记录可在“记录”中删除。备份会在上述保存期限届满后失效。我们只保留有限的删除和退款记录，用于防止旧账号 ID 或已退款的购买凭据恢复时长；这些记录不会重新启用已删除的账号。如需查阅你的数据或获得帮助，请将 设置 → 剩余时长 中显示的账号 ID 发送至 <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a>。",
   'privacy.children.title': '儿童',
   'privacy.children.p': '本 App 面向商务与日常口译场景，不面向儿童，也不会有意收集儿童的任何信息。',
   'privacy.changes.title': '政策变更',

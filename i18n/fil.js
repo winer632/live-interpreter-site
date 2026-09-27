@@ -177,7 +177,7 @@ siteI18n('fil', {
   // privacy.html
   'privacy.doc.title': 'Patakaran sa Privacy · Duo Interpreter',
   'privacy.title': 'Patakaran sa Privacy',
-  'privacy.sub': 'Duo Interpreter · Huling na-update noong Setyembre 24, 2026',
+  'privacy.sub': "Duo Interpreter · Huling na-update noong Setyembre 26, 2026",
   'privacy.translated':
     'Salin ang patakarang ito. Kung may pagkakaiba ito sa <a href="?lang=en">bersyong Ingles</a>, ang bersyong Ingles ang masusunod.',
   'privacy.short':
@@ -192,10 +192,7 @@ siteI18n('fil', {
   'privacy.credit.intro':
     'Para matandaan kung gaano karaming oras ang binili mo at para pigilan ang pang-aabuso, kumokonekta ang app sa server naming ' +
     '<code>api.duo-interpreter.com</code> (naka-host sa Microsoft Azure sa Singapore). Ito ang itinatago ng server:',
-  'privacy.credit.id':
-    '<strong>Isang random na account ID</strong>: isang numero (UUID) na ginagawa ng app sa unang beses mo itong gamitin. ' +
-    'Wala itong kinalaman sa pangalan, email, phone number o Apple Account mo. Nakatago ito sa iCloud Keychain mo, kaya hindi nawawala ' +
-    'ang balance mo kapag nag-reinstall ka, at sumusunod ito sa iyo sa bagong phone na may parehong Apple Account.',
+  'privacy.credit.id': "<strong>Isang random na Account ID at pang-verify para sa pagbawi</strong>: gumagawa ang app ng ID (UUID) at hiwalay na random na lihim na susi para sa pagbawi. Walang kaugnayan ang mga ito sa iyong pangalan, email, numero ng telepono o Apple Account. Nananatili ang ID at lihim na susi sa iCloud Keychain; digest lang na pang-verify ng lihim na susi ang iniimbak ng server para pahintulutan ang ibang device na gumamit ng parehong balanse.",
   'privacy.credit.device':
     '<strong>Mga credential ng device</strong>: para sa bawat device, ang identifier at public key ng isang Apple App Attest key, ' +
     'kasama kung kailan ito nairehistro at kung kailan huling ginamit. Pinapatunayan ng mga ito na galing ang mga request sa tunay na kopya ' +
@@ -206,17 +203,12 @@ siteI18n('fil', {
   'privacy.credit.usage':
     '<strong>Paggamit</strong>: kung kailan nagsimula at natapos ang bawat session ng pagsasalin, ang mode nito (may boses ang salin o subtitles lang), ' +
     'kung gaano karaming oras ang nagamit nito, ilang pansamantalang key ang hiningi nito, at bawat pagbabago sa balance mo.',
-  'privacy.credit.trial':
-    '<strong>Ang 5-minutong trial</strong> ay ibinibigay nang isang beses bawat device. Para maiwasan ang paulit-ulit na pag-claim, ' +
-    'nagbibigay ang app sa server ng isang beses lang magagamit na Apple DeviceCheck token; ginagamit ito ng server para hilingin sa Apple ' +
-    'na tingnan, at saka itakda, ang isang bit na itinatago ng Apple para sa device na ito sa ngalan namin (“nagamit na ang trial”). ' +
-    'Isang beses lang ginagamit ang token at hindi ito itinatago, at ang bit lang na iyon ang itinatago ng Apple para sa amin, ' +
-    'nang hindi sinasabi sa amin kung aling device ito.',
+  'privacy.credit.trial': "<strong>Ang 5-minutong pagsubok</strong> ay ibinibigay nang isang beses sa bawat device. Nagpapadala ang app ng Apple DeviceCheck token para matingnan at maitakda ng server sa Apple ang marka ng device na ‘nagamit na ang pagsubok’. Kung pansamantalang hindi magawa ang pagsusuring ito, maaaring subukan muli ng app nang hindi nagbibigay ng pagsubok nang dalawang beses. Hindi iniimbak ang mga DeviceCheck token. Hindi sinasabi sa amin ng Apple ang pagkakakilanlan ng device.",
   'privacy.credit.never':
     '<strong>Hindi kailanman natatanggap</strong> ng server ang boses, subtitles o salin mo; ang pangalan, email, phone number, lokasyon ' +
     'o mga contact mo; o ang mga detalye ng pagbabayad mo.',
   'privacy.key.title': 'Paggamit ng sarili mong Alibaba Cloud key',
-  'privacy.key.p': 'Sa mode na ito, hindi kumokonekta ang app sa server namin, at <strong>wala kaming kinokolekta</strong>.',
+  'privacy.key.p': "Ang interpretasyon gamit ang sarili mong Alibaba Cloud key ay hindi nagpapadala ng data ng pagsasalita o pagsasalin sa aming server. Kung namamahala ka o nagbubura ng umiiral na account ng oras, kokontakin ng app ang aming server para sa kahilingang iyon.",
   'privacy.both.title': 'Alinman sa dalawa',
   'privacy.both.p':
     'Walang third-party na analytics, advertising o tracking sa app. Hindi kami nagpapatakbo ng analytics o ads, ' +
@@ -261,10 +253,7 @@ siteI18n('fil', {
     'ang mga ito at hindi kasama sa iCloud backup. Puwede mong basahin, i-export o burahin ang mga ito sa “Kasaysayan” sa app; ' +
     'kapag binura ang app, mabubura rin ang mga ito.',
   'privacy.account.title': 'Account ID',
-  'privacy.account.p':
-    'Ang random na account ID na inilarawan sa itaas ay nakatago sa iOS Keychain at, kung naka-on ang iCloud Keychain, nagsi-sync ' +
-    'sa pagitan ng mga device mo na may parehong Apple Account (end-to-end encrypted ng Apple). Hindi ito natatanggal kapag binura ang app, ' +
-    'kaya naroon pa rin ang balance mo pagkatapos mag-reinstall.',
+  'privacy.account.p': "Ang iyong random na ID ng account ng oras at hiwalay na lihim na susi para sa pagbawi ay iniingatan sa iOS Keychain. Kapag naka-enable ang iCloud Keychain, maaaring i-sync ng Apple ang mga ito sa mga device na gumagamit ng parehong Apple Account gamit ang end-to-end encryption. Magagamit ang naka-sync na mga kredensyal para maibalik ang balanse pagkatapos mag-reinstall o lumipat ng device. Maaaring kailangang i-update muna ang lumang installation sa orihinal na device bago maihanda ang ligtas na pagbawi.",
   'privacy.apikey.title': 'Mga API key',
   'privacy.apikey.p':
     'Ang mga API key na ikaw mismo ang naglagay ay nakatago sa iOS <strong>Keychain</strong>, na naka-mark na mababasa lang sa device na ito ' +
@@ -286,11 +275,7 @@ siteI18n('fil', {
     'Ang Apple ang humahawak sa mga refund, at inaabisuhan nito ang server namin para bawiin ang oras.',
   'privacy.purchase.all': '“Lahat ng wika”: tinatanong lang ng app sa system kung nabili na ito; hindi kasali ang server namin.',
   'privacy.delete.title': 'Pag-access at pagbura',
-  'privacy.delete.p':
-    'Nasa Mga Setting → Natitirang oras sa app ang account ID mo, may button na Kopyahin. Para makita o mabura ang itinatago ng server namin ' +
-    'tungkol sa iyo, ipadala ito sa <a href="mailto:winer632@qq.com">winer632@qq.com</a> at buburahin namin ang lahat ng record ng account na iyon ' +
-    'sa server (mag-e-expire ang mga snapshot at ang off-site na kopya pagkalipas ng kani-kanilang tagal ng pagtatago). ' +
-    'Hindi na maibabalik ang natitirang oras pagkatapos ng pagbura. Sa Apple hinihingi ang refund para sa mga binili.',
+  'privacy.delete.p': "Sa app, buksan ang Mga Setting → Tungkol dito → Burahin ang account ng oras at kumpirmahin. Hihinto ang interpretasyon, at mabubura ang aktibong account, mga pagpaparehistro ng device, natitirang balanse at mga tala ng paggamit. Hindi ito maibabalik at hindi nito ibinabalik ang bayad sa mga binili sa Apple o binubura ang mga transcript na naka-save sa iyong device; maaari mong burahin ang mga transcript sa Kasaysayan. Mawawalan ng bisa ang mga backup pagkatapos ng mga panahon ng pag-iingat na nakasaad sa itaas. Nag-iingat kami ng limitadong tala ng pagbura at refund para lamang pigilan ang mga lumang Account ID o resibo ng na-refund na pagbili na magbalik ng oras; hindi muling ina-activate ng mga talang ito ang naburang account. Para ma-access ang iyong data o humingi ng tulong, mag-email sa <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> at isama ang Account ID na makikita sa Mga Setting → Natitirang oras.",
   'privacy.children.title': 'Mga bata',
   'privacy.children.p':
     'Para sa pagsasalin sa negosyo at sa pang-araw-araw ang app na ito. Hindi ito nakatuon sa mga bata at hindi ito sadyang nangongolekta ' +

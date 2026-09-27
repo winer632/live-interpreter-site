@@ -151,7 +151,7 @@ siteI18n('zh-Hant', {
   // privacy.html
   'privacy.doc.title': '隱私權政策 · Duo Interpreter',
   'privacy.title': '隱私權政策',
-  'privacy.sub': 'Duo Interpreter · 最後更新：2026 年 9 月 24 日',
+  'privacy.sub': "Duo Interpreter · 最後更新：2026 年 9 月 26 日",
   'privacy.translated': '本政策為翻譯版本。如與<a href="?lang=en">英文版</a>有任何不一致，以英文版為準。',
   'privacy.short':
     '<strong>簡單來說：</strong>App 有兩種使用方式。預設是購買口譯時間，不需要註冊：你的語音從手機直接傳送到阿里雲百煉進行翻譯，' +
@@ -163,9 +163,7 @@ siteI18n('zh-Hant', {
   'privacy.credit.intro':
     '為了記住你購買了多少時間並防止濫用，App 會連線到我們的伺服器 <code>api.duo-interpreter.com</code>' +
     '（架設在 Microsoft Azure 新加坡區域）。伺服器會保存：',
-  'privacy.credit.id':
-    '<strong>隨機帳號 ID</strong>：App 第一次使用時產生的一串號碼（UUID），與你的姓名、電子郵件、電話號碼或 Apple 帳號都沒有關聯。' +
-    '它保存在你的 iCloud 鑰匙圈中，因此重新安裝 App 後餘額仍在，換成使用同一個 Apple 帳號的新手機也會跟著過去。',
+  'privacy.credit.id': "<strong>隨機帳號 ID 與復原驗證資訊</strong>：App 會產生一個 ID（UUID）與一份獨立的隨機復原密鑰。它們與你的姓名、電子郵件、電話號碼或 Apple 帳號無關。ID 與密鑰保存在 iCloud 鑰匙圈中；伺服器只保存密鑰的驗證摘要，用來授權另一台裝置共用同一份餘額。",
   'privacy.credit.device':
     '<strong>裝置憑證</strong>：每部裝置一把 Apple App Attest 金鑰的識別碼和公開金鑰，以及登記時間和最後使用時間。' +
     '用來證明請求來自這個 App 的正版副本，而不是被修改過的版本。',
@@ -174,14 +172,11 @@ siteI18n('zh-Hant', {
   'privacy.credit.usage':
     '<strong>使用紀錄</strong>：每次口譯的開始和結束時間、模式（翻譯語音或僅字幕）、用掉多少時間、' +
     '要求了幾次臨時金鑰，以及餘額的每一筆變動。',
-  'privacy.credit.trial':
-    '<strong>5 分鐘試用</strong>每部裝置只提供一次。為了防止重複領取，App 會把一次性的 Apple DeviceCheck 權杖交給伺服器；' +
-    '伺服器用它請 Apple 查詢、再設定 Apple 代我們為這部裝置保存的一個位元（「已使用試用」）。' +
-    '權杖只使用一次、不會保存；Apple 也只替我們保存那一個位元，不會告訴我們是哪一部裝置。',
+  'privacy.credit.trial': "<strong>5 分鐘試用</strong>每台裝置只贈送一次。App 會傳送 Apple DeviceCheck 權杖，讓伺服器向 Apple 查詢並設定這台裝置的「已使用試用」標記。若暫時無法完成檢查，App 可以重試，且不會重複贈送試用。我們不保存 DeviceCheck 權杖，Apple 也不會向我們透露裝置身分。",
   'privacy.credit.never':
     '伺服器<strong>絕不會收到</strong>：你的語音、字幕或譯文；你的姓名、電子郵件、電話號碼、位置或聯絡人；以及你的付款資訊。',
   'privacy.key.title': '使用自己的阿里雲 Key',
-  'privacy.key.p': '在這種模式下，App 不會連線到我們的伺服器，<strong>我們什麼都不蒐集</strong>。',
+  'privacy.key.p': "使用自己的阿里雲 Key 進行口譯時，不會將語音或翻譯資料傳送至我們的伺服器。如果你管理或刪除既有的時間帳號，App 會為了處理該請求連接我們的伺服器。",
   'privacy.both.title': '兩種方式都一樣',
   'privacy.both.p':
     'App 不含任何第三方分析、廣告或追蹤元件。我們不做分析、不投放廣告、不跨 App 或網站追蹤你，也不出售或分享任何資料。',
@@ -217,9 +212,7 @@ siteI18n('zh-Hant', {
     '定稿的句子會寫入 App 自己的容器內，每天一個檔案。這些檔案<strong>絕不會上傳</strong>，也不包含在 iCloud 備份中。' +
     '你可以在 App 的「紀錄」裡查看、匯出或刪除；刪除 App 時會一併移除。',
   'privacy.account.title': '帳號 ID',
-  'privacy.account.p':
-    '上面提到的隨機帳號 ID 保存在 iOS 鑰匙圈中；如果開啟了 iCloud 鑰匙圈，會在你使用同一個 Apple 帳號的裝置之間同步（由 Apple 端對端加密）。' +
-    '刪除 App 不會移除它，所以重新安裝後餘額仍在。',
+  'privacy.account.p': "隨機時間帳號 ID 與一份獨立的復原密鑰保存在 iOS 鑰匙圈中。啟用 iCloud 鑰匙圈後，Apple 可透過端對端加密，在同一 Apple 帳號的裝置之間同步它們。同步後的憑證可用於在重新安裝 App 或更換裝置後復原餘額。舊版本可能需要先在原裝置上更新，才能建立安全復原所需的資訊。",
   'privacy.apikey.title': 'API Key',
   'privacy.apikey.p':
     '你自行輸入的 API Key 保存在 iOS <strong>鑰匙圈</strong>中，並標記為只能在這部裝置上、且只在裝置解鎖時讀取。' +
@@ -237,10 +230,7 @@ siteI18n('zh-Hant', {
     '伺服器只會為交易中指定的帳號加值。退款由 Apple 處理，Apple 會通知我們的伺服器收回相應的時間。',
   'privacy.purchase.all': '「全部語言」：App 只向系統查詢是否已購買，不經過我們的伺服器。',
   'privacy.delete.title': '查詢與刪除',
-  'privacy.delete.p':
-    '你的帳號 ID 在 App 的「設定 → 剩餘時間」裡，旁邊有「拷貝」按鈕。如果想查看或刪除我們伺服器上與你有關的資料，請把帳號 ID 寄到 ' +
-    '<a href="mailto:winer632@qq.com">winer632@qq.com</a>，我們會刪除該帳號在伺服器上的所有紀錄' +
-    '（快照和異地副本會在各自的保存期限到期後失效）。刪除後，剩餘時間無法恢復。購買項目的退款請向 Apple 申請。',
+  'privacy.delete.p': "在 App 中開啟 設定 → 關於 → 刪除時間帳號 並確認。口譯會停止，目前的帳號、裝置註冊資訊、剩餘餘額與使用紀錄會被刪除。此操作無法復原，不會退還 Apple 購買款項，也不會刪除裝置上保存的對話紀錄；這些紀錄可在「紀錄」中刪除。備份會在上述保存期限屆滿後失效。我們僅保留有限的刪除與退款紀錄，用於防止舊帳號 ID 或已退款的購買收據恢復時間；這些紀錄不會重新啟用已刪除的帳號。如需查閱你的資料或取得協助，請將 設定 → 剩餘時間 中顯示的帳號 ID 寄至 <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a>。",
   'privacy.children.title': '兒童',
   'privacy.children.p': '本 App 適用於商務與日常口譯，並非以兒童為對象，也不會在知情的情況下向兒童蒐集任何資料。',
   'privacy.changes.title': '政策變更',

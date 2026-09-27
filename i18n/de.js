@@ -182,7 +182,7 @@ siteI18n('de', {
   // privacy.html
   'privacy.doc.title': 'Datenschutzerklärung · Duo Interpreter',
   'privacy.title': 'Datenschutzerklärung',
-  'privacy.sub': 'Duo Interpreter · Zuletzt aktualisiert am 24. September 2026',
+  'privacy.sub': "Duo Interpreter · Zuletzt aktualisiert am 26. September 2026",
   'privacy.translated':
     'Diese Erklärung ist eine Übersetzung. Weicht sie von der <a href="?lang=en">englischen Fassung</a> ab, gilt die englische Fassung.',
   'privacy.short':
@@ -197,10 +197,7 @@ siteI18n('de', {
   'privacy.credit.intro':
     'Damit festgehalten wird, wie viel Zeit du gekauft hast, und um Missbrauch zu verhindern, kommuniziert die App mit unserem Server ' +
     '<code>api.duo-interpreter.com</code> (gehostet bei Microsoft Azure in Singapur). Der Server speichert:',
-  'privacy.credit.id':
-    '<strong>Eine zufällige Konto-ID</strong>: eine Nummer (eine UUID), die die App bei der ersten Nutzung erzeugt. ' +
-    'Sie hat nichts mit deinem Namen, deiner E-Mail-Adresse, deiner Telefonnummer oder deinem Apple Account zu tun. ' +
-    'Sie liegt in deinem iCloud-Schlüsselbund, sodass dein Guthaben Neuinstallationen übersteht und dich auf neue iPhones mit demselben Apple Account begleitet.',
+  'privacy.credit.id': "<strong>Eine zufällige Konto-ID und ein Wiederherstellungsprüfwert</strong>: Die App erzeugt eine ID (UUID) und einen separaten, zufälligen Wiederherstellungsschlüssel. Sie stehen in keinem Zusammenhang mit deinem Namen, deiner E-Mail-Adresse, Telefonnummer oder deinem Apple Account. ID und Schlüssel bleiben im iCloud-Schlüsselbund. Der Server speichert nur einen Prüfhash des Schlüssels, um weiteren Geräten den Zugriff auf dasselbe Guthaben zu erlauben.",
   'privacy.credit.device':
     '<strong>Geräteanmeldedaten</strong>: für jedes Gerät die Kennung und der öffentliche Schlüssel eines Schlüssels von Apple App Attest, ' +
     'dazu wann er registriert und zuletzt verwendet wurde. Sie belegen, dass Anfragen von einer echten Kopie dieser App stammen und nicht von einer veränderten.',
@@ -210,16 +207,12 @@ siteI18n('de', {
   'privacy.credit.usage':
     '<strong>Nutzung</strong>: wann jede Dolmetschsitzung begonnen und geendet hat, ihr Modus (Sprachausgabe oder nur Untertitel), ' +
     'wie viel Zeit sie verbraucht hat, wie viele temporäre Schlüssel sie angefordert hat, und jede Änderung deines Guthabens.',
-  'privacy.credit.trial':
-    '<strong>Die 5-minütige Testphase</strong> gibt es einmal pro Gerät. Um wiederholtes Einlösen zu verhindern, übergibt die App dem Server ' +
-    'ein einmaliges Token von Apple DeviceCheck; damit bittet der Server Apple, ein einzelnes Bit zu prüfen und dann zu setzen, ' +
-    'das Apple in unserem Auftrag für dieses Gerät speichert („Testphase genutzt“). Das Token wird einmal verwendet und nicht gespeichert, ' +
-    'und Apple speichert für uns nur dieses eine Bit, ohne uns mitzuteilen, um welches Gerät es sich handelt.',
+  'privacy.credit.trial': "<strong>Die 5-minütige Testzeit</strong> wird einmal pro Gerät gewährt. Die App sendet ein Apple-DeviceCheck-Token, damit der Server bei Apple das Kennzeichen „Testzeit bereits genutzt“ des Geräts prüfen und setzen kann. Ist diese Prüfung vorübergehend nicht verfügbar, kann die App sie wiederholen, ohne die Testzeit doppelt zu gewähren. DeviceCheck-Token werden nicht gespeichert. Apple teilt uns die Identität des Geräts nicht mit.",
   'privacy.credit.never':
     'Der Server <strong>erhält niemals</strong> deine Sprache, Untertitel oder Übersetzungen, deinen Namen, deine E-Mail-Adresse, ' +
     'Telefonnummer, deinen Standort oder deine Kontakte und auch nicht deine Zahlungsdaten.',
   'privacy.key.title': 'Eigenen Alibaba Cloud Key nutzen',
-  'privacy.key.p': 'In diesem Modus kontaktiert die App unseren Server nicht, und <strong>wir erfassen nichts</strong>.',
+  'privacy.key.p': "Beim Dolmetschen mit deinem eigenen Alibaba-Cloud-Schlüssel werden keine Sprach- oder Übersetzungsdaten an unseren Server gesendet. Wenn du ein bestehendes Zeitkonto verwaltest oder löschst, kontaktiert die App unseren Server für diese Anfrage.",
   'privacy.both.title': 'In beiden Fällen',
   'privacy.both.p':
     'Die App enthält keine Analyse-, Werbe- oder Tracking-Komponenten von Drittanbietern. Wir betreiben keine Analyse und keine Werbung, ' +
@@ -266,10 +259,7 @@ siteI18n('de', {
     'Sie werden <strong>nie hochgeladen</strong> und sind vom iCloud-Backup ausgeschlossen. ' +
     'Du kannst sie in der App unter „Verlauf“ lesen, exportieren oder löschen; wenn du die App löschst, werden sie entfernt.',
   'privacy.account.title': 'Konto-ID',
-  'privacy.account.p':
-    'Die oben beschriebene zufällige Konto-ID liegt im iOS-Schlüsselbund und wird bei eingeschaltetem iCloud-Schlüsselbund ' +
-    'zwischen deinen Geräten mit demselben Apple Account synchronisiert (von Apple Ende-zu-Ende-verschlüsselt). ' +
-    'Beim Löschen der App wird sie nicht entfernt, daher ist dein Guthaben nach einer Neuinstallation noch da.',
+  'privacy.account.p': "Deine zufällige Zeitkonto-ID und ein separater Wiederherstellungsschlüssel werden im iOS-Schlüsselbund gespeichert. Bei aktiviertem iCloud-Schlüsselbund kann Apple sie mit Ende-zu-Ende-Verschlüsselung zwischen Geräten mit demselben Apple Account synchronisieren. Mit den synchronisierten Zugangsdaten kannst du dein Guthaben nach einer Neuinstallation oder einem Gerätewechsel wiederherstellen. Bei einer älteren Installation kann zunächst ein Update auf dem ursprünglichen Gerät nötig sein, um eine sichere Wiederherstellung einzurichten.",
   'privacy.apikey.title': 'API Keys',
   'privacy.apikey.p':
     'Die API Keys, die du selbst eingibst, werden im iOS-<strong>Schlüsselbund</strong> gespeichert und sind so markiert, ' +
@@ -291,12 +281,7 @@ siteI18n('de', {
     'Erstattungen wickelt Apple ab und benachrichtigt unseren Server, damit er die Zeit wieder abzieht.',
   'privacy.purchase.all': '„Alle Sprachen“: Die App fragt nur das System, ob es gekauft wurde; unser Server ist nicht beteiligt.',
   'privacy.delete.title': 'Auskunft und Löschung',
-  'privacy.delete.p':
-    'Deine Konto-ID findest du in der App unter Einstellungen → Restzeit, mit einer Schaltfläche „Kopieren“. ' +
-    'Um einzusehen oder zu löschen, was unser Server über dich gespeichert hat, schick sie an ' +
-    '<a href="mailto:winer632@qq.com">winer632@qq.com</a>; wir löschen dann alle Daten dieses Kontos auf dem Server ' +
-    '(Snapshots und die externe Kopie verfallen nach Ablauf ihrer Aufbewahrungsfristen). ' +
-    'Verbleibende Zeit kann nach der Löschung nicht wiederhergestellt werden. Erstattungen für Käufe beantragst du bei Apple.',
+  'privacy.delete.p': "Öffne in der App Einstellungen → Info → Zeitkonto löschen und bestätige. Das Dolmetschen wird beendet; das aktive Konto, Geräteregistrierungen, das Restguthaben und Nutzungsaufzeichnungen werden entfernt. Das lässt sich nicht rückgängig machen. Apple-Käufe werden nicht erstattet und auf deinem Gerät gespeicherte Transkripte nicht gelöscht; diese kannst du unter Verlauf löschen. Sicherungskopien laufen nach den oben genannten Aufbewahrungsfristen ab. Wir bewahren begrenzte Lösch- und Erstattungsnachweise ausschließlich auf, damit alte Konto-IDs oder erstattete Kaufbelege keine Zeit wiederherstellen können. Diese Nachweise aktivieren ein gelöschtes Konto nicht erneut. Für Auskunft über deine Daten oder Hilfe schreibe an <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> und gib die unter Einstellungen → Restzeit angezeigte Konto-ID an.",
   'privacy.children.title': 'Kinder',
   'privacy.children.p':
     'Diese App ist für das Dolmetschen im Beruf und im Alltag gedacht. Sie richtet sich nicht an Kinder und erfasst wissentlich keine Daten von ihnen.',

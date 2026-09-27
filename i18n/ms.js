@@ -177,7 +177,7 @@ siteI18n('ms', {
   // privacy.html
   'privacy.doc.title': 'Dasar Privasi · Duo Interpreter',
   'privacy.title': 'Dasar Privasi',
-  'privacy.sub': 'Duo Interpreter · Kemas kini terakhir 24 September 2026',
+  'privacy.sub': "Duo Interpreter · Kemas kini terakhir 26 September 2026",
   'privacy.translated':
     'Dasar ini ialah terjemahan. Jika terdapat perbezaan dengan <a href="?lang=en">versi bahasa Inggeris</a>, versi bahasa Inggeris yang terpakai.',
   'privacy.short':
@@ -192,10 +192,7 @@ siteI18n('ms', {
   'privacy.credit.intro':
     'Untuk mengingati jumlah masa yang anda beli dan menghalang penyalahgunaan, apl berhubung dengan pelayan kami ' +
     '<code>api.duo-interpreter.com</code> (dihoskan di Microsoft Azure di Singapura). Pelayan menyimpan:',
-  'privacy.credit.id':
-    '<strong>ID akaun rawak</strong>: nombor (UUID) yang dijana oleh apl kali pertama anda menggunakannya. Ia tiada kaitan dengan nama, ' +
-    'e-mel, nombor telefon atau Akaun Apple anda. Ia disimpan dalam Rantai Kunci iCloud anda, jadi baki anda kekal selepas apl dipasang semula ' +
-    'dan mengikut anda ke telefon baharu dengan Akaun Apple yang sama.',
+  'privacy.credit.id': "<strong>ID akaun rawak dan pengesah pemulihan</strong>: app menjana ID (UUID) dan rahsia pemulihan rawak yang berasingan. Kedua-duanya tidak berkaitan dengan nama, e-mel, nombor telefon atau Akaun Apple anda. ID dan rahsia kekal dalam Rantai Kunci iCloud; pelayan hanya menyimpan ringkasan pengesahan rahsia untuk membenarkan peranti lain mengakses baki yang sama.",
   'privacy.credit.device':
     '<strong>Bukti kelayakan peranti</strong>: bagi setiap peranti, pengecam dan kunci awam bagi kunci Apple App Attest, ' +
     'berserta masa ia didaftarkan dan kali terakhir digunakan. Ia membuktikan bahawa permintaan datang daripada salinan tulen apl ini, ' +
@@ -206,16 +203,12 @@ siteI18n('ms', {
   'privacy.credit.usage':
     '<strong>Penggunaan</strong>: masa setiap sesi terjemahan bermula dan tamat, modnya (terjemahan suara atau sari kata sahaja), ' +
     'jumlah masa yang digunakan, berapa kali ia meminta kunci sementara, dan setiap perubahan pada baki anda.',
-  'privacy.credit.trial':
-    '<strong>Percubaan 5 minit</strong> diberikan sekali bagi setiap peranti. Untuk menghalang tuntutan berulang, apl memberikan token ' +
-    'Apple DeviceCheck sekali guna kepada pelayan; pelayan menggunakannya untuk meminta Apple menyemak, kemudian menetapkan, satu bit ' +
-    'yang disimpan oleh Apple untuk peranti ini bagi pihak kami (“percubaan telah digunakan”). Token itu digunakan sekali dan tidak disimpan, ' +
-    'dan Apple hanya menyimpan bit itu untuk kami, tanpa memberitahu kami peranti yang mana.',
+  'privacy.credit.trial': "<strong>Percubaan 5 minit</strong> diberikan sekali bagi setiap peranti. App menghantar token Apple DeviceCheck supaya pelayan boleh menyemak dan menetapkan penanda ‘percubaan telah digunakan’ bagi peranti tersebut melalui Apple. Jika semakan ini tidak tersedia buat sementara waktu, app boleh mencuba semula tanpa memberikan percubaan dua kali. Token DeviceCheck tidak disimpan. Apple tidak memberitahu kami identiti peranti.",
   'privacy.credit.never':
     'Pelayan <strong>tidak pernah menerima</strong> pertuturan, sari kata atau terjemahan anda; nama, e-mel, nombor telefon, lokasi ' +
     'atau kenalan anda; atau butiran pembayaran anda.',
   'privacy.key.title': 'Menggunakan kunci Alibaba Cloud anda sendiri',
-  'privacy.key.p': 'Dalam mod ini, apl tidak menghubungi pelayan kami, dan <strong>kami tidak mengumpul apa-apa</strong>.',
+  'privacy.key.p': "Pentafsiran menggunakan kunci Alibaba Cloud anda sendiri tidak menghantar data pertuturan atau terjemahan ke pelayan kami. Jika anda mengurus atau memadam akaun masa sedia ada, app menghubungi pelayan kami untuk permintaan tersebut.",
   'privacy.both.title': 'Dalam kedua-dua mod',
   'privacy.both.p':
     'Apl ini tidak mengandungi analitik, pengiklanan atau penjejakan pihak ketiga. Kami tidak menjalankan analitik atau iklan, ' +
@@ -259,10 +252,7 @@ siteI18n('ms', {
     'dan dikecualikan daripada sandaran iCloud. Anda boleh membaca, mengeksport atau memadamnya di bawah “Sejarah” dalam apl; ' +
     'memadam apl akan turut memadamnya.',
   'privacy.account.title': 'ID akaun',
-  'privacy.account.p':
-    'ID akaun rawak yang diterangkan di atas disimpan dalam Rantai Kunci iOS dan, jika Rantai Kunci iCloud diaktifkan, disegerakkan antara ' +
-    'peranti anda pada Akaun Apple yang sama (disulitkan hujung ke hujung oleh Apple). Memadam apl tidak membuangnya, ' +
-    'jadi baki anda masih ada selepas apl dipasang semula.',
+  'privacy.account.p': "ID akaun masa rawak anda dan rahsia pemulihan yang berasingan disimpan dalam Rantai Kunci iOS. Dengan Rantai Kunci iCloud didayakan, Apple boleh menyegerakkannya antara peranti pada Akaun Apple yang sama menggunakan penyulitan hujung ke hujung. Bukti kelayakan yang disegerakkan membolehkan anda memulihkan baki selepas pemasangan semula atau pertukaran peranti. Pemasangan versi lama mungkin perlu dikemas kini pada peranti asal sebelum pemulihan selamat boleh disediakan.",
   'privacy.apikey.title': 'API Key',
   'privacy.apikey.p':
     'API Key yang anda masukkan sendiri disimpan dalam <strong>Rantai Kunci</strong> iOS, ditanda sebagai boleh dibaca hanya pada peranti ini ' +
@@ -283,11 +273,7 @@ siteI18n('ms', {
     'Bayaran balik dikendalikan oleh Apple, yang memaklumkan pelayan kami untuk menarik balik masa tersebut.',
   'privacy.purchase.all': '“Semua bahasa”: apl hanya bertanya kepada sistem sama ada ia telah dibeli; pelayan kami tidak terlibat.',
   'privacy.delete.title': 'Akses dan pemadaman',
-  'privacy.delete.p':
-    'ID akaun anda terdapat di Seting → Baki masa dalam apl, dengan butang Salin. Untuk melihat atau memadam apa yang disimpan oleh pelayan kami ' +
-    'tentang anda, hantarkannya ke <a href="mailto:winer632@qq.com">winer632@qq.com</a> dan kami akan memadam semua rekod akaun itu pada pelayan ' +
-    '(syot kilat dan salinan luar tapak akan luput selepas tempoh penyimpanan masing-masing). Baki masa tidak boleh dipulihkan selepas pemadaman. ' +
-    'Bayaran balik untuk pembelian dimohon daripada Apple.',
+  'privacy.delete.p': "Dalam app, buka Seting → Perihal → Padam akaun masa dan sahkan. Pentafsiran berhenti, dan akaun aktif, pendaftaran peranti, baki masa serta rekod penggunaan dipadam. Tindakan ini tidak boleh dibuat asal dan tidak memulangkan bayaran pembelian Apple atau memadam transkrip yang disimpan pada peranti anda; transkrip tersebut boleh dipadam dalam Sejarah. Sandaran tamat tempoh selepas tempoh penyimpanan yang dinyatakan di atas. Kami menyimpan rekod pemadaman dan bayaran balik yang terhad semata-mata untuk menghalang ID akaun lama atau resit pembelian yang telah dibayar balik daripada memulihkan masa; rekod ini tidak mengaktifkan semula akaun yang dipadam. Untuk mengakses data anda atau mendapatkan bantuan, e-mel <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> dengan ID akaun yang dipaparkan dalam Seting → Baki masa.",
   'privacy.children.title': 'Kanak-kanak',
   'privacy.children.p':
     'Apl ini ditujukan untuk terjemahan lisan dalam urusan perniagaan dan harian. Ia tidak ditujukan kepada kanak-kanak ' +

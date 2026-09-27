@@ -181,7 +181,7 @@ siteI18n('tr', {
   // privacy.html
   'privacy.doc.title': 'Gizlilik Politikası · Duo Interpreter',
   'privacy.title': 'Gizlilik Politikası',
-  'privacy.sub': 'Duo Interpreter · Son güncelleme: 24 Eylül 2026',
+  'privacy.sub': "Duo Interpreter · Son güncelleme: 26 Eylül 2026",
   'privacy.translated':
     'Bu politika bir çeviridir. <a href="?lang=en">İngilizce sürümle</a> arasında bir fark olursa İngilizce sürüm geçerlidir.',
   'privacy.short':
@@ -197,10 +197,7 @@ siteI18n('tr', {
     'Ne kadar süre satın aldığınızı hatırlamak ve kötüye kullanımı önlemek için uygulama, sunucumuz ' +
     '<code>api.duo-interpreter.com</code> ile iletişim kurar (Singapur’da, Microsoft Azure üzerinde barındırılır). ' +
     'Sunucu şunları saklar:',
-  'privacy.credit.id':
-    '<strong>Rastgele bir hesap kimliği</strong>: uygulamanın ilk kullanımda oluşturduğu bir numara (UUID). Adınız, e-posta ' +
-    'adresiniz, telefon numaranız veya Apple Hesabınızla hiçbir ilgisi yoktur. iCloud Anahtar Zincirinizde saklanır; bu sayede ' +
-    'bakiyeniz uygulamayı yeniden yüklediğinizde korunur ve aynı Apple Hesabı ile yeni telefonlarınıza taşınır.',
+  'privacy.credit.id': "<strong>Rastgele bir hesap kimliği ve kurtarma doğrulayıcısı</strong>: uygulama bir kimlik (UUID) ve bundan ayrı, rastgele bir gizli kurtarma anahtarı oluşturur. Bunlar adınız, e-postanız, telefon numaranız veya Apple Hesabınızla ilişkili değildir. Kimlik ve gizli anahtar iCloud Anahtar Zinciri’nde kalır; sunucu, başka bir cihazın aynı bakiyeye erişmesine izin vermek için yalnızca gizli anahtarın doğrulama özetini saklar.",
   'privacy.credit.device':
     '<strong>Cihaz kimlik bilgileri</strong>: her cihaz için bir Apple App Attest anahtarının tanımlayıcısı ve ortak anahtarı ' +
     'ile bu anahtarın ne zaman kaydedildiği ve en son ne zaman kullanıldığı. Bunlar, isteklerin bu uygulamanın değiştirilmiş ' +
@@ -211,16 +208,12 @@ siteI18n('tr', {
   'privacy.credit.usage':
     '<strong>Kullanım</strong>: her çeviri oturumunun ne zaman başlayıp bittiği, modu (sesli çeviri veya yalnızca altyazı), ' +
     'ne kadar süre kullandığı, kaç geçici anahtar istediği ve bakiyenizdeki her değişiklik.',
-  'privacy.credit.trial':
-    '<strong>5 dakikalık deneme</strong> her cihaza bir kez verilir. Tekrar tekrar alınmasını önlemek için uygulama, sunucuya ' +
-    'tek kullanımlık bir Apple DeviceCheck belirteci verir; sunucu bu belirteçle Apple’dan, Apple’ın bizim adımıza bu cihaz ' +
-    'için tuttuğu tek bir biti (“deneme kullanıldı”) önce kontrol etmesini, sonra ayarlamasını ister. Belirteç bir kez ' +
-    'kullanılır ve saklanmaz; Apple bizim için yalnızca o biti tutar ve bunun hangi cihaz olduğunu bize söylemez.',
+  'privacy.credit.trial': "<strong>5 dakikalık deneme</strong> her cihaza bir kez verilir. Uygulama bir Apple DeviceCheck belirteci gönderir; böylece sunucu, cihazın ‘deneme kullanıldı’ işaretini Apple üzerinden kontrol edip ayarlayabilir. Bu kontrol geçici olarak kullanılamıyorsa uygulama denemeyi iki kez vermeden yeniden deneyebilir. DeviceCheck belirteçleri saklanmaz. Apple bize cihazın kimliğini bildirmez.",
   'privacy.credit.never':
     'Sunucu konuşmanızı, altyazılarınızı veya çevirilerinizi, adınızı, e-posta adresinizi, telefon numaranızı, konumunuzu ' +
     'veya kişilerinizi ya da ödeme bilgilerinizi <strong>hiçbir zaman almaz</strong>.',
   'privacy.key.title': 'Kendi Alibaba Cloud anahtarınızı kullanma',
-  'privacy.key.p': 'Bu modda uygulama sunucumuzla iletişim kurmaz ve <strong>hiçbir şey toplamayız</strong>.',
+  'privacy.key.p': "Kendi Alibaba Cloud anahtarınızla sözlü çeviri yapmak, sunucumuza konuşma veya çeviri verisi göndermez. Mevcut bir süre hesabını yönetir ya da silerseniz uygulama bu isteği işlemek için sunucumuzla iletişime geçer.",
   'privacy.both.title': 'Her iki durumda da',
   'privacy.both.p':
     'Uygulamada üçüncü taraf analiz, reklam veya izleme araçları yoktur. Analiz ya da reklam çalıştırmıyoruz, sizi uygulamalar ' +
@@ -266,10 +259,7 @@ siteI18n('tr', {
     've iCloud yedeklemesinin dışında tutulur. Bunları uygulamadaki “Geçmiş” bölümünden okuyabilir, dışa aktarabilir veya ' +
     'silebilirsiniz; uygulamayı silmek bunları da siler.',
   'privacy.account.title': 'Hesap kimliği',
-  'privacy.account.p':
-    'Yukarıda açıklanan rastgele hesap kimliği iOS Anahtar Zinciri’nde saklanır ve iCloud Anahtar Zinciri açıksa aynı ' +
-    'Apple Hesabı’ndaki cihazlarınız arasında eşzamanlanır (Apple tarafından uçtan uca şifrelenir). Uygulamayı silmek onu ' +
-    'silmez; bu yüzden yeniden yükledikten sonra bakiyeniz yerinde durur.',
+  'privacy.account.p': "Rastgele süre hesabı kimliğiniz ve ayrı bir gizli kurtarma anahtarı iOS Anahtar Zinciri’nde tutulur. iCloud Anahtar Zinciri etkinse Apple bunları uçtan uca şifreleme kullanarak aynı Apple Hesabındaki cihazlar arasında eşzamanlayabilir. Eşzamanlanan kimlik bilgileri, yeniden yükleme veya cihaz değişiminden sonra bakiyeyi geri yüklemenizi sağlar. Güvenli kurtarma ayarlanabilmeden önce eski kurulumun önceki cihazda güncellenmesi gerekebilir.",
   'privacy.apikey.title': 'API anahtarları',
   'privacy.apikey.p':
     'Kendi girdiğiniz API anahtarları iOS <strong>Anahtar Zinciri</strong>’nde, yalnızca bu cihazda ve yalnızca cihazın ' +
@@ -293,12 +283,7 @@ siteI18n('tr', {
   'privacy.purchase.all':
     '“Tüm Diller”: uygulama yalnızca sisteme bunun satın alınıp alınmadığını sorar; sunucumuz bu sürece dahil değildir.',
   'privacy.delete.title': 'Erişim ve silme',
-  'privacy.delete.p':
-    'Hesap kimliğiniz uygulamada Ayarlar → Kalan süre bölümündedir ve yanında bir “Kopyala” düğmesi bulunur. Sunucumuzun ' +
-    'sizinle ilgili tuttuğu bilgileri görmek veya silmek için bu kimliği <a href="mailto:winer632@qq.com">winer632@qq.com</a> ' +
-    'adresine gönderin; o hesabın sunucudaki tüm kayıtlarını sileriz (anlık görüntüler ve başka konumdaki kopya, saklama ' +
-    'sürelerinin sonunda kendiliğinden silinir). Silme işleminden sonra kalan süre geri getirilemez. Satın alımlar için ' +
-    'iade talepleri Apple’a yapılır.',
+  'privacy.delete.p': "Uygulamada Ayarlar → Hakkında → Süre hesabını sil yolunu açıp onaylayın. Sözlü çeviri durur; etkin hesap, cihaz kayıtları, kalan bakiye ve kullanım kayıtları silinir. Bu işlem geri alınamaz; Apple satın alımlarının ücretini iade etmez ve cihazınızdaki kayıtlı metinleri silmez. Bu metinler Geçmiş bölümünden silinebilir. Yedekler yukarıdaki saklama sürelerinin sonunda geçerliliğini yitirir. Eski hesap kimliklerinin veya ücreti iade edilmiş satın alım makbuzlarının süreyi geri getirmesini önlemek amacıyla sınırlı silme ve iade kayıtları tutarız; bu kayıtlar silinmiş bir hesabı yeniden etkinleştirmez. Verilerinize erişmek veya yardım almak için Ayarlar → Kalan süre bölümündeki hesap kimliğinizi ekleyerek <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> adresine e-posta gönderin.",
   'privacy.children.title': 'Çocuklar',
   'privacy.children.p':
     'Bu uygulama iş hayatında ve günlük yaşamda sözlü çeviri için tasarlanmıştır. Çocuklara yönelik değildir ve bilerek ' +

@@ -182,7 +182,7 @@ siteI18n('fr', {
   // privacy.html
   'privacy.doc.title': 'Politique de confidentialité · Duo Interpreter',
   'privacy.title': 'Politique de confidentialité',
-  'privacy.sub': 'Duo Interpreter · Dernière mise à jour : 24 septembre 2026',
+  'privacy.sub': "Duo Interpreter · Dernière mise à jour : 26 septembre 2026",
   'privacy.translated':
     'Cette politique est une traduction. En cas de divergence avec la <a href="?lang=en">version anglaise</a>, la version anglaise prévaut.',
   'privacy.short':
@@ -197,10 +197,7 @@ siteI18n('fr', {
   'privacy.credit.intro':
     'Pour mémoriser le temps que vous avez acheté et empêcher les abus, l’app communique avec notre serveur ' +
     '<code>api.duo-interpreter.com</code> (hébergé sur Microsoft Azure à Singapour). Le serveur conserve :',
-  'privacy.credit.id':
-    '<strong>Un identifiant de compte aléatoire</strong> : un numéro (un UUID) que l’app génère lors de la première utilisation. ' +
-    'Il n’a aucun lien avec votre nom, votre e-mail, votre numéro de téléphone ou votre compte Apple. ' +
-    'Il est conservé dans votre trousseau iCloud : votre solde survit ainsi aux réinstallations et vous suit sur un nouveau téléphone utilisant le même compte Apple.',
+  'privacy.credit.id': "<strong>Un identifiant de compte aléatoire et une information de vérification pour la récupération</strong> : l’app génère un identifiant (UUID) et un secret de récupération aléatoire distinct. Ils ne sont liés ni à votre nom, ni à votre adresse e-mail, numéro de téléphone ou compte Apple. L’identifiant et le secret restent dans le trousseau iCloud ; le serveur ne conserve qu’une empreinte de vérification du secret pour autoriser un autre appareil à accéder au même solde.",
   'privacy.credit.device':
     '<strong>Justificatifs de l’appareil</strong> : pour chaque appareil, l’identifiant et la clé publique d’une clé Apple App Attest, ' +
     'avec la date de son enregistrement et de sa dernière utilisation. Ils prouvent que les requêtes proviennent d’une copie authentique de cette app, ' +
@@ -211,16 +208,12 @@ siteI18n('fr', {
   'privacy.credit.usage':
     '<strong>Utilisation</strong> : le début et la fin de chaque session d’interprétation, son mode (traduction vocale ou sous-titres uniquement), ' +
     'le temps utilisé, le nombre de clés temporaires demandées, et chaque modification de votre solde.',
-  'privacy.credit.trial':
-    '<strong>L’essai de 5 minutes</strong> est accordé une fois par appareil. Pour éviter les demandes répétées, ' +
-    'l’app remet au serveur un jeton Apple DeviceCheck à usage unique ; le serveur s’en sert pour demander à Apple de vérifier, puis de définir, ' +
-    'un unique bit qu’Apple conserve pour cet appareil en notre nom (« essai utilisé »). ' +
-    'Le jeton n’est utilisé qu’une fois et n’est pas conservé, et Apple ne garde pour nous que ce bit, sans nous dire de quel appareil il s’agit.',
+  'privacy.credit.trial': "<strong>L’essai de 5 minutes</strong> est accordé une seule fois par appareil. L’app envoie un jeton Apple DeviceCheck afin que le serveur puisse vérifier et définir auprès d’Apple l’indicateur « essai utilisé » de l’appareil. Si cette vérification est temporairement indisponible, l’app peut réessayer sans accorder l’essai deux fois. Les jetons DeviceCheck ne sont pas conservés. Apple ne nous communique pas l’identité de l’appareil.",
   'privacy.credit.never':
     'Le serveur <strong>ne reçoit jamais</strong> votre voix, vos sous-titres ou vos traductions, ni votre nom, votre e-mail, ' +
     'votre numéro de téléphone, votre position ou vos contacts, ni vos informations de paiement.',
   'privacy.key.title': 'Utiliser votre propre clé Alibaba Cloud',
-  'privacy.key.p': 'Dans ce mode, l’app ne contacte pas notre serveur, et <strong>nous ne collectons rien</strong>.',
+  'privacy.key.p': "L’interprétation avec votre propre clé Alibaba Cloud n’envoie aucune donnée vocale ou de traduction à notre serveur. Si vous gérez ou supprimez un compte de temps existant, l’app contacte notre serveur pour traiter cette demande.",
   'privacy.both.title': 'Dans les deux cas',
   'privacy.both.p':
     'L’app ne contient aucun outil tiers d’analyse, de publicité ou de pistage. Nous n’effectuons aucune analyse d’utilisation ni aucune publicité, ' +
@@ -269,10 +262,7 @@ siteI18n('fr', {
     'Elles ne sont <strong>jamais téléversées</strong> et sont exclues de la sauvegarde iCloud. ' +
     'Vous pouvez les lire, les exporter ou les supprimer dans « Historique » ; supprimer l’app les efface.',
   'privacy.account.title': 'Identifiant du compte',
-  'privacy.account.p':
-    'L’identifiant de compte aléatoire décrit plus haut est conservé dans le trousseau iOS et, si le trousseau iCloud est activé, ' +
-    'se synchronise entre vos appareils utilisant le même compte Apple (chiffré de bout en bout par Apple). ' +
-    'Supprimer l’app ne l’efface pas : votre solde est donc toujours là après une réinstallation.',
+  'privacy.account.p': "Votre identifiant de compte de temps aléatoire et un secret de récupération distinct sont conservés dans le trousseau iOS. Si le trousseau iCloud est activé, Apple peut les synchroniser entre les appareils utilisant le même compte Apple grâce au chiffrement de bout en bout. Ces informations d’authentification synchronisées permettent de restaurer le solde après une réinstallation ou un changement d’appareil. Une ancienne installation peut nécessiter une mise à jour sur l’appareil d’origine avant de pouvoir configurer une récupération sécurisée.",
   'privacy.apikey.title': 'API Keys',
   'privacy.apikey.p':
     'Les API Keys que vous saisissez vous-même sont conservées dans le <strong>trousseau</strong> iOS, ' +
@@ -296,12 +286,7 @@ siteI18n('fr', {
     'Les remboursements sont gérés par Apple, qui prévient notre serveur pour qu’il reprenne le temps correspondant.',
   'privacy.purchase.all': '« Toutes les langues » : l’app demande seulement au système si cet achat a été effectué ; notre serveur n’intervient pas.',
   'privacy.delete.title': 'Accès et suppression',
-  'privacy.delete.p':
-    'Votre identifiant de compte se trouve dans l’app sous Réglages → Temps restant, avec un bouton Copier. ' +
-    'Pour consulter ou supprimer ce que notre serveur détient sur vous, envoyez-le à ' +
-    '<a href="mailto:winer632@qq.com">winer632@qq.com</a> et nous supprimerons toutes les données de ce compte sur le serveur ' +
-    '(les instantanés et la copie hors site expirent à la fin de leur durée de conservation). ' +
-    'Le temps restant ne peut pas être rétabli après la suppression. Les remboursements d’achats se demandent auprès d’Apple.',
+  'privacy.delete.p': "Dans l’app, ouvrez Réglages → À propos → Supprimer le compte de temps et confirmez. L’interprétation s’arrête, et le compte actif, les enregistrements d’appareils, le solde restant et les relevés d’utilisation sont supprimés. Cette action est irréversible ; elle ne rembourse pas les achats Apple et ne supprime pas les transcriptions enregistrées sur votre appareil. Vous pouvez supprimer ces transcriptions dans Historique. Les sauvegardes expirent après les durées de conservation indiquées ci-dessus. Nous conservons des traces limitées de suppression et de remboursement uniquement pour empêcher d’anciens identifiants de compte ou des reçus remboursés de restaurer du temps ; elles ne réactivent pas un compte supprimé. Pour accéder à vos données ou obtenir de l’aide, écrivez à <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> en indiquant l’identifiant du compte affiché dans Réglages → Temps restant.",
   'privacy.children.title': 'Enfants',
   'privacy.children.p':
     'Cette app est destinée à l’interprétation professionnelle et à celle du quotidien. ' +

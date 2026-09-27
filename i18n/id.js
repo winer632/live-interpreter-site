@@ -176,7 +176,7 @@ siteI18n('id', {
   // privacy.html
   'privacy.doc.title': 'Kebijakan Privasi · Duo Interpreter',
   'privacy.title': 'Kebijakan Privasi',
-  'privacy.sub': 'Duo Interpreter · Terakhir diperbarui 24 September 2026',
+  'privacy.sub': "Duo Interpreter · Terakhir diperbarui 26 September 2026",
   'privacy.translated':
     'Kebijakan ini adalah terjemahan. Jika ada perbedaan dengan <a href="?lang=en">versi bahasa Inggris</a>, yang berlaku adalah versi bahasa Inggris.',
   'privacy.short':
@@ -191,10 +191,7 @@ siteI18n('id', {
   'privacy.credit.intro':
     'Untuk mencatat berapa banyak waktu yang Anda beli dan mencegah penyalahgunaan, aplikasi berkomunikasi dengan server kami ' +
     '<code>api.duo-interpreter.com</code> (di-hosting di Microsoft Azure di Singapura). Server menyimpan:',
-  'privacy.credit.id':
-    '<strong>ID akun acak</strong>: nomor (UUID) yang dibuat aplikasi saat pertama kali Anda memakainya. Nomor ini tidak berkaitan dengan ' +
-    'nama, email, nomor telepon, atau Akun Apple Anda. ID ini disimpan di Rantai Kunci iCloud Anda, sehingga saldo Anda tetap ada ' +
-    'setelah aplikasi dipasang ulang dan ikut pindah ke ponsel baru dengan Akun Apple yang sama.',
+  'privacy.credit.id': "<strong>ID akun acak dan verifikator pemulihan</strong>: aplikasi membuat ID (UUID) dan rahasia pemulihan acak yang terpisah. Keduanya tidak terkait dengan nama, email, nomor telepon, atau Akun Apple Anda. ID dan rahasia tersebut disimpan di Rantai Kunci iCloud; server hanya menyimpan digest verifikasi rahasia untuk mengizinkan perangkat lain menggunakan saldo yang sama.",
   'privacy.credit.device':
     '<strong>Kredensial perangkat</strong>: untuk setiap perangkat, pengenal dan kunci publik dari kunci Apple App Attest, ' +
     'beserta waktu pendaftarannya dan waktu terakhir dipakai. Data ini membuktikan bahwa permintaan berasal dari salinan asli aplikasi ini, ' +
@@ -205,16 +202,12 @@ siteI18n('id', {
   'privacy.credit.usage':
     '<strong>Pemakaian</strong>: kapan setiap sesi penerjemahan dimulai dan berakhir, modenya (suara terjemahan atau hanya subtitel), ' +
     'berapa banyak waktu yang terpakai, berapa kali sesi itu meminta kunci sementara, dan setiap perubahan saldo Anda.',
-  'privacy.credit.trial':
-    '<strong>Uji coba 5 menit</strong> diberikan sekali per perangkat. Untuk mencegah klaim berulang, aplikasi memberikan token ' +
-    'Apple DeviceCheck sekali pakai kepada server; server memakainya untuk meminta Apple memeriksa, lalu menyetel, satu bit yang disimpan ' +
-    'Apple untuk perangkat ini atas nama kami (“uji coba sudah dipakai”). Token hanya dipakai sekali dan tidak disimpan, dan Apple ' +
-    'hanya menyimpan bit tersebut untuk kami, tanpa memberi tahu kami perangkat mana itu.',
+  'privacy.credit.trial': "<strong>Uji coba 5 menit</strong> diberikan sekali per perangkat. Aplikasi mengirim token Apple DeviceCheck agar server dapat memeriksa dan mengatur penanda ‘uji coba telah digunakan’ perangkat melalui Apple. Jika pemeriksaan ini sementara tidak tersedia, aplikasi dapat mencoba lagi tanpa memberikan uji coba dua kali. Token DeviceCheck tidak disimpan. Apple tidak memberi tahu kami identitas perangkat.",
   'privacy.credit.never':
     'Server <strong>tidak pernah menerima</strong> suara, subtitel, atau terjemahan Anda; nama, email, nomor telepon, lokasi, atau kontak Anda; ' +
     'maupun detail pembayaran Anda.',
   'privacy.key.title': 'Memakai Key Alibaba Cloud Anda sendiri',
-  'privacy.key.p': 'Dalam mode ini aplikasi tidak menghubungi server kami, dan <strong>kami tidak mengumpulkan apa pun</strong>.',
+  'privacy.key.p': "Interpretasi dengan kunci Alibaba Cloud Anda sendiri tidak mengirim data ucapan atau terjemahan ke server kami. Jika Anda mengelola atau menghapus akun waktu yang sudah ada, aplikasi menghubungi server kami untuk permintaan tersebut.",
   'privacy.both.title': 'Di kedua mode',
   'privacy.both.p':
     'Aplikasi ini tidak berisi analitik, iklan, atau pelacakan pihak ketiga. Kami tidak menjalankan analitik atau iklan, ' +
@@ -258,10 +251,7 @@ siteI18n('id', {
     'dan dikecualikan dari cadangan iCloud. Anda bisa membaca, mengekspor, atau menghapusnya di “Riwayat” dalam aplikasi; ' +
     'menghapus aplikasi juga akan menghapusnya.',
   'privacy.account.title': 'ID akun',
-  'privacy.account.p':
-    'ID akun acak yang dijelaskan di atas disimpan di Rantai Kunci iOS dan, jika Rantai Kunci iCloud aktif, disinkronkan di antara ' +
-    'perangkat Anda yang memakai Akun Apple yang sama (terenkripsi menyeluruh oleh Apple). Menghapus aplikasi tidak menghapus ID ini, ' +
-    'sehingga saldo Anda tetap ada setelah aplikasi dipasang ulang.',
+  'privacy.account.p': "ID akun waktu acak dan rahasia pemulihan terpisah Anda disimpan di Rantai Kunci iOS. Jika Rantai Kunci iCloud diaktifkan, Apple dapat menyinkronkannya di antara perangkat dengan Akun Apple yang sama menggunakan enkripsi menyeluruh. Kredensial yang tersinkronisasi memungkinkan saldo dipulihkan setelah pemasangan ulang atau pergantian perangkat. Instalasi versi lama mungkin perlu diperbarui di perangkat asal sebelum pemulihan aman dapat disiapkan.",
   'privacy.apikey.title': 'API Key',
   'privacy.apikey.p':
     'API Key yang Anda masukkan sendiri disimpan di <strong>Rantai Kunci</strong> iOS, ditandai hanya dapat dibaca di perangkat ini dan hanya ' +
@@ -283,11 +273,7 @@ siteI18n('id', {
     'Pengembalian dana ditangani oleh Apple, yang memberi tahu server kami untuk menarik kembali waktunya.',
   'privacy.purchase.all': '“Semua bahasa”: aplikasi hanya menanyakan kepada sistem apakah item ini sudah dibeli; server kami tidak terlibat.',
   'privacy.delete.title': 'Akses dan penghapusan',
-  'privacy.delete.p':
-    'ID akun Anda ada di Pengaturan → Sisa waktu dalam aplikasi, dengan tombol Salin. Untuk melihat atau menghapus data tentang Anda ' +
-    'yang disimpan server kami, kirimkan ID tersebut ke <a href="mailto:winer632@qq.com">winer632@qq.com</a> dan kami akan menghapus ' +
-    'semua catatan akun tersebut di server (snapshot dan salinan di lokasi terpisah akan kedaluwarsa setelah masa penyimpanannya berakhir). ' +
-    'Sisa waktu tidak bisa dipulihkan setelah dihapus. Pengembalian dana untuk pembelian diajukan kepada Apple.',
+  'privacy.delete.p': "Di aplikasi, buka Pengaturan → Tentang → Hapus akun waktu dan konfirmasikan. Interpretasi berhenti, lalu akun aktif, pendaftaran perangkat, sisa saldo, dan catatan penggunaan dihapus. Tindakan ini tidak dapat dibatalkan dan tidak mengembalikan pembayaran pembelian Apple atau menghapus transkrip yang tersimpan di perangkat Anda; transkrip tersebut dapat dihapus melalui Riwayat. Cadangan kedaluwarsa setelah masa penyimpanan di atas. Kami menyimpan catatan penghapusan dan pengembalian dana yang terbatas semata-mata untuk mencegah ID akun lama atau tanda terima yang sudah dikembalikan dananya memulihkan waktu; catatan tersebut tidak mengaktifkan kembali akun yang dihapus. Untuk mengakses data Anda atau meminta bantuan, kirim email ke <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a> dengan ID akun yang ditampilkan di Pengaturan → Sisa waktu.",
   'privacy.children.title': 'Anak-anak',
   'privacy.children.p':
     'Aplikasi ini ditujukan untuk penerjemahan bisnis dan sehari-hari. Aplikasi ini tidak ditujukan untuk anak-anak dan tidak dengan sengaja ' +

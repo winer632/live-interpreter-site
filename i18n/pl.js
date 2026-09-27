@@ -177,7 +177,7 @@ siteI18n('pl', {
   // privacy.html
   'privacy.doc.title': 'Polityka prywatności · Duo Interpreter',
   'privacy.title': 'Polityka prywatności',
-  'privacy.sub': 'Duo Interpreter · Ostatnia aktualizacja: 24 września 2026 r.',
+  'privacy.sub': "Duo Interpreter · Ostatnia aktualizacja: 26 września 2026 r.",
   'privacy.translated':
     'Ta polityka jest tłumaczeniem. Jeśli różni się od <a href="?lang=en">wersji angielskiej</a>, obowiązuje wersja angielska.',
   'privacy.short':
@@ -192,10 +192,7 @@ siteI18n('pl', {
   'privacy.credit.intro':
     'Aby pamiętać, ile czasu kupiono, i zapobiegać nadużyciom, aplikacja łączy się z naszym serwerem ' +
     '<code>api.duo-interpreter.com</code> (hostowanym w Microsoft Azure w Singapurze). Serwer przechowuje:',
-  'privacy.credit.id':
-    '<strong>Losowe ID konta</strong>: numer (UUID), który aplikacja generuje przy pierwszym użyciu. Nie ma on nic wspólnego ' +
-    'z twoim imieniem i nazwiskiem, adresem e-mail, numerem telefonu ani kontem Apple. Jest przechowywany w twoim pęku kluczy ' +
-    'iCloud, więc saldo przetrwa ponowną instalację i przejdzie na nowe telefony z tym samym kontem Apple.',
+  'privacy.credit.id': "<strong>Losowy ID konta i dane weryfikacyjne odzyskiwania</strong>: aplikacja generuje ID (UUID) oraz osobny, losowy sekret odzyskiwania. Nie są one powiązane z Twoim imieniem i nazwiskiem, adresem e-mail, numerem telefonu ani kontem Apple. ID i sekret pozostają w Pęku kluczy iCloud; serwer przechowuje jedynie skrót weryfikacyjny sekretu, aby umożliwić innemu urządzeniu dostęp do tego samego salda.",
   'privacy.credit.device':
     '<strong>Poświadczenia urządzenia</strong>: dla każdego urządzenia identyfikator klucza Apple App Attest i jego klucz publiczny ' +
     'oraz czas rejestracji i ostatniego użycia. Potwierdzają one, że żądania pochodzą z oryginalnej kopii tej aplikacji, ' +
@@ -206,17 +203,12 @@ siteI18n('pl', {
   'privacy.credit.usage':
     '<strong>Użycie</strong>: kiedy każda sesja tłumaczenia się zaczęła i zakończyła, jej tryb (tłumaczenie głosowe lub tylko ' +
     'napisy), ile czasu zużyła, ile kluczy tymczasowych pobrała, a także każda zmiana salda.',
-  'privacy.credit.trial':
-    '<strong>5 darmowych minut</strong> przysługuje raz na urządzenie. Aby nie można ich było odbierać wielokrotnie, aplikacja ' +
-    'przekazuje serwerowi jednorazowy token Apple DeviceCheck; serwer używa go, aby poprosić Apple o sprawdzenie, a następnie ' +
-    'ustawienie pojedynczego bitu, który Apple przechowuje dla tego urządzenia w naszym imieniu („darmowe minuty wykorzystane”). ' +
-    'Token jest używany raz i nie jest przechowywany, a Apple przechowuje dla nas tylko ten bit, nie ujawniając nam, ' +
-    'o które urządzenie chodzi.',
+  'privacy.credit.trial': "<strong>5-minutowy okres próbny</strong> jest przyznawany raz na urządzenie. Aplikacja wysyła token Apple DeviceCheck, aby serwer mógł sprawdzić i ustawić u Apple znacznik urządzenia „okres próbny wykorzystany”. Jeśli sprawdzenie jest tymczasowo niedostępne, aplikacja może ponowić próbę bez dwukrotnego przyznania czasu próbnego. Tokeny DeviceCheck nie są przechowywane. Apple nie ujawnia nam tożsamości urządzenia.",
   'privacy.credit.never':
     'Serwer <strong>nigdy nie otrzymuje</strong> twojej mowy, napisów ani tłumaczeń, twojego imienia i nazwiska, adresu e-mail, ' +
     'numeru telefonu, lokalizacji ani kontaktów, ani twoich danych płatniczych.',
   'privacy.key.title': 'Korzystanie z własnego klucza Alibaba Cloud',
-  'privacy.key.p': 'W tym trybie aplikacja nie łączy się z naszym serwerem i <strong>nie zbieramy niczego</strong>.',
+  'privacy.key.p': "Tłumaczenie z własnym kluczem Alibaba Cloud nie wysyła danych głosowych ani tłumaczeń na nasz serwer. Jeśli zarządzasz istniejącym kontem czasu lub je usuwasz, aplikacja łączy się z naszym serwerem w celu wykonania tego żądania.",
   'privacy.both.title': 'W obu przypadkach',
   'privacy.both.p':
     'Aplikacja nie zawiera zewnętrznych narzędzi analitycznych, reklam ani mechanizmów śledzenia. Nie prowadzimy analityki ' +
@@ -262,10 +254,7 @@ siteI18n('pl', {
     'i są wyłączone z kopii zapasowej iCloud. Możesz je przeglądać, eksportować lub usuwać w sekcji „Historia” w aplikacji; ' +
     'usunięcie aplikacji usuwa również je.',
   'privacy.account.title': 'ID konta',
-  'privacy.account.p':
-    'Opisane wyżej losowe ID konta jest przechowywane w pęku kluczy iOS, a jeśli pęk kluczy iCloud jest włączony, synchronizuje się ' +
-    'między twoimi urządzeniami z tym samym kontem Apple (z szyfrowaniem end-to-end zapewnianym przez Apple). Usunięcie aplikacji ' +
-    'go nie usuwa, więc po ponownej instalacji saldo nadal jest na miejscu.',
+  'privacy.account.p': "Losowy ID konta czasu oraz osobny sekret odzyskiwania są przechowywane w Pęku kluczy iOS. Przy włączonym Pęku kluczy iCloud Apple może synchronizować je między urządzeniami z tym samym kontem Apple, używając szyfrowania end-to-end. Zsynchronizowane dane uwierzytelniające pozwalają przywrócić saldo po ponownej instalacji lub zmianie urządzenia. Starsza instalacja może wymagać aktualizacji na pierwotnym urządzeniu, zanim będzie można skonfigurować bezpieczne odzyskiwanie.",
   'privacy.apikey.title': 'Klucze API',
   'privacy.apikey.p':
     'Klucze API, które wpisujesz samodzielnie, są przechowywane w <strong>pęku kluczy</strong> iOS z oznaczeniem, że można je ' +
@@ -289,11 +278,7 @@ siteI18n('pl', {
   'privacy.purchase.all':
     '„Wszystkie języki”: aplikacja jedynie pyta system, czy ten zakup został dokonany; nasz serwer nie bierze w tym udziału.',
   'privacy.delete.title': 'Dostęp i usuwanie',
-  'privacy.delete.p':
-    'Twoje ID konta znajdziesz w aplikacji w sekcji „Ustawienia” → „Pozostały czas”, obok przycisku „Kopiuj”. Aby zobaczyć ' +
-    'lub usunąć dane, które nasz serwer o tobie przechowuje, wyślij je na <a href="mailto:winer632@qq.com">winer632@qq.com</a>, ' +
-    'a usuniemy wszystkie rekordy tego konta na serwerze (migawki i kopia w innej lokalizacji wygasają po upływie swoich okresów ' +
-    'przechowywania). Po usunięciu pozostałego czasu nie da się przywrócić. O zwrot pieniędzy za zakupy należy prosić Apple.',
+  'privacy.delete.p': "W aplikacji otwórz Ustawienia → Informacje → Usuń konto czasu i potwierdź. Tłumaczenie ustne zostanie zatrzymane, a aktywne konto, rejestracje urządzeń, pozostałe saldo i zapisy użycia zostaną usunięte. Tej operacji nie można cofnąć; nie powoduje ona zwrotu pieniędzy za zakupy Apple ani usunięcia transkrypcji zapisanych na urządzeniu. Transkrypcje można usunąć w sekcji Historia. Kopie zapasowe wygasają po upływie podanych wyżej okresów przechowywania. Przechowujemy ograniczone zapisy usunięć i zwrotów wyłącznie po to, by stare ID kont lub paragony za zwrócone zakupy nie przywracały czasu; zapisy te nie aktywują ponownie usuniętego konta. Aby uzyskać dostęp do swoich danych lub pomoc, napisz na <a href=\"mailto:winer632@qq.com\">winer632@qq.com</a>, podając ID konta widoczne w Ustawienia → Pozostały czas.",
   'privacy.children.title': 'Dzieci',
   'privacy.children.p':
     'Ta aplikacja jest przeznaczona do tłumaczenia w sprawach służbowych i codziennych. Nie jest skierowana do dzieci ' +

@@ -53,7 +53,7 @@
 <header>
   <div class="langbar" data-lang-picker></div>
   <h1 data-i18n="privacy.title">Privacy Policy</h1>
-  <p class="sub" data-i18n="privacy.sub">Duo Interpreter · Last updated 24 September 2026</p>
+  <p class="sub" data-i18n="privacy.sub">Last updated: 2026-09-26</p>
   <!-- 只有译文里有这句（中文和英文是原文，没有）：法律文本以原文为准 -->
   <p class="translated" data-i18n="privacy.translated" hidden></p>
 </header>
@@ -73,9 +73,7 @@
 <p data-i18n="privacy.credit.intro">To remember how much time you bought and to stop abuse, the app talks to our server
 <code>api.duo-interpreter.com</code> (hosted on Microsoft Azure in Singapore). The server keeps:</p>
 <ul>
-  <li data-i18n="privacy.credit.id"><strong>A random account ID</strong>: a number (a UUID) the app generates the first
-    time you use it. It has nothing to do with your name, email, phone number or Apple Account. It is kept in your
-    iCloud Keychain, so your balance survives reinstalls and follows you to new phones on the same Apple Account.</li>
+  <li data-i18n="privacy.credit.id"><strong>A random account ID and a recovery verifier</strong>: the app generates an ID (UUID) and a separate random recovery secret. They are unrelated to your name, email, phone number or Apple Account. The ID and secret stay in iCloud Keychain; the server stores only a verification digest of the secret to authorize another device joining the same balance.</li>
   <li data-i18n="privacy.credit.device"><strong>Device credentials</strong>: for each device, the identifier and public
     key of an Apple App Attest key, with when it was registered and last used. They prove that requests come from a
     genuine copy of this app, not a modified one.</li>
@@ -85,16 +83,12 @@
     mode (spoken translation or subtitles only), how much time it used, how many temporary keys it asked for, and every
     change to your balance.</li>
 </ul>
-<p data-i18n="privacy.credit.trial"><strong>The 5-minute trial</strong> is given once per device. To prevent repeat
-claims the app hands the server a one-time Apple DeviceCheck token; the server uses it to ask Apple to check, then set,
-a single bit Apple keeps for this device on our behalf (“trial used”). The token is used once and not stored, and Apple
-keeps only that bit for us, without telling us which device it is.</p>
+<p data-i18n="privacy.credit.trial"><strong>The 5-minute trial</strong> is given once per device. The app sends an Apple DeviceCheck token so the server can check and set the device’s ‘trial used’ bit with Apple. If this check is temporarily unavailable, the app can retry without granting the trial twice. DeviceCheck tokens are not stored. Apple does not tell us the device’s identity.</p>
 <p data-i18n="privacy.credit.never">The server <strong>never receives</strong> your speech, subtitles or translations,
 your name, email, phone number, location or contacts, or your payment details.</p>
 
 <h3 data-i18n="privacy.key.title">Using your own Alibaba Cloud key</h3>
-<p data-i18n="privacy.key.p">In this mode the app does not contact our server, and <strong>we collect
-nothing</strong>.</p>
+<p data-i18n="privacy.key.p">Interpreting with your own Alibaba Cloud key does not send speech or translation data to our server. If you manage or delete an existing time account, the app contacts our server for that request.</p>
 
 <h3 data-i18n="privacy.both.title">Either way</h3>
 <p data-i18n="privacy.both.p">The app contains no third-party analytics, advertising or tracking. We run no analytics
@@ -138,9 +132,7 @@ They are <strong>never uploaded</strong> and are excluded from iCloud backup. Yo
 “History” in the app; deleting the app removes them.</p>
 
 <h3 data-i18n="privacy.account.title">Account ID</h3>
-<p data-i18n="privacy.account.p">The random account ID described above is kept in the iOS Keychain and, if iCloud
-Keychain is on, syncs between your devices on the same Apple Account (end-to-end encrypted by Apple). Deleting the app
-does not remove it, so your balance is still there after a reinstall.</p>
+<p data-i18n="privacy.account.p">Your random time-account ID and a separate recovery secret are kept in the iOS Keychain. With iCloud Keychain enabled, Apple can sync them between devices on the same Apple Account using end-to-end encryption. Synced credentials let you restore the balance after reinstalling or changing devices. An older installation may need to be updated on the original device before secure recovery can be set up.</p>
 
 <h3 data-i18n="privacy.apikey.title">API keys</h3>
 <p data-i18n="privacy.apikey.p">The API keys you enter yourself are kept in the iOS <strong>Keychain</strong>, marked
@@ -167,10 +159,7 @@ your payment method, name or billing details.</p>
 </ul>
 
 <h2 data-i18n="privacy.delete.title">Access and deletion</h2>
-<p data-i18n="privacy.delete.p">Your account ID is under Settings → Time left in the app, with a Copy button. To see or
-delete what our server holds about you, send it to <a href="mailto:winer632@qq.com">winer632@qq.com</a> and we will
-delete all of that account’s records on the server (snapshots and the off-site copy expire after their retention
-periods). Remaining time cannot be restored after deletion. Refunds for purchases are requested from Apple.</p>
+<p data-i18n="privacy.delete.p">In the app, open Settings → About → Delete time account and confirm. Interpreting stops, and the active account, device registrations, remaining balance and usage records are removed. This cannot be undone and does not refund Apple purchases or delete transcripts saved on your device; those transcripts can be deleted in History. Backups expire after the retention periods above. We keep limited deletion and refund records solely to prevent old account IDs or refunded receipts from restoring time; these records do not reactivate a deleted account. For access to your data or help, email <a href="mailto:winer632@qq.com">winer632@qq.com</a> with the Account ID shown in Settings → Time left.</p>
 
 <h2 data-i18n="privacy.children.title">Children</h2>
 <p data-i18n="privacy.children.p">This app is aimed at business and everyday interpreting. It is not directed at
