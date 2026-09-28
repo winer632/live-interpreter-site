@@ -260,7 +260,7 @@ siteI18n('ja', {
   'privacy.contact.title': 'お問い合わせ',
   'privacy.contact.p': 'プライバシーに関するご質問は、<a href="mailto:winer632@qq.com">winer632@qq.com</a> までお寄せください。',
   'privacy.consent.title': "AI データ共有",
-  'privacy.consent.p': "AI サービスへの音声送信には同意が必要です。 同意しなくても履歴、設定、購入の復元は利用できます。「設定 → このアプリについて → AI データ共有」で同意を撤回すると、通訳が停止します。",
+  'privacy.consent.p': "AI サービスへの音声送信には同意が必要です。 同意しなくても履歴、設定、購入の復元は利用できます。「設定 → このアプリについて → 同意を撤回」で同意を撤回すると、通訳が停止します。",
   'privacy.speech.protection': "利用者のデータを受け取る第三者には、本ポリシーと同等以上の保護が求められます。適用される Alibaba Cloud のサービス・データ保護契約では、処理目的の限定、守秘義務、安全対策が定められています。 <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud は公開規約と適用法に従いサービス呼び出しデータを保持する場合があり、保存しないとは保証しません。削除の依頼は時間購入モードでは当方へ、自己キーのモードでは Alibaba Cloud へご連絡ください。同意の撤回は今後の共有を停止しますが、処理済みデータを自動で削除するものではありません。",
 });

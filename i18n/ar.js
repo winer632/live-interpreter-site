@@ -272,7 +272,7 @@ siteI18n('ar', {
   'privacy.contact.title': 'التواصل',
   'privacy.contact.p': 'لأي سؤال يتعلق بالخصوصية: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
   'privacy.consent.title': "مشاركة البيانات مع الذكاء الاصطناعي",
-  'privacy.consent.p': "موافقتك مطلوبة قبل إرسال الصوت إلى خدمة الذكاء الاصطناعي. يمكنك الرفض مع الاستمرار في استخدام السجل والإعدادات واستعادة المشتريات. اسحب موافقتك من الإعدادات ← حول ← مشاركة البيانات مع الذكاء الاصطناعي؛ وسيؤدي ذلك إلى إيقاف الترجمة الفورية.",
+  'privacy.consent.p': "موافقتك مطلوبة قبل إرسال الصوت إلى خدمة الذكاء الاصطناعي. يمكنك الرفض مع الاستمرار في استخدام السجل والإعدادات واستعادة المشتريات. اسحب موافقتك من الإعدادات ← حول ← سحب الموافقة؛ وسيؤدي ذلك إلى إيقاف الترجمة الفورية.",
   'privacy.speech.protection': "يجب على كل طرف ثالث يتلقى بيانات المستخدم توفير حماية مماثلة أو مكافئة لهذه السياسة. تفرض اتفاقيات الخدمة وحماية البيانات السارية لدى Alibaba Cloud تحديد غرض المعالجة والسرية وتدابير الأمان. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "قد تحتفظ Alibaba Cloud ببيانات استدعاء الخدمة وفق شروطها المنشورة والقانون؛ ولا نضمن عدم الاحتفاظ بها. لطلبات الحذف تواصل معنا في وضع شراء الوقت، أو مع Alibaba Cloud عند استخدام مفتاحك. سحب الموافقة يوقف المشاركة المستقبلية ولا يحذف تلقائيًا البيانات التي عولجت سابقًا.",
 });

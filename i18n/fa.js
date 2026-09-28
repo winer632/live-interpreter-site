@@ -280,7 +280,7 @@ siteI18n('fa', {
   'privacy.contact.title': 'تماس',
   'privacy.contact.p': 'هر پرسشی دربارهٔ حریم خصوصی: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
   'privacy.consent.title': "اشتراک داده با AI",
-  'privacy.consent.p': "پیش از ارسال صدا به سرویس هوش مصنوعی، رضایت شما لازم است. می‌توانید نپذیرید و همچنان از تاریخچه، تنظیمات و بازیابی خریدها استفاده کنید. در تنظیمات ← درباره ← اشتراک داده با AI رضایت را پس بگیرید؛ ترجمه متوقف می‌شود.",
+  'privacy.consent.p': "پیش از ارسال صدا به سرویس هوش مصنوعی، رضایت شما لازم است. می‌توانید نپذیرید و همچنان از تاریخچه، تنظیمات و بازیابی خریدها استفاده کنید. در تنظیمات ← درباره ← پس‌گرفتن رضایت رضایت را پس بگیرید؛ ترجمه متوقف می‌شود.",
   'privacy.speech.protection': "هر شخص ثالث دریافت‌کنندهٔ داده باید حفاظتی یکسان یا هم‌ارز این سیاست فراهم کند. قراردادهای مربوط خدمات و حفاظت از دادهٔ Alibaba Cloud، پردازش با هدف محدود، محرمانگی و اقدامات امنیتی را الزامی می‌کنند. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud ممکن است دادهٔ فراخوانی سرویس را طبق شرایط منتشرشده و قانون نگه دارد؛ عدم نگهداری تضمین نمی‌شود. برای حذف در حالت خرید زمان با ما و در حالت کلید شخصی با Alibaba Cloud تماس بگیرید. پس‌گرفتن رضایت اشتراک آینده را متوقف می‌کند، اما دادهٔ پردازش‌شده را خودکار حذف نمی‌کند.",
 });

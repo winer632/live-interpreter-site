@@ -283,7 +283,7 @@ siteI18n('vi', {
   'privacy.contact.title': 'Liên hệ',
   'privacy.contact.p': 'Mọi câu hỏi về quyền riêng tư: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
   'privacy.consent.title': "Chia sẻ dữ liệu AI",
-  'privacy.consent.p': "Cần sự đồng ý của bạn trước khi gửi âm thanh đến dịch vụ AI. Bạn có thể từ chối và vẫn dùng Lịch sử, Cài đặt và Khôi phục giao dịch mua. Rút lại đồng ý tại Cài đặt → Giới thiệu → Chia sẻ dữ liệu AI; phiên dịch sẽ dừng.",
+  'privacy.consent.p': "Cần sự đồng ý của bạn trước khi gửi âm thanh đến dịch vụ AI. Bạn có thể từ chối và vẫn dùng Lịch sử, Cài đặt và Khôi phục giao dịch mua. Rút lại đồng ý tại Cài đặt → Giới thiệu → Rút lại đồng ý; phiên dịch sẽ dừng.",
   'privacy.speech.protection': "Mọi bên thứ ba nhận dữ liệu phải bảo vệ ở mức tương đương chính sách này. Các thỏa thuận dịch vụ và bảo vệ dữ liệu áp dụng của Alibaba Cloud yêu cầu xử lý đúng mục đích, bảo mật và các biện pháp an toàn. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud có thể lưu dữ liệu gọi dịch vụ theo điều khoản công bố và pháp luật; không cam kết không lưu trữ. Hãy liên hệ chúng tôi để yêu cầu xóa ở chế độ mua thời gian, hoặc Alibaba Cloud ở chế độ dùng khóa riêng. Rút đồng ý dừng chia sẻ trong tương lai, không tự xóa dữ liệu đã xử lý.",
 });

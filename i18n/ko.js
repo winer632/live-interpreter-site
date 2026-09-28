@@ -257,7 +257,7 @@ siteI18n('ko', {
   'privacy.contact.title': '문의',
   'privacy.contact.p': '개인정보 관련 문의는 <a href="mailto:winer632@qq.com">winer632@qq.com</a>으로 보내 주세요.',
   'privacy.consent.title': "AI 데이터 공유",
-  'privacy.consent.p': "AI 서비스에 음성을 전송하려면 동의가 필요합니다. 동의하지 않아도 기록, 설정, 구매 복원을 사용할 수 있습니다. 설정 → 정보 → AI 데이터 공유에서 동의를 철회하면 통역이 중지됩니다.",
+  'privacy.consent.p': "AI 서비스에 음성을 전송하려면 동의가 필요합니다. 동의하지 않아도 기록, 설정, 구매 복원을 사용할 수 있습니다. 설정 → 정보 → 동의 철회에서 동의를 철회하면 통역이 중지됩니다.",
   'privacy.speech.protection': "사용자 데이터를 받는 모든 제3자는 이 정책과 동일하거나 동등한 보호를 제공해야 합니다. 적용되는 Alibaba Cloud 서비스 및 데이터 보호 계약은 목적에 한정된 처리, 기밀 유지 및 보안 조치를 요구합니다. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud는 공개 약관과 관련 법률에 따라 서비스 호출 데이터를 보관할 수 있으며, 무보관을 보장하지 않습니다. 삭제 요청은 시간 구매 모드에서는 저희에게, 자체 키 모드에서는 Alibaba Cloud에 문의하세요. 동의 철회는 이후 공유를 중지하며 이미 처리된 데이터를 자동으로 삭제하지는 않습니다.",
 });

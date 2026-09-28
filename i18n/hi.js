@@ -273,7 +273,7 @@ siteI18n('hi', {
   'privacy.contact.title': 'संपर्क',
   'privacy.contact.p': 'गोपनीयता से जुड़ा कोई भी सवाल: <a href="mailto:winer632@qq.com">winer632@qq.com</a>।',
   'privacy.consent.title': "AI डेटा साझाकरण",
-  'privacy.consent.p': "AI सेवा को ऑडियो भेजने से पहले आपकी सहमति आवश्यक है। आप मना करके भी इतिहास, सेटिंग और खरीदारी बहाल करने का उपयोग कर सकते हैं। सेटिंग → परिचय → AI डेटा साझाकरण में सहमति वापस लें; इससे दुभाषिया सेवा रुक जाएगी।",
+  'privacy.consent.p': "AI सेवा को ऑडियो भेजने से पहले आपकी सहमति आवश्यक है। आप मना करके भी इतिहास, सेटिंग और खरीदारी बहाल करने का उपयोग कर सकते हैं। सेटिंग → परिचय → सहमति वापस लें में सहमति वापस लें; इससे दुभाषिया सेवा रुक जाएगी।",
   'privacy.speech.protection': "डेटा पाने वाले हर तीसरे पक्ष को इस नीति के समान या समकक्ष सुरक्षा देनी होगी। Alibaba Cloud के लागू सेवा और डेटा-सुरक्षा समझौते सीमित उद्देश्य से प्रोसेसिंग, गोपनीयता और सुरक्षा उपाय अनिवार्य करते हैं। <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud अपने प्रकाशित नियमों और कानून के अनुसार सेवा कॉल का डेटा रख सकता है; शून्य भंडारण का वादा नहीं है। हटाने के लिए समय खरीद मोड में हमसे, और अपनी कुंजी वाले मोड में Alibaba Cloud से संपर्क करें। सहमति वापस लेने से आगे साझा करना रुकता है, पहले प्रोसेस हुआ डेटा अपने आप नहीं मिटता।",
 });

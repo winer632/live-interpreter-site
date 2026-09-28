@@ -233,7 +233,7 @@ siteI18n('zh-Hant', {
   'privacy.contact.title': '聯絡方式',
   'privacy.contact.p': '任何隱私相關問題，請寄信至 <a href="mailto:winer632@qq.com">winer632@qq.com</a>。',
   'privacy.consent.title': "AI 資料共享",
-  'privacy.consent.p': "向 AI 服務傳送音訊前，需要你的同意。 你可以暫不同意，仍可使用傳譯記錄、設定和恢復購買。在「設定 → 關於 → AI 資料共享」中可撤回同意，並停止傳譯。",
+  'privacy.consent.p': "向 AI 服務傳送音訊前，需要你的同意。 你可以暫不同意，仍可使用傳譯記錄、設定和恢復購買。在「設定 → 關於 → 撤回同意」中可撤回同意，並停止傳譯。",
   'privacy.speech.protection': "所有接收使用者資料的第三方均須提供與本政策相同或同等程度的保護。阿里雲適用的服務及資料保護協議要求限定處理目的、履行保密義務並採取安全措施。 <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "阿里雲可能依據其公開條款和適用法律保留服務呼叫資料，我們不承諾零保留。購買時長模式的刪除請求請聯絡我們；自帶 Key 模式請聯絡阿里雲。撤回同意會停止後續共享，但不會自動刪除已處理的資料。",
 });

@@ -275,7 +275,7 @@ siteI18n('ur', {
   'privacy.contact.title': 'رابطہ',
   'privacy.contact.p': 'رازداری سے متعلق کوئی بھی سوال: <a href="mailto:winer632@qq.com">winer632@qq.com</a>۔',
   'privacy.consent.title': "AI ڈیٹا کا اشتراک",
-  'privacy.consent.p': "AI سروس کو آڈیو بھیجنے سے پہلے آپ کی رضامندی ضروری ہے۔ آپ انکار کر کے بھی سابقہ ریکارڈ، ترتیبات اور خریداریوں کی بحالی استعمال کر سکتے ہیں۔ ترتیبات ← تعارف ← AI ڈیٹا کا اشتراک میں رضامندی واپس لیں؛ اس سے ترجمانی رک جائے گی۔",
+  'privacy.consent.p': "AI سروس کو آڈیو بھیجنے سے پہلے آپ کی رضامندی ضروری ہے۔ آپ انکار کر کے بھی سابقہ ریکارڈ، ترتیبات اور خریداریوں کی بحالی استعمال کر سکتے ہیں۔ ترتیبات ← تعارف ← رضامندی واپس لیں میں رضامندی واپس لیں؛ اس سے ترجمانی رک جائے گی۔",
   'privacy.speech.protection': "ڈیٹا وصول کرنے والے ہر تیسرے فریق کو اس پالیسی جیسا یا مساوی تحفظ دینا ہوگا۔ Alibaba Cloud کے متعلقہ سروس اور ڈیٹا تحفظ کے معاہدے محدود مقصد، رازداری اور حفاظتی اقدامات کا تقاضا کرتے ہیں۔ <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud اپنی شائع شدہ شرائط اور قانون کے تحت سروس کال کا ڈیٹا رکھ سکتا ہے؛ صفر ذخیرے کا وعدہ نہیں ہے۔ حذف کی درخواست کے لیے وقت خریدنے کے موڈ میں ہم سے، یا اپنی کلید کے موڈ میں Alibaba Cloud سے رابطہ کریں۔ رضامندی کی واپسی آئندہ اشتراک روکتی ہے، پہلے پراسیس شدہ ڈیٹا خودبخود حذف نہیں کرتی۔",
 });

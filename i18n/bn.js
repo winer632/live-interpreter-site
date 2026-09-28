@@ -270,7 +270,7 @@ siteI18n('bn', {
   'privacy.contact.title': 'যোগাযোগ',
   'privacy.contact.p': 'গোপনীয়তা নিয়ে যেকোনো প্রশ্ন: <a href="mailto:winer632@qq.com">winer632@qq.com</a>।',
   'privacy.consent.title': "AI ডেটা ভাগ করা",
-  'privacy.consent.p': "AI সেবায় অডিও পাঠানোর আগে আপনার সম্মতি প্রয়োজন। আপনি অসম্মতি জানিয়েও ইতিহাস, সেটিং ও কেনাকাটা পুনরুদ্ধার ব্যবহার করতে পারেন। সেটিং → পরিচিতি → AI ডেটা ভাগ করা থেকে সম্মতি প্রত্যাহার করলে দোভাষী সেবা বন্ধ হবে।",
+  'privacy.consent.p': "AI সেবায় অডিও পাঠানোর আগে আপনার সম্মতি প্রয়োজন। আপনি অসম্মতি জানিয়েও ইতিহাস, সেটিং ও কেনাকাটা পুনরুদ্ধার ব্যবহার করতে পারেন। সেটিং → পরিচিতি → সম্মতি প্রত্যাহার থেকে সম্মতি প্রত্যাহার করলে দোভাষী সেবা বন্ধ হবে।",
   'privacy.speech.protection': "ডেটা গ্রহণকারী প্রতিটি তৃতীয় পক্ষকে এই নীতির সমান বা সমতুল্য সুরক্ষা দিতে হবে। Alibaba Cloud-এর প্রযোজ্য সেবা ও ডেটা সুরক্ষা চুক্তি সীমিত উদ্দেশ্যে প্রক্রিয়াকরণ, গোপনীয়তা ও নিরাপত্তা ব্যবস্থা আবশ্যক করে। <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud প্রকাশিত শর্ত ও আইন অনুযায়ী সেবা কলের ডেটা রাখতে পারে; শূন্য সংরক্ষণের প্রতিশ্রুতি নেই। মুছতে চাইলে সময় কেনার মোডে আমাদের, অথবা নিজস্ব কী মোডে Alibaba Cloud-এর সঙ্গে যোগাযোগ করুন। সম্মতি প্রত্যাহার ভবিষ্যতের ভাগ করা বন্ধ করে, আগে প্রক্রিয়াকৃত ডেটা নিজে থেকে মুছে দেয় না।",
 });

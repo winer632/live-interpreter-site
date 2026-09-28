@@ -270,7 +270,7 @@ siteI18n('th', {
   'privacy.contact.title': 'ติดต่อ',
   'privacy.contact.p': 'หากมีคำถามเรื่องความเป็นส่วนตัว ติดต่อ <a href="mailto:winer632@qq.com">winer632@qq.com</a>',
   'privacy.consent.title': "การแชร์ข้อมูลกับ AI",
-  'privacy.consent.p': "ต้องได้รับความยินยอมก่อนส่งเสียงไปยังบริการ AI คุณปฏิเสธและยังใช้ประวัติ การตั้งค่า และกู้คืนการซื้อได้ ถอนความยินยอมที่ การตั้งค่า → เกี่ยวกับ → การแชร์ข้อมูลกับ AI ซึ่งจะหยุดการแปลสด",
+  'privacy.consent.p': "ต้องได้รับความยินยอมก่อนส่งเสียงไปยังบริการ AI คุณปฏิเสธและยังใช้ประวัติ การตั้งค่า และกู้คืนการซื้อได้ ถอนความยินยอมที่ การตั้งค่า → เกี่ยวกับ → ถอนความยินยอม ซึ่งจะหยุดการแปลสด",
   'privacy.speech.protection': "บุคคลที่สามที่รับข้อมูลต้องให้การคุ้มครองเท่ากันหรือเทียบเท่านโยบายนี้ ข้อตกลงบริการและการคุ้มครองข้อมูลที่ใช้บังคับของ Alibaba Cloud กำหนดให้จำกัดวัตถุประสงค์ รักษาความลับ และมีมาตรการความปลอดภัย <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud อาจเก็บข้อมูลการเรียกบริการตามข้อกำหนดที่เผยแพร่และกฎหมาย เราไม่รับรองว่าจะไม่มีการเก็บข้อมูล หากต้องการลบข้อมูลให้ติดต่อเราในโหมดซื้อเวลา หรือติดต่อ Alibaba Cloud ในโหมดใช้คีย์ของตนเอง การถอนความยินยอมหยุดการแชร์ในอนาคต แต่ไม่ได้ลบข้อมูลที่ประมวลผลแล้วโดยอัตโนมัติ",
 });

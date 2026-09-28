@@ -267,7 +267,7 @@ siteI18n('he', {
   'privacy.contact.title': 'יצירת קשר',
   'privacy.contact.p': 'כל שאלה בנושא פרטיות: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
   'privacy.consent.title': "שיתוף נתונים עם AI",
-  'privacy.consent.p': "נדרשת הסכמתך לפני שליחת שמע לשירות הבינה המלאכותית. אפשר לסרב ולהמשיך להשתמש בהיסטוריה, בהגדרות ובשחזור רכישות. ביטול הסכמה זמין בהגדרות ← אודות ← שיתוף נתונים עם AI; התרגום יופסק.",
+  'privacy.consent.p': "נדרשת הסכמתך לפני שליחת שמע לשירות הבינה המלאכותית. אפשר לסרב ולהמשיך להשתמש בהיסטוריה, בהגדרות ובשחזור רכישות. ביטול הסכמה זמין בהגדרות ← אודות ← ביטול הסכמה; התרגום יופסק.",
   'privacy.speech.protection': "כל צד שלישי שמקבל נתונים חייב לספק הגנה זהה או שוות ערך למדיניות זו. הסכמי השירות והגנת הנתונים החלים של Alibaba Cloud דורשים עיבוד למטרה מוגדרת, סודיות ואמצעי אבטחה. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
   'privacy.speech.retention': "Alibaba Cloud עשויה לשמור נתוני קריאות שירות לפי תנאיה שפורסמו והדין; אין הבטחה לאי-שמירה. לבקשת מחיקה פנו אלינו במצב רכישת זמן, או אל Alibaba Cloud בשימוש במפתח אישי. ביטול הסכמה מפסיק שיתוף עתידי ואינו מוחק אוטומטית נתונים שכבר עובדו.",
 });
