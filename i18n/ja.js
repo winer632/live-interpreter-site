@@ -168,14 +168,10 @@ siteI18n('ja', {
   // privacy.html
   'privacy.doc.title': 'プライバシーポリシー · Duo Interpreter',
   'privacy.title': 'プライバシーポリシー',
-  'privacy.sub': "Duo Interpreter · 最終更新日：2026年9月26日",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'このポリシーは翻訳版です。<a href="?lang=en">英語版</a>と内容が異なる場合は、英語版が優先されます。',
-  'privacy.short':
-    '<strong>概要：</strong>このアプリには 2 つの使い方があります。デフォルトでは、登録なしで通訳時間を購入します。' +
-    '音声は翻訳のために端末から Alibaba Cloud Model Studio へ直接送られ、<strong>私たちのサーバーを経由することはありません</strong>。' +
-    '私たちのサーバーが保存するのは、ランダムに生成されたアカウント番号、購入した時間、使用した時間だけです。' +
-    '代わりに自分の Alibaba Cloud Key を使う場合、私たちは何も収集しません。分析、広告、トラッキングは一切なく、通訳記録は端末の中に残ります。',
+  'privacy.short': "個人情報を含む可能性があるマイク音声と言語設定が、Alibaba Cloud Model Studio（Qwen）に直接送信されます。 AI サービスはこのデータを使って音声を認識・翻訳し、翻訳音声を生成します。",
   'privacy.collect.title': '収集する情報',
   'privacy.collect.intro': '「設定」→「お支払い方法」で何を選んだかによって異なります。',
   'privacy.credit.title': '時間を購入する場合（デフォルト、登録不要）',
@@ -198,9 +194,7 @@ siteI18n('ja', {
   'privacy.key.title': '自分の Alibaba Cloud Key を使う場合',
   'privacy.key.p': "ご自身の Alibaba Cloud キーで通訳する場合、音声や翻訳データは当方のサーバーに送信されません。既存の通訳時間アカウントを管理または削除する場合は、その処理のためにアプリが当方のサーバーに接続します。",
   'privacy.both.title': 'どちらの場合も',
-  'privacy.both.p':
-    'アプリには、サードパーティの分析、広告、トラッキングは含まれていません。私たちは分析や広告を行わず、' +
-    'ほかのアプリやウェブサイトをまたいであなたをトラッキングすることもなく、いかなるデータも販売・共有しません。',
+  'privacy.both.p': "データの販売、広告、アクセス解析、アプリ間の追跡は行いません。データの共有は本ポリシーに記載した機能の提供に限られます。",
   'privacy.logs.title': 'サーバーログと保存期間',
   'privacy.logs.ip':
     'IP アドレスは、リクエスト頻度の制限（不正利用の防止）のためにメモリ上でのみ使用し、最後のリクエストから 1 時間後に破棄します。' +
@@ -237,9 +231,7 @@ siteI18n('ja', {
   'privacy.account.title': 'アカウント ID',
   'privacy.account.p': "ランダムな通訳時間アカウント ID と、別の復元用シークレットを iOS キーチェーンに保存します。iCloud キーチェーンが有効な場合、Apple はエンドツーエンド暗号化を使い、同じ Apple Account のデバイス間でこれらを同期できます。同期された認証情報により、再インストールや機種変更後に残高を復元できます。古いバージョンでは、安全な復元を設定するために、元のデバイスでアプリを更新する必要がある場合があります。",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    'ご自身で入力した API Key は iOS の<strong>キーチェーン</strong>に保存され、このデバイス上で、かつロック解除中にのみ読み取れるよう設定されています。' +
-    'アップロードされることはなく、バックアップを通じてほかのデバイスに移行することもありません。',
+  'privacy.apikey.p': "ご自身の API キーはこの端末の iOS キーチェーンに保存されます。リクエスト認証のため選択した Alibaba Cloud の接続先だけに送信され、当方のサーバーには送られず、他の端末にも同期されません。",
   'privacy.mic.title': 'マイク',
   'privacy.mic.p':
     'マイクは「開始」を押した後にのみ使用されます。通訳中のセッションは、ほかのアプリに切り替えたり画面をロックしたりしても、' +
@@ -267,4 +259,8 @@ siteI18n('ja', {
     'このページが正式な記録となります。',
   'privacy.contact.title': 'お問い合わせ',
   'privacy.contact.p': 'プライバシーに関するご質問は、<a href="mailto:winer632@qq.com">winer632@qq.com</a> までお寄せください。',
+  'privacy.consent.title': "AI データ共有",
+  'privacy.consent.p': "AI サービスへの音声送信には同意が必要です。 同意しなくても履歴、設定、購入の復元は利用できます。「設定 → このアプリについて → AI データ共有」で同意を撤回すると、通訳が停止します。",
+  'privacy.speech.protection': "利用者のデータを受け取る第三者には、本ポリシーと同等以上の保護が求められます。適用される Alibaba Cloud のサービス・データ保護契約では、処理目的の限定、守秘義務、安全対策が定められています。 <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud は公開規約と適用法に従いサービス呼び出しデータを保持する場合があり、保存しないとは保証しません。削除の依頼は時間購入モードでは当方へ、自己キーのモードでは Alibaba Cloud へご連絡ください。同意の撤回は今後の共有を停止しますが、処理済みデータを自動で削除するものではありません。",
 });

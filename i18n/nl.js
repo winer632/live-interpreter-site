@@ -181,15 +181,10 @@ siteI18n('nl', {
   // privacy.html
   'privacy.doc.title': 'Privacybeleid · Duo Interpreter',
   'privacy.title': 'Privacybeleid',
-  'privacy.sub': "Duo Interpreter · Laatst bijgewerkt op 26 september 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Dit beleid is een vertaling. Als het afwijkt van de <a href="?lang=en">Engelse versie</a>, geldt de Engelse versie.',
-  'privacy.short':
-    '<strong>In het kort:</strong> de app werkt op twee manieren. Standaard koop je tolktijd, zonder registratie: ' +
-    'je spraak gaat rechtstreeks van je telefoon naar Alibaba Cloud Model Studio om te worden vertaald en <strong>gaat nooit via onze server</strong>; ' +
-    'onze server bewaart alleen een willekeurig aangemaakt accountnummer, hoeveel tijd je hebt gekocht en hoeveel je hebt gebruikt. ' +
-    'Gebruik je in plaats daarvan je eigen Alibaba Cloud-key, dan verzamelen we niets. ' +
-    'Er is geen analyse, geen advertenties en geen tracking, en transcripties blijven op je telefoon.',
+  'privacy.short': "Uw microfoonaudio, die persoonsgegevens kan bevatten, en taalinstellingen worden rechtstreeks naar Alibaba Cloud Model Studio (Qwen) gestuurd. De AI-dienst gebruikt deze gegevens om spraak te herkennen, te vertalen en gesproken vertalingen te maken.",
   'privacy.collect.title': 'Wat we verzamelen',
   'privacy.collect.intro': 'Dat hangt af van wat je hebt gekozen onder Instellingen → Betaalwijze.',
   'privacy.credit.title': 'Tijd kopen (standaard, zonder registratie)',
@@ -214,9 +209,7 @@ siteI18n('nl', {
   'privacy.key.title': 'Je eigen Alibaba Cloud-key gebruiken',
   'privacy.key.p': "Tolken met je eigen Alibaba Cloud-sleutel verstuurt geen spraak- of vertaalgegevens naar onze server. Als je een bestaand tijdaccount beheert of verwijdert, neemt de app voor dat verzoek contact op met onze server.",
   'privacy.both.title': 'In beide gevallen',
-  'privacy.both.p':
-    'De app bevat geen analyse-, advertentie- of trackingsoftware van derden. Wij doen niet aan analyse of advertenties, ' +
-    'volgen je niet over apps of websites heen en verkopen of delen geen gegevens.',
+  'privacy.both.p': "Wij verkopen geen gegevens en gebruiken geen advertenties, analyses of tracking tussen apps. Gegevens worden alleen gedeeld voor de functies in dit beleid.",
   'privacy.logs.title': 'Serverlogs en bewaartermijnen',
   'privacy.logs.ip':
     'Je IP-adres wordt alleen in het geheugen gebruikt om het aantal verzoeken te beperken (tegen misbruik) ' +
@@ -261,10 +254,7 @@ siteI18n('nl', {
   'privacy.account.title': 'Account-ID',
   'privacy.account.p': "Je willekeurige tijdaccount-ID en een afzonderlijke geheime herstelsleutel worden bewaard in de iOS-sleutelhanger. Als iCloud-sleutelhanger is ingeschakeld, kan Apple ze met end-to-endversleuteling synchroniseren tussen apparaten met hetzelfde Apple Account. Met gesynchroniseerde inloggegevens kun je het saldo herstellen na een herinstallatie of overstap naar een ander apparaat. Een oudere installatie moet mogelijk eerst op het oorspronkelijke apparaat worden bijgewerkt voordat veilig herstel kan worden ingesteld.",
   'privacy.apikey.title': 'API Keys',
-  'privacy.apikey.p':
-    'De API Keys die je zelf invoert, worden bewaard in de iOS-<strong>sleutelhanger</strong>, ' +
-    'gemarkeerd als alleen leesbaar op dit apparaat en alleen als het ontgrendeld is. ' +
-    'Ze worden nooit geüpload en gaan via een reservekopie niet mee naar een ander apparaat.',
+  'privacy.apikey.p': "Uw eigen API-sleutel staat in de iOS-sleutelhanger op dit apparaat. Hij wordt alleen naar het gekozen Alibaba Cloud-eindpunt gestuurd voor authenticatie, niet naar onze server, en niet met andere apparaten gesynchroniseerd.",
   'privacy.mic.title': 'Microfoon',
   'privacy.mic.p':
     'De microfoon wordt pas gebruikt nadat je op ‘Start’ hebt getikt. ' +
@@ -291,4 +281,8 @@ siteI18n('nl', {
     'De app heeft geen registratie en we kunnen je op geen enkele manier bereiken, dus deze pagina is leidend.',
   'privacy.contact.title': 'Contact',
   'privacy.contact.p': 'Vragen over privacy: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "AI-gegevens delen",
+  'privacy.consent.p': "Uw toestemming is nodig voordat audio naar de AI-dienst wordt gestuurd. U kunt weigeren en Geschiedenis, Instellingen en Aankopen herstellen blijven gebruiken. Trek toestemming in via Instellingen → Over → AI-gegevens delen; het tolken stopt dan.",
+  'privacy.speech.protection': "Elke derde partij die gegevens ontvangt, moet dezelfde of gelijkwaardige bescherming bieden als dit beleid. De toepasselijke overeenkomsten van Alibaba Cloud vereisen doelgebonden verwerking, vertrouwelijkheid en beveiligingsmaatregelen. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud kan gegevens van dienstaanroepen bewaren volgens de gepubliceerde voorwaarden en de wet; geen opslag wordt niet gegarandeerd. Neem voor verwijdering contact met ons op bij tijd kopen, of met Alibaba Cloud bij een eigen sleutel. Intrekken stopt toekomstig delen, maar verwijdert niet automatisch eerder verwerkte gegevens.",
 });

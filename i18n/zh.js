@@ -152,11 +152,8 @@ siteI18n('zh', {
   // privacy.html
   'privacy.doc.title': '隐私政策 · 实时同声传译',
   'privacy.title': '隐私政策',
-  'privacy.sub': "实时同声传译 · 最后更新 2026 年 9 月 26 日",
-  'privacy.short':
-    '<strong>一句话版本：</strong>App 有两种用法。默认的「购买时长」不用注册：你的语音从手机直接发往阿里云百炼翻译，' +
-    '<strong>不经过我们的服务器</strong>；我们的服务器只记一个随机生成的账号号码、你买了多少时长、用了多少时长。' +
-    '选「用自己的阿里云 Key」时，我们什么都不收集。App 里没有统计、广告和追踪，字幕记录只存在你的手机里。',
+  'privacy.sub': "2026-09-28",
+  'privacy.short': "你的麦克风音频（可能包含个人信息）和语言设置将直接发送给阿里云百炼 Alibaba Cloud Model Studio（通义千问 Qwen）。 AI 服务使用这些数据识别语音、翻译并生成译音。",
   'privacy.collect.title': '我们收集什么',
   'privacy.collect.intro': '取决于你在「设置 → 计费方式」里选的是哪一种。',
   'privacy.credit.title': '购买时长（默认，免注册）',
@@ -178,7 +175,7 @@ siteI18n('zh', {
   'privacy.key.title': '用自己的阿里云 Key',
   'privacy.key.p': "使用自己的阿里云 Key 传译时，不会向我们的服务器发送语音或翻译数据。如果你管理或删除已有的时长账号，App 会为处理该请求连接我们的服务器。",
   'privacy.both.title': '两种用法都一样',
-  'privacy.both.p': 'App 里没有第三方分析、广告或跟踪组件。我们不做统计、不投广告、不跨 App 或网站追踪你，也不出售或分享任何数据。',
+  'privacy.both.p': "我们不出售数据，不使用广告、统计分析或跨 App 追踪。数据共享仅用于本政策说明的功能。",
   'privacy.logs.title': '服务器日志与保存期限',
   'privacy.logs.ip':
     '连接服务器时，你的 IP 地址只在内存里用来限制请求频率（防刷），最后一次请求一小时后清掉，不写日志、不进数据库。' +
@@ -212,8 +209,7 @@ siteI18n('zh', {
   'privacy.account.title': '账号 ID',
   'privacy.account.p': "随机时长账号 ID 和一份独立的恢复密钥保存在 iOS 钥匙串中。启用 iCloud 钥匙串后，Apple 可通过端到端加密，在同一 Apple 账户的设备之间同步它们。同步后的凭据可用于在重装 App 或更换设备后恢复余额。旧版本可能需要先在原设备上更新，才能建立安全恢复所需的信息。",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    '你自己填写的 API Key 保存在 iOS <strong>钥匙串</strong>中，标记为「仅本机、解锁后可读」，既不上传也不随备份迁移到其他设备。',
+  'privacy.apikey.p': "你自己的 API Key 保存在本机 iOS 钥匙串中，仅发送到你选择的阿里云端点进行请求认证，不发送给我们的服务器，也不同步到其他设备。",
   'privacy.mic.title': '麦克风',
   'privacy.mic.p':
     '只有在你点击「开始传译」之后才会使用麦克风。切换到其他 App 或锁屏后，正在进行的传译会继续采集、翻译并保存字幕；' +
@@ -235,4 +231,8 @@ siteI18n('zh', {
     '如果这份政策有实质性变化，我们会更新页面顶部的日期。App 不需要注册，我们没有你的联系方式，无法主动通知你，请以本页为准。',
   'privacy.contact.title': '联系',
   'privacy.contact.p': '有任何隐私相关的问题，写信到 <a href="mailto:winer632@qq.com">winer632@qq.com</a>。',
+  'privacy.consent.title': "AI 数据共享",
+  'privacy.consent.p': "向 AI 服务发送音频前，需要你的同意。 你可以暂不同意，仍可使用传译记录、设置和恢复购买。在「设置 → 关于 → AI 数据共享」中可撤回同意，并停止传译。",
+  'privacy.speech.protection': "所有接收用户数据的第三方均须提供与本政策相同或同等程度的保护。阿里云适用的服务及数据保护协议要求限定处理目的、履行保密义务并采取安全措施。 <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "阿里云可能依据其公开条款和适用法律保留服务调用数据，我们不承诺零保留。购买时长模式的删除请求请联系我们；自带 Key 模式请联系阿里云。撤回同意会停止后续共享，但不会自动删除已处理的数据。",
 });

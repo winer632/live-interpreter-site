@@ -182,15 +182,10 @@ siteI18n('de', {
   // privacy.html
   'privacy.doc.title': 'Datenschutzerklärung · Duo Interpreter',
   'privacy.title': 'Datenschutzerklärung',
-  'privacy.sub': "Duo Interpreter · Zuletzt aktualisiert am 26. September 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Diese Erklärung ist eine Übersetzung. Weicht sie von der <a href="?lang=en">englischen Fassung</a> ab, gilt die englische Fassung.',
-  'privacy.short':
-    '<strong>Kurz gesagt:</strong> Die App funktioniert auf zwei Arten. Standardmäßig kaufst du Dolmetschzeit, ohne Registrierung: ' +
-    'Deine Sprache geht zur Übersetzung direkt von deinem iPhone an Alibaba Cloud Model Studio und <strong>läuft nie über unseren Server</strong>; ' +
-    'unser Server speichert nur eine zufällig erzeugte Kontonummer sowie wie viel Zeit du gekauft und wie viel du verbraucht hast. ' +
-    'Nutzt du stattdessen deinen eigenen Alibaba Cloud Key, erfassen wir gar nichts. ' +
-    'Es gibt keine Analyse, keine Werbung und kein Tracking, und Transkripte bleiben auf deinem iPhone.',
+  'privacy.short': "Ihr Mikrofon-Audio, das personenbezogene Daten enthalten kann, und Ihre Spracheinstellungen werden direkt an Alibaba Cloud Model Studio (Qwen) gesendet. Der KI-Dienst nutzt diese Daten zur Spracherkennung, Übersetzung und Erzeugung gesprochener Übersetzungen.",
   'privacy.collect.title': 'Was wir erfassen',
   'privacy.collect.intro': 'Das hängt davon ab, was du unter Einstellungen → Bezahlung gewählt hast.',
   'privacy.credit.title': 'Zeit kaufen (Standard, ohne Registrierung)',
@@ -214,9 +209,7 @@ siteI18n('de', {
   'privacy.key.title': 'Eigenen Alibaba Cloud Key nutzen',
   'privacy.key.p': "Beim Dolmetschen mit deinem eigenen Alibaba-Cloud-Schlüssel werden keine Sprach- oder Übersetzungsdaten an unseren Server gesendet. Wenn du ein bestehendes Zeitkonto verwaltest oder löschst, kontaktiert die App unseren Server für diese Anfrage.",
   'privacy.both.title': 'In beiden Fällen',
-  'privacy.both.p':
-    'Die App enthält keine Analyse-, Werbe- oder Tracking-Komponenten von Drittanbietern. Wir betreiben keine Analyse und keine Werbung, ' +
-    'verfolgen dich nicht über Apps oder Websites hinweg und verkaufen oder teilen keinerlei Daten.',
+  'privacy.both.p': "Wir verkaufen keine Daten und nutzen weder Werbung noch Analysen oder appübergreifendes Tracking. Daten werden nur für die in dieser Richtlinie beschriebenen Funktionen weitergegeben.",
   'privacy.logs.title': 'Serverprotokolle und Aufbewahrung',
   'privacy.logs.ip':
     'Deine IP-Adresse wird nur im Arbeitsspeicher verwendet, um die Anfragerate zu begrenzen (gegen Missbrauch), ' +
@@ -261,10 +254,7 @@ siteI18n('de', {
   'privacy.account.title': 'Konto-ID',
   'privacy.account.p': "Deine zufällige Zeitkonto-ID und ein separater Wiederherstellungsschlüssel werden im iOS-Schlüsselbund gespeichert. Bei aktiviertem iCloud-Schlüsselbund kann Apple sie mit Ende-zu-Ende-Verschlüsselung zwischen Geräten mit demselben Apple Account synchronisieren. Mit den synchronisierten Zugangsdaten kannst du dein Guthaben nach einer Neuinstallation oder einem Gerätewechsel wiederherstellen. Bei einer älteren Installation kann zunächst ein Update auf dem ursprünglichen Gerät nötig sein, um eine sichere Wiederherstellung einzurichten.",
   'privacy.apikey.title': 'API Keys',
-  'privacy.apikey.p':
-    'Die API Keys, die du selbst eingibst, werden im iOS-<strong>Schlüsselbund</strong> gespeichert und sind so markiert, ' +
-    'dass sie nur auf diesem Gerät und nur im entsperrten Zustand lesbar sind. ' +
-    'Sie werden nie hochgeladen und wandern nicht per Backup auf ein anderes Gerät.',
+  'privacy.apikey.p': "Ihr eigener API-Schlüssel liegt im iOS-Schlüsselbund dieses Geräts. Er wird nur zur Authentifizierung an den gewählten Alibaba-Cloud-Endpunkt gesendet, nicht an unseren Server, und nicht auf andere Geräte synchronisiert.",
   'privacy.mic.title': 'Mikrofon',
   'privacy.mic.p':
     'Das Mikrofon wird erst verwendet, nachdem du auf „Starten“ getippt hast. ' +
@@ -291,4 +281,8 @@ siteI18n('de', {
     'Die App hat keine Registrierung, und wir haben keine Möglichkeit, dich zu kontaktieren – daher ist diese Seite maßgeblich.',
   'privacy.contact.title': 'Kontakt',
   'privacy.contact.p': 'Bei allen Fragen zum Datenschutz: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "KI-Datenfreigabe",
+  'privacy.consent.p': "Vor dem Senden von Audio an den KI-Dienst ist Ihre Zustimmung erforderlich. Auch ohne Zustimmung bleiben Verlauf, Einstellungen und Käufe wiederherstellen verfügbar. Unter Einstellungen → Über → KI-Datenfreigabe können Sie die Zustimmung widerrufen; das Dolmetschen wird dann beendet.",
+  'privacy.speech.protection': "Jeder Dritte, der Nutzerdaten erhält, muss einen gleichwertigen Schutz wie in dieser Richtlinie bieten. Die geltenden Dienst- und Datenschutzvereinbarungen von Alibaba Cloud verlangen zweckgebundene Verarbeitung, Vertraulichkeit und Sicherheitsmaßnahmen. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud kann Daten aus Dienstaufrufen nach seinen veröffentlichten Bedingungen und geltendem Recht aufbewahren; eine Speicherung ist nicht ausgeschlossen. Für Löschanfragen wenden Sie sich im Zeitkaufmodus an uns, bei eigenem Schlüssel an Alibaba Cloud. Ein Widerruf stoppt künftige Weitergaben, löscht aber nicht automatisch bereits verarbeitete Daten.",
 });

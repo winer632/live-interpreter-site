@@ -186,15 +186,10 @@ siteI18n('es', {
   // privacy.html
   'privacy.doc.title': 'Política de privacidad · Duo Interpreter',
   'privacy.title': 'Política de privacidad',
-  'privacy.sub': "Duo Interpreter · Última actualización: 26 de septiembre de 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Esta política es una traducción. Si difiere de la <a href="?lang=en">versión en inglés</a>, prevalece la versión en inglés.',
-  'privacy.short':
-    '<strong>En resumen:</strong> la app funciona de dos maneras. De forma predeterminada compras tiempo de interpretación, sin registro: ' +
-    'tu voz va directamente de tu teléfono a Alibaba Cloud Model Studio para traducirse y <strong>nunca pasa por nuestro servidor</strong>; ' +
-    'nuestro servidor solo guarda un número de cuenta generado al azar, cuánto tiempo compraste y cuánto usaste. ' +
-    'Si en cambio usas tu propia clave de Alibaba Cloud, no recopilamos nada. No hay analíticas, publicidad ni seguimiento, ' +
-    'y las transcripciones se quedan en tu teléfono.',
+  'privacy.short': "El audio del micrófono, que puede contener datos personales, y los ajustes de idioma se envían directamente a Alibaba Cloud Model Studio (Qwen). El servicio de IA utiliza estos datos para reconocer el habla, traducirla y generar traducciones habladas.",
   'privacy.collect.title': 'Qué recopilamos',
   'privacy.collect.intro': 'Depende de lo que hayas elegido en Ajustes → Forma de pago.',
   'privacy.credit.title': 'Comprar tiempo (opción predeterminada, sin registro)',
@@ -219,9 +214,7 @@ siteI18n('es', {
   'privacy.key.title': 'Usar tu propia clave de Alibaba Cloud',
   'privacy.key.p': "La interpretación con tu propia clave de Alibaba Cloud no envía datos de voz ni de traducción a nuestro servidor. Si gestionas o eliminas una cuenta de tiempo existente, la app contacta con nuestro servidor para atender esa solicitud.",
   'privacy.both.title': 'En ambos casos',
-  'privacy.both.p':
-    'La app no contiene analíticas, publicidad ni seguimiento de terceros. No usamos analíticas ni anuncios, ' +
-    'no te seguimos a través de otras apps o sitios web, y no vendemos ni compartimos ningún dato.',
+  'privacy.both.p': "No vendemos datos ni usamos publicidad, análisis o seguimiento entre aplicaciones. Los datos solo se comparten para las funciones descritas en esta política.",
   'privacy.logs.title': 'Registros del servidor y conservación',
   'privacy.logs.ip':
     'Tu dirección IP solo se usa en memoria para limitar la frecuencia de las solicitudes (para evitar abusos) ' +
@@ -265,9 +258,7 @@ siteI18n('es', {
   'privacy.account.title': 'ID de cuenta',
   'privacy.account.p': "Tu ID aleatorio de la cuenta de tiempo y un secreto de recuperación independiente se guardan en el llavero de iOS. Si el llavero de iCloud está activado, Apple puede sincronizarlos entre dispositivos con la misma Cuenta de Apple mediante cifrado de extremo a extremo. Las credenciales sincronizadas permiten restaurar el saldo tras reinstalar la app o cambiar de dispositivo. Una instalación antigua puede necesitar actualizarse en el dispositivo original antes de poder configurar la recuperación segura.",
   'privacy.apikey.title': 'API Keys',
-  'privacy.apikey.p':
-    'Las API Keys que escribes tú mismo se guardan en el <strong>llavero</strong> de iOS, marcadas como legibles solo en este dispositivo ' +
-    'y solo mientras está desbloqueado. Nunca se suben ni pasan a otro dispositivo a través de copias de seguridad.',
+  'privacy.apikey.p': "Tu clave API se guarda en el llavero de iOS de este dispositivo. Solo se envía al punto de conexión de Alibaba Cloud elegido para autenticar solicitudes, nunca a nuestro servidor, y no se sincroniza con otros dispositivos.",
   'privacy.mic.title': 'Micrófono',
   'privacy.mic.p':
     'El micrófono solo se usa después de que tocas “Iniciar”. Una sesión activa sigue grabando, traduciendo y guardando transcripciones ' +
@@ -296,4 +287,8 @@ siteI18n('es', {
     'y no tenemos forma de contactarte, así que esta página es la referencia.',
   'privacy.contact.title': 'Contacto',
   'privacy.contact.p': 'Para cualquier pregunta sobre privacidad: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "Compartir datos con IA",
+  'privacy.consent.p': "Se necesita tu consentimiento antes de enviar audio al servicio de IA. Puedes rechazarlo y seguir usando Historial, Ajustes y Restaurar compras. Retira el consentimiento en Ajustes → Acerca de → Compartir datos con IA; esto detiene la interpretación.",
+  'privacy.speech.protection': "Todo tercero que reciba datos debe ofrecer una protección igual o equivalente a esta política. Los acuerdos aplicables de Alibaba Cloud exigen un tratamiento limitado a su finalidad, confidencialidad y medidas de seguridad. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud puede conservar datos de llamadas al servicio según sus condiciones publicadas y la ley; no se garantiza una retención nula. Para solicitar la eliminación, contáctanos en modo de compra de tiempo o a Alibaba Cloud si usas tu propia clave. Retirar el consentimiento detiene los envíos futuros, sin borrar automáticamente datos ya procesados.",
 });

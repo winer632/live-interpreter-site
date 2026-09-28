@@ -177,15 +177,10 @@ siteI18n('fil', {
   // privacy.html
   'privacy.doc.title': 'Patakaran sa Privacy · Duo Interpreter',
   'privacy.title': 'Patakaran sa Privacy',
-  'privacy.sub': "Duo Interpreter · Huling na-update noong Setyembre 26, 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Salin ang patakarang ito. Kung may pagkakaiba ito sa <a href="?lang=en">bersyong Ingles</a>, ang bersyong Ingles ang masusunod.',
-  'privacy.short':
-    '<strong>Sa madaling salita:</strong> may dalawang paraan ng paggamit ang app. Bilang default, bumibili ka ng oras ng pagsasalin nang walang sign-up: ' +
-    'direktang pumupunta ang boses mo mula sa phone mo papunta sa Alibaba Cloud Model Studio para isalin at <strong>hindi kailanman dumadaan sa server namin</strong>; ' +
-    'ang itinatago lang ng server namin ay isang random na numero ng account, kung gaano karaming oras ang binili mo, at kung gaano karami ang nagamit mo. ' +
-    'Kung sarili mong Alibaba Cloud key ang gamit mo, wala kaming kinokolekta. Walang analytics, advertising o tracking, ' +
-    'at nananatili sa phone mo ang mga transcript.',
+  'privacy.short': "Ang audio ng iyong mikropono, na maaaring may personal na impormasyon, at mga setting ng wika ay direktang ipinapadala sa Alibaba Cloud Model Studio (Qwen). Ginagamit ng serbisyong AI ang data na ito upang makilala ang pananalita, isalin ito, at gumawa ng binibigkas na salin.",
   'privacy.collect.title': 'Ano ang kinokolekta namin',
   'privacy.collect.intro': 'Depende ito sa pinili mo sa Mga Setting → Paano magbayad.',
   'privacy.credit.title': 'Pagbili ng oras (ang default, walang sign-up)',
@@ -210,9 +205,7 @@ siteI18n('fil', {
   'privacy.key.title': 'Paggamit ng sarili mong Alibaba Cloud key',
   'privacy.key.p': "Ang interpretasyon gamit ang sarili mong Alibaba Cloud key ay hindi nagpapadala ng data ng pagsasalita o pagsasalin sa aming server. Kung namamahala ka o nagbubura ng umiiral na account ng oras, kokontakin ng app ang aming server para sa kahilingang iyon.",
   'privacy.both.title': 'Alinman sa dalawa',
-  'privacy.both.p':
-    'Walang third-party na analytics, advertising o tracking sa app. Hindi kami nagpapatakbo ng analytics o ads, ' +
-    'hindi ka namin tina-track sa iba’t ibang app o website, at hindi kami nagbebenta o nagbabahagi ng anumang data.',
+  'privacy.both.p': "Hindi kami nagbebenta ng data o gumagamit ng patalastas, analytics, o pagsubaybay sa iba’t ibang app. Ibinabahagi lamang ang data para sa mga tungkuling nasa patakarang ito.",
   'privacy.logs.title': 'Mga server log at tagal ng pagtatago',
   'privacy.logs.ip':
     'Sa memory lang ginagamit ang IP address mo para limitahan ang dami ng request (para pigilan ang pang-aabuso), at tinatanggal ito ' +
@@ -255,9 +248,7 @@ siteI18n('fil', {
   'privacy.account.title': 'Account ID',
   'privacy.account.p': "Ang iyong random na ID ng account ng oras at hiwalay na lihim na susi para sa pagbawi ay iniingatan sa iOS Keychain. Kapag naka-enable ang iCloud Keychain, maaaring i-sync ng Apple ang mga ito sa mga device na gumagamit ng parehong Apple Account gamit ang end-to-end encryption. Magagamit ang naka-sync na mga kredensyal para maibalik ang balanse pagkatapos mag-reinstall o lumipat ng device. Maaaring kailangang i-update muna ang lumang installation sa orihinal na device bago maihanda ang ligtas na pagbawi.",
   'privacy.apikey.title': 'Mga API key',
-  'privacy.apikey.p':
-    'Ang mga API key na ikaw mismo ang naglagay ay nakatago sa iOS <strong>Keychain</strong>, na naka-mark na mababasa lang sa device na ito ' +
-    'at habang naka-unlock lang ito. Hindi kailanman ina-upload ang mga ito at hindi lumilipat sa ibang device sa pamamagitan ng backup.',
+  'privacy.apikey.p': "Nasa iOS Keychain ng device na ito ang sarili mong API key. Ipinapadala lamang ito sa napiling Alibaba Cloud endpoint para patunayan ang mga kahilingan, hindi sa aming server, at hindi sini-sync sa ibang device.",
   'privacy.mic.title': 'Mikropono',
   'privacy.mic.p':
     'Ginagamit lang ang mikropono pagkatapos mong pindutin ang “Simulan”. Tuloy ang pagre-record, pagsasalin at pag-save ng transcript ' +
@@ -286,4 +277,8 @@ siteI18n('fil', {
     'at wala kaming paraan para makontak ka, kaya ang page na ito ang magsisilbing talaan.',
   'privacy.contact.title': 'Contact',
   'privacy.contact.p': 'Anumang tanong tungkol sa privacy: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "Pagbabahagi ng data sa AI",
+  'privacy.consent.p': "Kailangan ang iyong pahintulot bago magpadala ng audio sa serbisyong AI. Maaari kang tumanggi at gamitin pa rin ang Kasaysayan, Mga Setting, at Ibalik ang mga binili. Bawiin ang pahintulot sa Mga Setting → Tungkol → Pagbabahagi ng data sa AI; hihinto ang pagsasalin.",
+  'privacy.speech.protection': "Ang bawat third party na tumatanggap ng data ay dapat magbigay ng kapareho o katumbas na proteksiyon ng patakarang ito. Hinihingi ng naaangkop na kasunduan ng Alibaba Cloud ang limitadong layunin, pagiging kumpidensiyal, at mga hakbang sa seguridad. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Maaaring magtago ang Alibaba Cloud ng data ng tawag sa serbisyo ayon sa mga inilathalang tuntunin at batas; hindi ipinapangako ang walang pag-iimbak. Para sa pagbura, makipag-ugnayan sa amin sa pagbili ng oras, o sa Alibaba Cloud kung sariling key ang gamit. Ang pagbawi ay humihinto sa susunod na pagbabahagi, hindi awtomatikong nagbubura ng naprosesong data.",
 });

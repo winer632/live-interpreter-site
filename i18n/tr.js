@@ -181,15 +181,10 @@ siteI18n('tr', {
   // privacy.html
   'privacy.doc.title': 'Gizlilik Politikası · Duo Interpreter',
   'privacy.title': 'Gizlilik Politikası',
-  'privacy.sub': "Duo Interpreter · Son güncelleme: 26 Eylül 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Bu politika bir çeviridir. <a href="?lang=en">İngilizce sürümle</a> arasında bir fark olursa İngilizce sürüm geçerlidir.',
-  'privacy.short':
-    '<strong>Kısaca:</strong> uygulama iki şekilde çalışır. Varsayılan olarak kayıt olmadan çeviri süresi satın alırsınız: ' +
-    'konuşmanız çeviri için telefonunuzdan doğrudan Alibaba Cloud Model Studio’ya gider ve ' +
-    '<strong>hiçbir zaman sunucumuzdan geçmez</strong>; sunucumuz yalnızca rastgele oluşturulmuş bir hesap numarasını, ' +
-    'ne kadar süre satın aldığınızı ve ne kadarını kullandığınızı saklar. Bunun yerine kendi Alibaba Cloud anahtarınızı ' +
-    'kullanırsanız hiçbir şey toplamayız. Analiz, reklam veya izleme yoktur; konuşma kayıtları telefonunuzda kalır.',
+  'privacy.short': "Kişisel bilgi içerebilen mikrofon sesiniz ve dil ayarlarınız doğrudan Alibaba Cloud Model Studio (Qwen) hizmetine gönderilir. Yapay zekâ hizmeti bu verileri konuşmayı tanımak, çevirmek ve sesli çeviri üretmek için kullanır.",
   'privacy.collect.title': 'Topladığımız bilgiler',
   'privacy.collect.intro': 'Bu, Ayarlar → Ödeme yöntemi bölümünde neyi seçtiğinize bağlıdır.',
   'privacy.credit.title': 'Süre satın alma (varsayılan, kayıt gerekmez)',
@@ -215,9 +210,7 @@ siteI18n('tr', {
   'privacy.key.title': 'Kendi Alibaba Cloud anahtarınızı kullanma',
   'privacy.key.p': "Kendi Alibaba Cloud anahtarınızla sözlü çeviri yapmak, sunucumuza konuşma veya çeviri verisi göndermez. Mevcut bir süre hesabını yönetir ya da silerseniz uygulama bu isteği işlemek için sunucumuzla iletişime geçer.",
   'privacy.both.title': 'Her iki durumda da',
-  'privacy.both.p':
-    'Uygulamada üçüncü taraf analiz, reklam veya izleme araçları yoktur. Analiz ya da reklam çalıştırmıyoruz, sizi uygulamalar ' +
-    'veya web siteleri arasında izlemiyoruz ve hiçbir veriyi satmıyor ya da paylaşmıyoruz.',
+  'privacy.both.p': "Veri satmayız; reklam, analiz veya uygulamalar arası izleme kullanmayız. Veriler yalnızca bu politikada açıklanan işlevler için paylaşılır.",
   'privacy.logs.title': 'Sunucu günlükleri ve saklama süresi',
   'privacy.logs.ip':
     'IP adresiniz yalnızca bellekte, istek sıklığını sınırlamak (kötüye kullanımı önlemek) için kullanılır ve son isteğinizden ' +
@@ -261,10 +254,7 @@ siteI18n('tr', {
   'privacy.account.title': 'Hesap kimliği',
   'privacy.account.p': "Rastgele süre hesabı kimliğiniz ve ayrı bir gizli kurtarma anahtarı iOS Anahtar Zinciri’nde tutulur. iCloud Anahtar Zinciri etkinse Apple bunları uçtan uca şifreleme kullanarak aynı Apple Hesabındaki cihazlar arasında eşzamanlayabilir. Eşzamanlanan kimlik bilgileri, yeniden yükleme veya cihaz değişiminden sonra bakiyeyi geri yüklemenizi sağlar. Güvenli kurtarma ayarlanabilmeden önce eski kurulumun önceki cihazda güncellenmesi gerekebilir.",
   'privacy.apikey.title': 'API anahtarları',
-  'privacy.apikey.p':
-    'Kendi girdiğiniz API anahtarları iOS <strong>Anahtar Zinciri</strong>’nde, yalnızca bu cihazda ve yalnızca cihazın ' +
-    'kilidi açıkken okunabilir olarak işaretlenmiş şekilde saklanır. Hiçbir zaman yüklenmez ve yedekleme yoluyla başka bir ' +
-    'cihaza taşınmaz.',
+  'privacy.apikey.p': "Kendi API anahtarınız bu cihazın iOS Anahtar Zinciri’nde saklanır. Yalnızca istek doğrulaması için seçtiğiniz Alibaba Cloud uç noktasına gönderilir, sunucumuza gönderilmez ve diğer cihazlarla eşitlenmez.",
   'privacy.mic.title': 'Mikrofon',
   'privacy.mic.p':
     'Mikrofon yalnızca “Başlat” düğmesine dokunduktan sonra kullanılır. Etkin bir oturum, başka bir uygulamaya geçtiğinizde ' +
@@ -294,4 +284,8 @@ siteI18n('tr', {
     'geçme imkânımız yoktur; bu nedenle esas alınacak kayıt bu sayfadır.',
   'privacy.contact.title': 'İletişim',
   'privacy.contact.p': 'Gizlilikle ilgili her türlü soru için: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "Yapay zekâ veri paylaşımı",
+  'privacy.consent.p': "Yapay zekâ hizmetine ses göndermeden önce onayınız gerekir. Reddedip Geçmiş, Ayarlar ve Satın alımları geri yükle özelliklerini kullanmaya devam edebilirsiniz. Ayarlar → Hakkında → Yapay zekâ veri paylaşımı bölümünden onayı geri çektiğinizde tercüme durur.",
+  'privacy.speech.protection': "Veri alan tüm üçüncü taraflar bu politikayla aynı veya eşdeğer korumayı sağlamalıdır. Alibaba Cloud’un geçerli hizmet ve veri koruma sözleşmeleri amaçla sınırlı işleme, gizlilik ve güvenlik önlemleri gerektirir. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud, yayımlanan şartları ve yasalar uyarınca hizmet çağrısı verilerini saklayabilir; sıfır saklama taahhüt edilmez. Silme talepleri için süre satın alma modunda bize, kendi anahtarınızla kullanımda Alibaba Cloud’a başvurun. Onayı geri çekmek gelecekteki paylaşımı durdurur, önceden işlenen verileri otomatik silmez.",
 });

@@ -151,12 +151,9 @@ siteI18n('zh-Hant', {
   // privacy.html
   'privacy.doc.title': '隱私權政策 · Duo Interpreter',
   'privacy.title': '隱私權政策',
-  'privacy.sub': "Duo Interpreter · 最後更新：2026 年 9 月 26 日",
+  'privacy.sub': "2026-09-28",
   'privacy.translated': '本政策為翻譯版本。如與<a href="?lang=en">英文版</a>有任何不一致，以英文版為準。',
-  'privacy.short':
-    '<strong>簡單來說：</strong>App 有兩種使用方式。預設是購買口譯時間，不需要註冊：你的語音從手機直接傳送到阿里雲百煉進行翻譯，' +
-    '<strong>絕不經過我們的伺服器</strong>；我們的伺服器只保存一個隨機產生的帳號號碼、你購買了多少時間，以及用了多少時間。' +
-    '如果改用自己的阿里雲 Key，我們什麼都不蒐集。App 沒有任何分析、廣告或追蹤，口譯紀錄只留在你的手機上。',
+  'privacy.short': "你的麥克風音訊（可能包含個人資訊）和語言設定將直接傳送給阿里雲百鍊 Alibaba Cloud Model Studio（通義千問 Qwen）。 AI 服務使用這些資料辨識語音、翻譯並產生譯音。",
   'privacy.collect.title': '我們蒐集哪些資料',
   'privacy.collect.intro': '取決於你在「設定 → 付費方式」裡的選擇。',
   'privacy.credit.title': '購買時間（預設，免註冊）',
@@ -178,8 +175,7 @@ siteI18n('zh-Hant', {
   'privacy.key.title': '使用自己的阿里雲 Key',
   'privacy.key.p': "使用自己的阿里雲 Key 進行口譯時，不會將語音或翻譯資料傳送至我們的伺服器。如果你管理或刪除既有的時間帳號，App 會為了處理該請求連接我們的伺服器。",
   'privacy.both.title': '兩種方式都一樣',
-  'privacy.both.p':
-    'App 不含任何第三方分析、廣告或追蹤元件。我們不做分析、不投放廣告、不跨 App 或網站追蹤你，也不出售或分享任何資料。',
+  'privacy.both.p': "我們不出售資料，不使用廣告、統計分析或跨 App 追蹤。資料共享僅用於本政策說明的功能。",
   'privacy.logs.title': '伺服器日誌與保存期限',
   'privacy.logs.ip':
     '你的 IP 位址只在記憶體中用來限制請求頻率（防止濫用），並在你最後一次請求的一小時後捨棄；不會寫入日誌，也不會儲存。' +
@@ -214,9 +210,7 @@ siteI18n('zh-Hant', {
   'privacy.account.title': '帳號 ID',
   'privacy.account.p': "隨機時間帳號 ID 與一份獨立的復原密鑰保存在 iOS 鑰匙圈中。啟用 iCloud 鑰匙圈後，Apple 可透過端對端加密，在同一 Apple 帳號的裝置之間同步它們。同步後的憑證可用於在重新安裝 App 或更換裝置後復原餘額。舊版本可能需要先在原裝置上更新，才能建立安全復原所需的資訊。",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    '你自行輸入的 API Key 保存在 iOS <strong>鑰匙圈</strong>中，並標記為只能在這部裝置上、且只在裝置解鎖時讀取。' +
-    '它們絕不會上傳，也不會透過備份移轉到其他裝置。',
+  'privacy.apikey.p': "你自己的 API Key 儲存在本機 iOS 鑰匙圈中，僅傳送至你選擇的阿里雲端點進行請求驗證，不傳送給我們的伺服器，也不同步到其他裝置。",
   'privacy.mic.title': '麥克風',
   'privacy.mic.p':
     '只有在你按下「開始口譯」之後才會使用麥克風。口譯進行中切換到其他 App 或鎖定螢幕時，仍會繼續收音、翻譯並儲存口譯紀錄；' +
@@ -238,4 +232,8 @@ siteI18n('zh-Hant', {
     '如果本政策有重大變更，我們會更新頁面頂端的日期。App 不需要註冊，我們也無從聯絡你，因此一切以本頁為準。',
   'privacy.contact.title': '聯絡方式',
   'privacy.contact.p': '任何隱私相關問題，請寄信至 <a href="mailto:winer632@qq.com">winer632@qq.com</a>。',
+  'privacy.consent.title': "AI 資料共享",
+  'privacy.consent.p': "向 AI 服務傳送音訊前，需要你的同意。 你可以暫不同意，仍可使用傳譯記錄、設定和恢復購買。在「設定 → 關於 → AI 資料共享」中可撤回同意，並停止傳譯。",
+  'privacy.speech.protection': "所有接收使用者資料的第三方均須提供與本政策相同或同等程度的保護。阿里雲適用的服務及資料保護協議要求限定處理目的、履行保密義務並採取安全措施。 <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "阿里雲可能依據其公開條款和適用法律保留服務呼叫資料，我們不承諾零保留。購買時長模式的刪除請求請聯絡我們；自帶 Key 模式請聯絡阿里雲。撤回同意會停止後續共享，但不會自動刪除已處理的資料。",
 });

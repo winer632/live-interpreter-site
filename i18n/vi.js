@@ -181,15 +181,10 @@ siteI18n('vi', {
   // privacy.html
   'privacy.doc.title': 'Chính sách quyền riêng tư · Duo Interpreter',
   'privacy.title': 'Chính sách quyền riêng tư',
-  'privacy.sub': "Duo Interpreter · Cập nhật lần cuối ngày 26 tháng 9 năm 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Chính sách này là bản dịch. Nếu có khác biệt so với <a href="?lang=en">bản tiếng Anh</a>, bản tiếng Anh sẽ được áp dụng.',
-  'privacy.short':
-    '<strong>Tóm tắt:</strong> ứng dụng có hai cách sử dụng. Mặc định, bạn mua thời gian phiên dịch mà không cần đăng ký: ' +
-    'giọng nói của bạn đi thẳng từ điện thoại tới Alibaba Cloud Model Studio để dịch và <strong>không bao giờ đi qua máy chủ của chúng tôi</strong>; ' +
-    'máy chủ của chúng tôi chỉ lưu một số tài khoản được tạo ngẫu nhiên, lượng thời gian bạn đã mua và lượng thời gian bạn đã dùng. ' +
-    'Nếu bạn dùng khóa Alibaba Cloud của riêng mình, chúng tôi không thu thập gì cả. Không có công cụ phân tích, quảng cáo hay theo dõi, ' +
-    'và bản ghi chỉ nằm trên điện thoại của bạn.',
+  'privacy.short': "Âm thanh từ micrô của bạn, có thể chứa thông tin cá nhân, cùng cài đặt ngôn ngữ được gửi trực tiếp đến Alibaba Cloud Model Studio (Qwen). Dịch vụ AI dùng dữ liệu này để nhận dạng giọng nói, dịch và tạo giọng đọc bản dịch.",
   'privacy.collect.title': 'Chúng tôi thu thập những gì',
   'privacy.collect.intro': 'Tùy vào lựa chọn của bạn trong Cài đặt → Cách thanh toán.',
   'privacy.credit.title': 'Mua thời gian (mặc định, không cần đăng ký)',
@@ -214,9 +209,7 @@ siteI18n('vi', {
   'privacy.key.title': 'Dùng khóa Alibaba Cloud của riêng bạn',
   'privacy.key.p': "Phiên dịch bằng khóa Alibaba Cloud của riêng bạn không gửi dữ liệu giọng nói hay bản dịch đến máy chủ của chúng tôi. Nếu bạn quản lý hoặc xóa tài khoản thời gian hiện có, ứng dụng sẽ liên hệ máy chủ của chúng tôi để xử lý yêu cầu đó.",
   'privacy.both.title': 'Ở cả hai chế độ',
-  'privacy.both.p':
-    'Ứng dụng không chứa công cụ phân tích, quảng cáo hay theo dõi của bên thứ ba. Chúng tôi không chạy phân tích hay quảng cáo, ' +
-    'không theo dõi bạn trên các ứng dụng hoặc trang web, và không bán hay chia sẻ bất kỳ dữ liệu nào.',
+  'privacy.both.p': "Chúng tôi không bán dữ liệu hoặc dùng quảng cáo, phân tích hay theo dõi giữa các ứng dụng. Dữ liệu chỉ được chia sẻ cho các chức năng nêu trong chính sách này.",
   'privacy.logs.title': 'Nhật ký máy chủ và thời gian lưu giữ',
   'privacy.logs.ip':
     'Địa chỉ IP của bạn chỉ được dùng trong bộ nhớ để giới hạn tần suất yêu cầu (nhằm ngăn lạm dụng) và bị loại bỏ sau một giờ ' +
@@ -259,9 +252,7 @@ siteI18n('vi', {
   'privacy.account.title': 'ID tài khoản',
   'privacy.account.p': "ID tài khoản thời gian ngẫu nhiên và mã bí mật khôi phục riêng biệt được giữ trong Chuỗi khóa iOS. Khi Chuỗi khóa iCloud được bật, Apple có thể đồng bộ chúng giữa các thiết bị dùng cùng Tài khoản Apple bằng mã hóa đầu cuối. Thông tin xác thực đã đồng bộ cho phép khôi phục số dư sau khi cài đặt lại hoặc đổi thiết bị. Bản cài đặt cũ có thể cần được cập nhật trên thiết bị ban đầu trước khi thiết lập khôi phục an toàn.",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    'Các API Key do bạn tự nhập được lưu trong <strong>Chuỗi khóa</strong> của iOS, được đánh dấu là chỉ đọc được trên thiết bị này ' +
-    'và chỉ khi thiết bị đang mở khóa. Chúng không bao giờ được tải lên và không chuyển sang thiết bị khác qua bản sao lưu.',
+  'privacy.apikey.p': "Khóa API riêng được lưu trong Chuỗi khóa iOS trên thiết bị này. Khóa chỉ được gửi tới điểm kết nối Alibaba Cloud đã chọn để xác thực yêu cầu, không tới máy chủ của chúng tôi và không đồng bộ sang thiết bị khác.",
   'privacy.mic.title': 'Micrô',
   'privacy.mic.p':
     'Micrô chỉ được dùng sau khi bạn chạm vào “Bắt đầu”. Khi đang phiên dịch, ứng dụng vẫn tiếp tục thu âm, dịch và lưu bản ghi ' +
@@ -291,4 +282,8 @@ siteI18n('vi', {
     'và chúng tôi không có cách nào liên lạc với bạn, vì vậy trang này là căn cứ chính thức.',
   'privacy.contact.title': 'Liên hệ',
   'privacy.contact.p': 'Mọi câu hỏi về quyền riêng tư: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "Chia sẻ dữ liệu AI",
+  'privacy.consent.p': "Cần sự đồng ý của bạn trước khi gửi âm thanh đến dịch vụ AI. Bạn có thể từ chối và vẫn dùng Lịch sử, Cài đặt và Khôi phục giao dịch mua. Rút lại đồng ý tại Cài đặt → Giới thiệu → Chia sẻ dữ liệu AI; phiên dịch sẽ dừng.",
+  'privacy.speech.protection': "Mọi bên thứ ba nhận dữ liệu phải bảo vệ ở mức tương đương chính sách này. Các thỏa thuận dịch vụ và bảo vệ dữ liệu áp dụng của Alibaba Cloud yêu cầu xử lý đúng mục đích, bảo mật và các biện pháp an toàn. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud có thể lưu dữ liệu gọi dịch vụ theo điều khoản công bố và pháp luật; không cam kết không lưu trữ. Hãy liên hệ chúng tôi để yêu cầu xóa ở chế độ mua thời gian, hoặc Alibaba Cloud ở chế độ dùng khóa riêng. Rút đồng ý dừng chia sẻ trong tương lai, không tự xóa dữ liệu đã xử lý.",
 });

@@ -177,15 +177,10 @@ siteI18n('ms', {
   // privacy.html
   'privacy.doc.title': 'Dasar Privasi · Duo Interpreter',
   'privacy.title': 'Dasar Privasi',
-  'privacy.sub': "Duo Interpreter · Kemas kini terakhir 26 September 2026",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     'Dasar ini ialah terjemahan. Jika terdapat perbezaan dengan <a href="?lang=en">versi bahasa Inggeris</a>, versi bahasa Inggeris yang terpakai.',
-  'privacy.short':
-    '<strong>Ringkasnya:</strong> apl ini berfungsi dalam dua cara. Secara lalai, anda membeli masa terjemahan tanpa pendaftaran: ' +
-    'pertuturan anda dihantar terus dari telefon anda ke Alibaba Cloud Model Studio untuk diterjemah dan <strong>tidak pernah melalui pelayan kami</strong>; ' +
-    'pelayan kami hanya menyimpan nombor akaun yang dijana secara rawak, jumlah masa yang anda beli dan jumlah yang telah anda gunakan. ' +
-    'Jika anda menggunakan kunci Alibaba Cloud anda sendiri, kami tidak mengumpul apa-apa. Tiada analitik, pengiklanan atau penjejakan, ' +
-    'dan transkrip kekal dalam telefon anda.',
+  'privacy.short': "Audio mikrofon anda, yang mungkin mengandungi maklumat peribadi, dan tetapan bahasa dihantar terus kepada Alibaba Cloud Model Studio (Qwen). Perkhidmatan AI menggunakan data ini untuk mengenal pasti pertuturan, menterjemahkannya dan menghasilkan terjemahan bersuara.",
   'privacy.collect.title': 'Apa yang kami kumpul',
   'privacy.collect.intro': 'Ia bergantung pada pilihan anda di Seting → Cara membayar.',
   'privacy.credit.title': 'Membeli masa (lalai, tanpa pendaftaran)',
@@ -210,9 +205,7 @@ siteI18n('ms', {
   'privacy.key.title': 'Menggunakan kunci Alibaba Cloud anda sendiri',
   'privacy.key.p': "Pentafsiran menggunakan kunci Alibaba Cloud anda sendiri tidak menghantar data pertuturan atau terjemahan ke pelayan kami. Jika anda mengurus atau memadam akaun masa sedia ada, app menghubungi pelayan kami untuk permintaan tersebut.",
   'privacy.both.title': 'Dalam kedua-dua mod',
-  'privacy.both.p':
-    'Apl ini tidak mengandungi analitik, pengiklanan atau penjejakan pihak ketiga. Kami tidak menjalankan analitik atau iklan, ' +
-    'tidak menjejak anda merentas apl atau laman web, dan tidak menjual atau berkongsi sebarang data.',
+  'privacy.both.p': "Kami tidak menjual data atau menggunakan iklan, analitik atau penjejakan merentas aplikasi. Data dikongsi hanya untuk fungsi dalam dasar ini.",
   'privacy.logs.title': 'Log pelayan dan tempoh penyimpanan',
   'privacy.logs.ip':
     'Alamat IP anda hanya digunakan dalam memori untuk mengehadkan kadar permintaan (bagi menghalang penyalahgunaan) dan dibuang sejam ' +
@@ -254,9 +247,7 @@ siteI18n('ms', {
   'privacy.account.title': 'ID akaun',
   'privacy.account.p': "ID akaun masa rawak anda dan rahsia pemulihan yang berasingan disimpan dalam Rantai Kunci iOS. Dengan Rantai Kunci iCloud didayakan, Apple boleh menyegerakkannya antara peranti pada Akaun Apple yang sama menggunakan penyulitan hujung ke hujung. Bukti kelayakan yang disegerakkan membolehkan anda memulihkan baki selepas pemasangan semula atau pertukaran peranti. Pemasangan versi lama mungkin perlu dikemas kini pada peranti asal sebelum pemulihan selamat boleh disediakan.",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    'API Key yang anda masukkan sendiri disimpan dalam <strong>Rantai Kunci</strong> iOS, ditanda sebagai boleh dibaca hanya pada peranti ini ' +
-    'dan hanya semasa peranti tidak berkunci. Ia tidak pernah dimuat naik dan tidak berpindah ke peranti lain melalui sandaran.',
+  'privacy.apikey.p': "Kunci API sendiri disimpan dalam Rantai Kunci iOS peranti ini. Ia dihantar hanya ke titik sambungan Alibaba Cloud pilihan anda untuk mengesahkan permintaan, bukan ke pelayan kami, dan tidak disegerakkan ke peranti lain.",
   'privacy.mic.title': 'Mikrofon',
   'privacy.mic.p':
     'Mikrofon hanya digunakan selepas anda mengetik “Mula”. Sesi yang aktif terus merakam, menterjemah dan menyimpan transkrip apabila anda ' +
@@ -284,4 +275,8 @@ siteI18n('ms', {
     'untuk menghubungi anda, jadi halaman ini menjadi rekodnya.',
   'privacy.contact.title': 'Hubungi',
   'privacy.contact.p': 'Sebarang soalan tentang privasi: <a href="mailto:winer632@qq.com">winer632@qq.com</a>.',
+  'privacy.consent.title': "Perkongsian data AI",
+  'privacy.consent.p': "Persetujuan anda diperlukan sebelum audio dihantar ke perkhidmatan AI. Anda boleh menolak dan masih menggunakan Sejarah, Tetapan dan Pulihkan pembelian. Tarik balik persetujuan di Tetapan → Perihal → Perkongsian data AI; pentafsiran akan berhenti.",
+  'privacy.speech.protection': "Setiap pihak ketiga yang menerima data mesti memberikan perlindungan yang sama atau setara dengan dasar ini. Perjanjian perkhidmatan dan perlindungan data Alibaba Cloud yang terpakai memerlukan pemprosesan terhad kepada tujuan, kerahsiaan dan langkah keselamatan. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud boleh menyimpan data panggilan perkhidmatan mengikut terma diterbitkan dan undang-undang; pengekalan sifar tidak dijanjikan. Hubungi kami untuk pemadaman dalam mod beli masa, atau Alibaba Cloud dalam mod kunci sendiri. Penarikan persetujuan menghentikan perkongsian akan datang, bukan memadam data yang telah diproses secara automatik.",
 });

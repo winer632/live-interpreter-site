@@ -170,14 +170,10 @@ siteI18n('ko', {
   // privacy.html
   'privacy.doc.title': '개인정보 처리방침 · Duo Interpreter',
   'privacy.title': '개인정보 처리방침',
-  'privacy.sub': "Duo Interpreter · 최종 업데이트: 2026년 9월 26일",
+  'privacy.sub': "2026-09-28",
   'privacy.translated':
     '이 방침은 번역본입니다. <a href="?lang=en">영문판</a>과 내용이 다를 경우 영문판이 우선합니다.',
-  'privacy.short':
-    '<strong>요약:</strong> 이 앱은 두 가지 방식으로 작동합니다. 기본 방식에서는 가입 없이 통역 시간을 구입합니다. ' +
-    '음성은 번역을 위해 휴대폰에서 Alibaba Cloud Model Studio로 곧바로 전송되며 <strong>저희 서버를 절대 거치지 않습니다</strong>. ' +
-    '저희 서버에는 무작위로 생성된 계정 번호, 구입한 시간, 사용한 시간만 보관됩니다. ' +
-    '대신 본인의 Alibaba Cloud Key를 사용하면 저희는 아무것도 수집하지 않습니다. 분석, 광고, 추적은 전혀 없으며, 통역 기록은 휴대폰에만 남습니다.',
+  'privacy.short': "개인정보가 포함될 수 있는 마이크 음성과 언어 설정이 Alibaba Cloud Model Studio(Qwen)로 직접 전송됩니다. AI 서비스는 이 데이터로 음성을 인식하고 번역하며 번역 음성을 생성합니다.",
   'privacy.collect.title': '수집하는 정보',
   'privacy.collect.intro': '설정 → 결제 방법에서 무엇을 선택했는지에 따라 다릅니다.',
   'privacy.credit.title': '시간 구입(기본값, 가입 불필요)',
@@ -199,9 +195,7 @@ siteI18n('ko', {
   'privacy.key.title': '내 Alibaba Cloud Key 사용',
   'privacy.key.p': "개인 Alibaba Cloud 키로 통역할 때는 음성이나 번역 데이터가 당사 서버에 전송되지 않습니다. 기존 통역 시간 계정을 관리하거나 삭제하는 경우에는 해당 요청을 처리하기 위해 앱이 당사 서버에 연결합니다.",
   'privacy.both.title': '어느 방식이든',
-  'privacy.both.p':
-    '앱에는 제3자 분석, 광고, 추적 기능이 전혀 없습니다. 저희는 분석이나 광고를 하지 않고, 다른 앱이나 웹사이트에 걸쳐 사용자를 추적하지 않으며, ' +
-    '어떤 데이터도 판매하거나 공유하지 않습니다.',
+  'privacy.both.p': "데이터를 판매하거나 광고, 분석 또는 앱 간 추적을 사용하지 않습니다. 데이터는 이 정책에 명시된 기능을 위해서만 공유됩니다.",
   'privacy.logs.title': '서버 로그와 보관 기간',
   'privacy.logs.ip':
     'IP 주소는 요청 빈도 제한(악용 방지)에만 메모리에서 사용되며, 마지막 요청 후 1시간이 지나면 폐기됩니다. 로그에 기록되거나 저장되지 않습니다. ' +
@@ -237,9 +231,7 @@ siteI18n('ko', {
   'privacy.account.title': '계정 ID',
   'privacy.account.p': "무작위 통역 시간 계정 ID와 별도의 복구 비밀값은 iOS 키체인에 저장됩니다. iCloud 키체인을 켜면 Apple은 종단 간 암호화를 사용하여 같은 Apple 계정의 기기 간에 이 정보를 동기화할 수 있습니다. 동기화된 인증 정보로 앱 재설치나 기기 변경 후 잔액을 복원할 수 있습니다. 이전 버전은 안전한 복구를 설정하기 전에 원래 기기에서 앱을 업데이트해야 할 수 있습니다.",
   'privacy.apikey.title': 'API Key',
-  'privacy.apikey.p':
-    '직접 입력한 API Key는 iOS <strong>키체인</strong>에 보관되며, 이 기기에서만, 그리고 잠금이 해제된 동안에만 읽을 수 있도록 설정됩니다. ' +
-    '절대 업로드되지 않으며 백업을 통해 다른 기기로 옮겨지지도 않습니다.',
+  'privacy.apikey.p': "개인 API 키는 이 기기의 iOS 키체인에 저장됩니다. 요청 인증을 위해 선택한 Alibaba Cloud 연결 지점으로만 전송되며, 저희 서버에 전송되거나 다른 기기에 동기화되지 않습니다.",
   'privacy.mic.title': '마이크',
   'privacy.mic.p':
     '마이크는 “시작”을 누른 뒤에만 사용됩니다. 진행 중인 세션은 다른 앱으로 전환하거나 화면을 잠가도 계속 녹음하고, 번역하고, 통역 기록을 저장합니다. ' +
@@ -264,4 +256,8 @@ siteI18n('ko', {
     '이 페이지가 공식 기록입니다.',
   'privacy.contact.title': '문의',
   'privacy.contact.p': '개인정보 관련 문의는 <a href="mailto:winer632@qq.com">winer632@qq.com</a>으로 보내 주세요.',
+  'privacy.consent.title': "AI 데이터 공유",
+  'privacy.consent.p': "AI 서비스에 음성을 전송하려면 동의가 필요합니다. 동의하지 않아도 기록, 설정, 구매 복원을 사용할 수 있습니다. 설정 → 정보 → AI 데이터 공유에서 동의를 철회하면 통역이 중지됩니다.",
+  'privacy.speech.protection': "사용자 데이터를 받는 모든 제3자는 이 정책과 동일하거나 동등한 보호를 제공해야 합니다. 적용되는 Alibaba Cloud 서비스 및 데이터 보호 계약은 목적에 한정된 처리, 기밀 유지 및 보안 조치를 요구합니다. <a href=\"https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement\" target=\"_blank\" rel=\"noreferrer\">Alibaba Cloud — Data Processing Addendum</a> · <a href=\"https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">Model Studio (International)</a> · <a href=\"https://help.aliyun.com/zh/model-studio/privacy-notice\" target=\"_blank\" rel=\"noreferrer\">阿里云百炼（中国站）</a>.",
+  'privacy.speech.retention': "Alibaba Cloud는 공개 약관과 관련 법률에 따라 서비스 호출 데이터를 보관할 수 있으며, 무보관을 보장하지 않습니다. 삭제 요청은 시간 구매 모드에서는 저희에게, 자체 키 모드에서는 Alibaba Cloud에 문의하세요. 동의 철회는 이후 공유를 중지하며 이미 처리된 데이터를 자동으로 삭제하지는 않습니다.",
 });

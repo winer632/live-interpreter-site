@@ -53,17 +53,13 @@
 <header>
   <div class="langbar" data-lang-picker></div>
   <h1 data-i18n="privacy.title">Privacy Policy</h1>
-  <p class="sub" data-i18n="privacy.sub">Last updated: 2026-09-26</p>
+  <p class="sub" data-i18n="privacy.sub">2026-09-28</p>
   <!-- 只有译文里有这句（中文和英文是原文，没有）：法律文本以原文为准 -->
   <p class="translated" data-i18n="privacy.translated" hidden></p>
 </header>
 
 <div class="card">
-  <p data-i18n="privacy.short"><strong>In short:</strong> the app works in two ways. By default you buy interpreting
-  time, with no sign-up: your speech goes straight from your phone to Alibaba Cloud Model Studio for translation and
-  <strong>never passes through our server</strong>; our server only keeps a randomly generated account number, how much
-  time you bought and how much you used. If you use your own Alibaba Cloud key instead, we collect nothing. There is no
-  analytics, advertising or tracking, and transcripts stay on your phone.</p>
+  <p data-i18n="privacy.short">Your microphone audio, which may contain personal information, and language settings are sent directly to Alibaba Cloud Model Studio (Qwen). The AI service uses this data to recognize speech, translate it and generate spoken translations.</p>
 </div>
 
 <h2 data-i18n="privacy.collect.title">What we collect</h2>
@@ -91,8 +87,7 @@ your name, email, phone number, location or contacts, or your payment details.</
 <p data-i18n="privacy.key.p">Interpreting with your own Alibaba Cloud key does not send speech or translation data to our server. If you manage or delete an existing time account, the app contacts our server for that request.</p>
 
 <h3 data-i18n="privacy.both.title">Either way</h3>
-<p data-i18n="privacy.both.p">The app contains no third-party analytics, advertising or tracking. We run no analytics
-or ads, do not track you across apps or websites, and do not sell or share any data.</p>
+<p data-i18n="privacy.both.p">We do not sell data or use advertising, analytics or cross-app tracking. Data is shared only for the functions described in this policy.</p>
 
 <h2 data-i18n="privacy.logs.title">Server logs and retention</h2>
 <p data-i18n="privacy.logs.ip">Your IP address is used only in memory to limit request rates (to stop abuse) and is
@@ -125,6 +120,11 @@ off in settings): Alibaba Cloud imitates the speaker's voice live from the same 
 is speaking — both people in a conversation. Neither the app nor we separately collect, store or upload any voiceprint;
 it is the same audio already sent for translation.</p>
 
+<h2 data-i18n="privacy.consent.title">AI data sharing</h2>
+<p data-i18n="privacy.consent.p">Your consent is required before sending audio to the AI service. You can decline and still use History, Settings and Restore purchases. Withdraw consent at Settings → About → AI data sharing; this stops interpreting.</p>
+<p data-i18n="privacy.speech.protection">Every third party receiving user data must provide the same or equivalent protection described in this policy. Alibaba Cloud’s applicable service and data-protection agreements require limited-purpose processing, confidentiality and security safeguards. <a href="https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-membership-agreement" target="_blank" rel="noreferrer">Alibaba Cloud — Data Processing Addendum</a> · <a href="https://docs.modelstudio.console.alibabacloud.com/en/model-studio/privacy-notice" target="_blank" rel="noreferrer">Model Studio (International)</a> · <a href="https://help.aliyun.com/zh/model-studio/privacy-notice" target="_blank" rel="noreferrer">阿里云百炼（中国站）</a>.</p>
+<p data-i18n="privacy.speech.retention">Alibaba Cloud may retain service-call data under its published terms and applicable law; zero retention is not promised. Contact us about deletion in buy-time mode, or Alibaba Cloud in own-key mode. Withdrawal stops future sharing; it does not itself delete previously processed data.</p>
+
 <h2 data-i18n="privacy.device.title">What stays on your phone</h2>
 <h3 data-i18n="privacy.transcripts.title">Transcripts</h3>
 <p data-i18n="privacy.transcripts.p">Finished lines are written to one file per day inside the app's own container.
@@ -135,9 +135,7 @@ They are <strong>never uploaded</strong> and are excluded from iCloud backup. Yo
 <p data-i18n="privacy.account.p">Your random time-account ID and a separate recovery secret are kept in the iOS Keychain. With iCloud Keychain enabled, Apple can sync them between devices on the same Apple Account using end-to-end encryption. Synced credentials let you restore the balance after reinstalling or changing devices. An older installation may need to be updated on the original device before secure recovery can be set up.</p>
 
 <h3 data-i18n="privacy.apikey.title">API keys</h3>
-<p data-i18n="privacy.apikey.p">The API keys you enter yourself are kept in the iOS <strong>Keychain</strong>, marked
-as readable only on this device and only while it is unlocked. They are never uploaded and do not migrate to another
-device via backup.</p>
+<p data-i18n="privacy.apikey.p">Your own API key is stored in the iOS Keychain on this device. It is sent only to your selected Alibaba Cloud endpoint to authenticate requests, not to our server, and does not sync to other devices.</p>
 
 <h2 data-i18n="privacy.mic.title">Microphone</h2>
 <p data-i18n="privacy.mic.p">The microphone is used only after you press Start. An active session continues recording,
