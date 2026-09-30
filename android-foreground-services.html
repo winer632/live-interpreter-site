@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duo Interpreter — Android foreground service demonstration</title>
+<style>
+body{font:17px/1.6 system-ui,sans-serif;color:#17263b;background:#f4f7fb;margin:0}main{max-width:960px;margin:40px auto;padding:28px;background:white;border-radius:18px}h1{font-size:30px;line-height:1.25}h2{font-size:22px}video{width:100%;background:#0d182e;border-radius:12px}a{color:#245fc5}small{color:#53637a}
+</style>
+<main>
+<h1>Duo Interpreter: Android foreground services</h1>
+<p>Google Play build 2.1.1 (23), recorded on a physical HONOR AMM-AN00 running Android 16. The video uses demonstration sentences and real cloud interpreting. Demonstration audio was recorded with an external microphone. A cropped notification screenshot from the same build is appended; other phone notifications are excluded for privacy.</p>
+<video controls preload="metadata" playsinline src="android-foreground-services.mp4"></video>
+<p><a href="android-foreground-services.mp4">Open or download the demonstration video</a></p>
+<h2>Microphone — background audio input</h2>
+<p>The user chooses two languages and taps Start while the app is visible. AI data-sharing consent and microphone permission must be granted before interpreting. The microphone foreground service captures the conversation after the user opens another app or locks the screen. Audio is transmitted directly to Alibaba Cloud for interpreting; paired subtitles are available on returning to the app.</p>
+<h2>Media playback — translated speech</h2>
+<p>During the same user-started session, the app streams and plays translated speech, including while another app is visible or the screen is locked. Delaying or interrupting capture or playback would cut off the live conversation. The demonstration shows the Speaker output selected during live interpreting and continuing conversation input while Android Settings is open.</p>
+<h2>Visibility and stopping</h2>
+<p>An ongoing Android notification identifies the active interpreting session and offers a Stop action. The user can also tap Stop in the app. Stopping ends microphone capture, translated playback and network connections, and removes the foreground notification. The service does not start on boot or automatically restart after being terminated. The demonstration shows starting, interpreting in another app, returning to paired subtitles, the ongoing notification and stopping in the app.</p>
+<p><small>Recorded 30 September 2026. <a href="privacy-android.html">Android privacy policy</a></small></p>
+</main>
+</html>
